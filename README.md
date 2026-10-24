@@ -15,7 +15,7 @@ Osobiste repozytorium raportów, analiz i hipotez biznesowych. Strony HTML są p
 | --- | --- | --- | --- |
 | 2026-10-24 | Test publikacji 🔒 | Strona demonstracyjna sprawdzająca automatyczne szyfrowanie i publikację HTML. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/test-publikacji.html) |
 | 2026-10-24 | Financial Forecasting & Decision Intelligence / Hipoteza H1 🔒 | Pomysł produktowy: od Exceli przez forecast i diagnozę odchyleń po analizę otoczenia, rekomendacje AI, ICP, MVP, monetyzację i walidację. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/hipoteza-financial-decision-intelligence-2026-10-24.html) |
-| 2026-10-24 | TOP 100 spółek Głównego Rynku GPW 🔒 | Ranking kapitalizacji i ostatnie kursy z 23.10.2026, zmiany dzienne, wykresy oraz filtry; bez GlobalConnect. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/gpw-rynek-glowny-top100-2026-10-23.html) |
+| 2026-10-24 | TOP 100 spółek notowanych wyłącznie na GPW 🔒 | Ranking kapitalizacji i ceny na 23.10.2026. Tylko Główny Rynek GPW, bez GlobalConnect, NewConnect i dual-listingu zagranicznego. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/gpw-rynek-glowny-top100-2026-10-23.html) |
 | 2026-10-24 | Finance Performance Cockpit 🔒 | Hipoteza biznesowa: prognozowanie finansowe z Power BI i AI, ICP, oferta i strategia sprzedaży. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/finance-performance-cockpit.html) |
 <!-- SEBA-INFO-REPORTS-END -->
 

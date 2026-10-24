@@ -14,6 +14,7 @@ Osobiste repozytorium raportów, analiz i hipotez biznesowych. Strony HTML są p
 | Data publikacji | Raport | Opis | Strona |
 | --- | --- | --- | --- |
 | 2026-10-24 | Test publikacji 🔒 | Strona demonstracyjna sprawdzająca automatyczne szyfrowanie i publikację HTML. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/test-publikacji.html) |
+| 2026-10-24 | TOP 100 spółek Głównego Rynku GPW 🔒 | Ranking kapitalizacji i ostatnie kursy z 23.10.2026, zmiany dzienne, wykresy oraz filtry; bez GlobalConnect. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/gpw-rynek-glowny-top100-2026-10-23.html) |
 | 2026-10-24 | Finance Performance Cockpit 🔒 | Hipoteza biznesowa: prognozowanie finansowe z Power BI i AI, ICP, oferta i strategia sprzedaży. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/finance-performance-cockpit.html) |
 <!-- SEBA-INFO-REPORTS-END -->
 

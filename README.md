@@ -10,9 +10,12 @@ Osobiste repozytorium raportów, analiz i hipotez biznesowych. Strony HTML są p
 
 ## Raporty
 
+<!-- SEBA-INFO-REPORTS-START -->
 | Data publikacji | Raport | Opis | Strona |
 | --- | --- | --- | --- |
-| 2026-10-24 | Finance Performance Cockpit 🔒 | Analiza i hipoteza biznesowa dotycząca prognozowania finansowego z AI; dostęp po podaniu hasła. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/finance-performance-cockpit.html) |
+| 2026-10-24 | Test publikacji 🔒 | Strona demonstracyjna sprawdzająca automatyczne szyfrowanie i publikację HTML. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/test-publikacji.html) |
+| 2026-10-24 | Finance Performance Cockpit 🔒 | Hipoteza biznesowa: prognozowanie finansowe z Power BI i AI, ICP, oferta i strategia sprzedaży. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/finance-performance-cockpit.html) |
+<!-- SEBA-INFO-REPORTS-END -->
 
 ## Zasady publikowania kolejnych raportów HTML
 

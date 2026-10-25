@@ -1,12 +1,20 @@
 # Seba Info
 
-Osobiste repozytorium raportów, analiz i hipotez biznesowych. Strony HTML są publikowane przez GitHub Pages w formie zaszyfrowanej przez StatiCrypt i wymagają wspólnego hasła.
+Osobiste repozytorium raportów, analiz i hipotez biznesowych. Raporty prywatne są szyfrowane przez StatiCrypt i wymagają hasła. Wyraźnie oznaczone publiczne demonstracje produktów zawierają wyłącznie dane fikcyjne i nie wymagają hasła.
 
 **Strona główna:** https://sebastiandabkowski.github.io/seba-info/
 
 ## Status zabezpieczenia
 
-**Aktualne pliki HTML są zaszyfrowane przez StatiCrypt (24.10.2026).** Dostęp do raportów wymaga hasła, które nie jest przechowywane w repozytorium. **UWAGA:** w dotychczasowej publicznej historii Git pozostają wcześniejsze, niezaszyfrowane wersje raportów. Zabezpieczenie nie jest kompletne, dopóki nie zostanie utworzone nowe repozytorium z czystą historią. Nawet to nie gwarantuje usunięcia wcześniej pobranych kopii.
+**Raporty prywatne HTML są zaszyfrowane przez StatiCrypt.** Dostęp do raportów wymaga hasła, które nie jest przechowywane w repozytorium. Wyjątkiem są specjalnie przygotowane demonstracje publiczne z fikcyjnymi danymi, np. Financial Intelligence Demo. **UWAGA:** w dotychczasowej publicznej historii Git pozostają wcześniejsze, niezaszyfrowane wersje raportów. Zabezpieczenie nie jest kompletne, dopóki nie zostanie utworzone nowe repozytorium z czystą historią. Nawet to nie gwarantuje usunięcia wcześniej pobranych kopii.
+
+## Publiczne demo produktu
+
+**[Financial Intelligence | Interaktywne demo (bez hasła)](https://sebastiandabkowski.github.io/seba-info/2026-10-25-financial-decision-intelligence-demo.html)** · 2026-10-25
+
+Samodzielny prototyp interfejsu aplikacji Financial Decision Intelligence. Zawiera dashboard zarządu, wyniki finansowe, przykładowe odpowiedzi AI, kontekst rynkowy, symulator scenariuszy i źródła danych. Działa bez logowania, bez backendu i wykorzystuje wyłącznie dane fikcyjne.
+
+To **celowo publiczna** strona do udostępniania potencjalnym klientom. Nie należy na niej umieszczać danych finansowych Arpeggia, danych klientów, sekretów ani nieopublikowanych materiałów strategicznych. Nie jest częścią katalogu zaszyfrowanych raportów ani źródłowego workflow StatiCrypt.
 
 ## Raporty
 

@@ -13,6 +13,7 @@ Osobiste repozytorium raportów, analiz i hipotez biznesowych. Strony HTML są p
 <!-- SEBA-INFO-REPORTS-START -->
 | Data publikacji | Raport | Opis | Strona |
 | --- | --- | --- | --- |
+| 2026-10-25 | Financial Decision Intelligence / Wizualna koncepcja produktu 🔒 | Interaktywny opis produktu: dashboard CFO, diagnoza odchyleń, analiza otoczenia, symulator scenariuszy, architektura, moduły, MVP i roadmapa. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-25-opis-produktu-financial-decision-intelligence.html) |
 | 2026-10-24 | Test publikacji 🔒 | Strona demonstracyjna sprawdzająca automatyczne szyfrowanie i publikację HTML. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/test-publikacji.html) |
 | 2026-10-24 | Financial Forecasting & Decision Intelligence / Hipoteza H1 🔒 | Pomysł produktowy: od Exceli przez forecast i diagnozę odchyleń po analizę otoczenia, rekomendacje AI, ICP, MVP, monetyzację i walidację. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/hipoteza-financial-decision-intelligence-2026-10-24.html) |
 | 2026-10-24 | TOP 100 spółek notowanych wyłącznie na GPW 🔒 | Ranking kapitalizacji i ceny na 23.10.2026. Tylko Główny Rynek GPW, bez GlobalConnect, NewConnect i dual-listingu zagranicznego. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/gpw-rynek-glowny-top100-2026-10-23.html) |

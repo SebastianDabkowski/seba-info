@@ -225,7 +225,7 @@ function usePreset(name){const p=presets[name];if(!p)return;sales.value=p[0];peo
 document.querySelectorAll("[data-preset]").forEach(b=>b.addEventListener("click",()=>usePreset(b.dataset.preset)));
 el("reset").addEventListener("click",()=>{usePreset("base");toast("Przywrócono scenariusz bazowy.")});
 el("saveScenario").addEventListener("click",()=>{try{localStorage.setItem("fdi-public-demo-scenario",JSON.stringify({sales:+sales.value,costs:+people.value,utilization:+util.value}));toast("Scenariusz zapisany w tej przeglądarce.")}catch(e){toast("Zapis lokalny jest niedostępny w tej przeglądarce.")}});
-try{const saved=JSON.parse(localStorage.getItem("fdi-public-demo-scenario")||"null");if(saved&&[-25,25].includes(0)){for(const [field,node] of [["sales",sales],["costs",people],["utilization",util]])if(Number.isFinite(saved[field]))node.value=String(saved[field]);el("preset-info").textContent="Przywrócono scenariusz zapisany lokalnie."}}catch(e){}
+try{const saved=JSON.parse(localStorage.getItem("fdi-public-demo-scenario")||"null");if(saved && typeof saved === 'object'){for(const [field,node] of [["sales",sales],["costs",people],["utilization",util]])if(Number.isFinite(saved[field]))node.value=String(saved[field]);el("preset-info").textContent="Przywrócono scenariusz zapisany lokalnie."}}catch(e){}
 renderScenario();
 })();
 </script>

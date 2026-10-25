@@ -52,6 +52,26 @@
 @media(max-width:750px){.modeldiagram{grid-template-columns:1fr}.moneyflow .row{grid-template-columns:105px 1fr 72px}}
 @media(max-width:650px){.mobilebar{overflow-x:auto;justify-content:flex-start}.mobilebar button{flex:0 0 67px}.team-summary{grid-template-columns:repeat(2,1fr)}.mini-kpi .number{font-size:19px}.moneyflow .row{font-size:10px}.expense-total strong{font-size:18px}}
 
+
+/* Project staffing scenario instead of generic cost/utilisation sliders */
+.project-table{min-width:1000px}
+.project-table th,.project-table td{padding:11px 8px}
+.project-table th{white-space:normal;font-size:10px}
+.project-table tfoot{background:#173041;font-weight:800}
+.project-table .edit{width:62px;color:#e9f5ff;background:#0b1b2b;border:1px solid #456175;border-radius:8px;padding:8px 3px;text-align:center;font-weight:800}
+.project-table .edit.cash{width:75px}
+.projtype{font-size:10px;font-weight:800;border:1px solid #436276;color:#c3e4ff;border-radius:6px;padding:4px 7px}
+.projtype.fixed{border-color:#846741;color:#f2d69f}
+.staff-boxes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:17px 0}
+.staff-boxes>div{border:1px solid #315566;border-radius:12px;background:#162e3e;padding:13px}
+.staff-boxes small{display:block;color:#97b1c0;font-size:10px}
+.staff-boxes strong{display:block;font-size:20px;margin-top:5px}
+.month-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.month-cards>div{background:#162b3a;border:1px solid #355267;border-radius:11px;padding:12px;font-size:11px;color:#abc5ce}
+.month-cards b{display:block;font-size:16px;color:white;margin-top:5px}
+.real-costs{display:grid;grid-template-columns:330px 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:1100px){.real-costs{grid-template-columns:1fr}.staff-boxes{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.month-cards{grid-template-columns:1fr}.real-costs .comparegrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -88,12 +108,12 @@
 <div class="grid">
 <div class="card"><div class="cardhead"><div><h2>Przychody · Actual / Forecast / Budget</h2><p>Styczeń–wrzesień: wynik rzeczywisty. Październik–grudzień: prognoza.</p></div><div class="legend"><span>Actual</span><span class="lforecast">Forecast</span><span class="lbudget">Budget</span></div></div><div class="chartbox"><svg id="revenue-chart" viewBox="0 0 820 310" role="img" aria-label="Wykres przychodów rzeczywistych, prognozowanych i budżetowych od stycznia do grudnia 2026"></svg></div><div class="footnote">Wykres pokazuje wyłącznie przykładowe liczby. Budżet i forecast są osobnymi seriami.</div></div>
 <div class="card"><div class="cardhead"><div><h2>Najważniejsze obserwacje</h2><p>Przykładowe wnioski oparte na danych demonstracyjnych</p></div><span class="pill">INSIGHTS</span></div>
-<div class="insight"><div class="ibadge">01 / Analiza odchylenia</div><h3>Marża projektu Atlas spada</h3><p>Zwiększone koszty podwykonawców i niższe obłożenie zespołu są potencjalnymi przyczynami.</p><button class="inlinebtn" data-goto="financials">Sprawdź strukturę kosztów →</button></div>
+<div class="insight"><div class="ibadge">01 / Analiza odchylenia</div><h3>Marża projektu Atlas spada</h3><p>W projekcie Fixed Price zwiększenie liczby osób podnosi koszty bez zwiększenia zakontraktowanych przychodów.</p><button class="inlinebtn" data-goto="financials">Sprawdź strukturę kosztów →</button></div>
 <div class="insight"><div class="ibadge">02 / Forecast</div><h3>Q4 poniżej budżetu</h3><p>Prognoza przychodów na ostatni kwartał jest niższa od planu. Warto sprawdzić pipeline i terminy kontraktów.</p><button class="inlinebtn" data-goto="scenarios">Przelicz scenariusz →</button></div>
 <div class="insight"><div class="ibadge">03 / Otoczenie</div><h3>Sygnał z rynku niemieckiego</h3><p>Wybrani klienci ograniczają zamówienia. Sprawdź dane handlowe i otoczenie branżowe.</p><button class="inlinebtn" data-goto="market">Przeanalizuj kontekst →</button></div>
 </div></div>
 <div class="split">
-<div class="card"><div class="cardhead"><div><h2>Rentowność projektów</h2><p>Przykładowe marże projektowe w bieżącym miesiącu</p></div><button class="inlinebtn" data-goto="financials">Wszystkie projekty →</button></div><div id="projects"></div></div>
+<div class="card"><div class="cardhead"><div><h2>Rentowność projektów</h2><p>Marże projektów Fixed Price i Time &amp; Material</p></div><button class="inlinebtn" data-goto="financials">Wszystkie projekty →</button></div><div id="projects"></div></div>
 <div class="card"><div class="cardhead"><div><h2>Co wymaga uwagi?</h2><p>Sygnały do sprawdzenia przez zespół finansowy</p></div></div><ul class="compactlist"><li><span>Projekt Atlas · wzrost kosztów</span><span class="stage warn">Wysoki</span></li><li><span>Prognoza Q4 poniżej budżetu</span><span class="stage warn">Średni</span></li><li><span>Kontrakty na rynku DE</span><span class="stage">Weryfikacja</span></li><li><span>6 osób na ławce · 84 tys. zł / mies.</span><span class="stage warn">Koszt</span></li><li><span>Weryfikacja danych urlopowych</span><span class="stage">Kontrola</span></li></ul><button style="margin-top:16px" class="mini" data-goto="analysis">Zapytaj analityka AI ↗</button></div>
 </div>
 </section>
@@ -149,30 +169,17 @@
 <div class="source"><div class="source-icon">⌁</div><div><strong>Branża i konkurencja</strong><small>Raporty oraz źródła branżowe</small></div><div class="status mock">Plan</div></div>
 <div class="notice">Dane otoczenia nie są aktualnie pobierane z internetu. Nie traktuj powyższych przykładów jako stanu gospodarki na dzień prezentacji.</div>
 </div></div></section>
-<section class="view" id="view-scenarios" aria-label="Scenariusze finansowe">
-<div class="intro"><div><div class="kicker">Scenario planning · what if</div><h1>Scenariusze finansowe</h1><p>Zmień założenia i sprawdź ich ilustracyjny wpływ na wynik czwartego kwartału 2026.</p></div><div class="actions"><button class="mini" id="reset" type="button">↺ Reset</button><button class="mini primary" id="saveScenario" type="button">Zapisz wariant lokalnie</button></div></div>
-<div class="scenario-layout">
-<div class="card"><div class="cardhead"><div><h2>Założenia scenariusza</h2><p>Porównanie z bazowym planem Q4</p></div></div>
-<div class="scenario-control"><label for="sales">Zmiana przychodów <output id="sales-out">0%</output></label><input id="sales" type="range" min="-25" max="25" step="5" value="0"><div class="sliderends"><span>−25%</span><span>+25%</span></div></div>
-<div class="scenario-control"><label for="people">Zmiana kosztów dostarczenia usług <output id="people-out">0%</output></label><input id="people" type="range" min="-15" max="20" step="5" value="0"><div class="sliderends"><span>−15%</span><span>+20%</span></div></div>
-<div class="scenario-control"><label for="util">Zmiana wykorzystania zespołu <output id="util-out">0 pp</output></label><input id="util" type="range" min="-15" max="15" step="5" value="0"><div class="sliderends"><span>−15 pp</span><span>+15 pp</span></div></div>
-<div class="scenario-control"><label for="bench">Osoby na ławce <output id="bench-out">6 osób</output></label><input id="bench" type="range" min="0" max="15" step="1" value="6"><div class="sliderends"><span>0 osób</span><span>15 osób</span></div></div>
-<div class="scenario-control"><label for="office">Zmiana OPEX (biuro, sprzęt, licencje) <output id="office-out">0%</output></label><input id="office" type="range" min="-30" max="30" step="5" value="0"><div class="sliderends"><span>−30%</span><span>+30%</span></div></div>
-<div class="notice">Uproszczenie: każde 5 pp wykorzystania zmienia prognozowany przychód o 2%. Każda osoba na ławce to 14 tys. zł kosztu miesięcznie. OPEX obejmuje biuro, sprzęt, licencje i inne wydatki. Bazowy przychód pochodzi z syntetycznej predykcji, a suwaki przeliczają wariant deterministycznie, bez uruchamiania modelu AI.</div>
-</div>
-<div class="card"><div class="cardhead"><div><h2>Wynik symulacji · Q4</h2><p>Trzy miesiące prognozy: październik, listopad, grudzień</p></div><span class="mini">Wartości w PLN</span></div>
-<div class="comparegrid">
-<div class="compare"><span>Przychody Q4</span><strong id="sc-revenue">2,99 mln</strong><small id="sc-revenue-delta">0% vs bazowy</small></div>
-<div class="compare"><span>Marża operacyjna Q4</span><strong id="sc-margin">10,3%</strong><small id="sc-margin-delta">0,0 pp vs bazowy</small></div>
-<div class="compare"><span>Wynik operacyjny Q4</span><strong id="sc-profit">307 tys.</strong><small id="sc-profit-delta">0 zł vs bazowy</small></div></div>
-<div class="moneyflow" id="scenario-cost-detail" style="margin:0 0 17px"></div>
-<div class="cardhead"><h3>Przychód bazowy a zmodyfikowany</h3><div class="legend"><span class="lbudget">Bazowy</span><span>Po zmianach</span></div></div>
-<div class="scenario-bars" id="scenario-bars" role="img" aria-label="Porównanie prognozy bazowej i wariantu dla października, listopada, grudnia"></div>
-<div class="footnote" style="margin-top:35px">Kalkulacja tylko w przeglądarce. Zmiana suwaków nie aktualizuje żadnej bazy danych.</div></div>
-</div>
-<div class="card" style="margin-top:16px"><div class="cardhead"><div><h2>Porównanie wariantów</h2><p>Wybierz przykładowy scenariusz lub skonfiguruj własny</p></div></div><div class="switches"><button class="switch active" data-preset="base">Bazowy</button><button class="switch" data-preset="optimistic">Optymistyczny</button><button class="switch" data-preset="pessimistic">Pesymistyczny</button></div><p id="preset-info" class="subhead">Plan bazowy. Brak dodatkowych zmian.</p></div>
-</section>
-
+<section class="view" id="view-scenarios" aria-label="Scenariusze obsady projektów i wyników">
+<div class="intro"><div><div class="kicker">Planowanie dla firmy usługowej</div><h1>Scenariusze finansowe</h1><p>Przychody z kontraktów Fixed Price i Time &amp; Material. Koszt zależy od liczby osób pracujących na konkretnym projekcie w konkretnym miesiącu.</p></div><div class="actions"><button class="mini" id="reset">↺ Reset planu</button><button class="mini primary" id="saveScenario">Zapisz wariant lokalnie</button></div></div>
+<div class="card" style="margin-bottom:16px"><div class="cardhead"><div><h2>01 · Projekty i obsada zespołu</h2><p>Wpisz liczbę osób na każdym projekcie w październiku, listopadzie i grudniu; możesz też zmienić kwotę Fixed Price albo stawkę za osobomiesiąc T&amp;M.</p></div><span class="mini">Q4 2026</span></div>
+<div class="tablebox"><table class="project-table"><thead><tr><th>Projekt</th><th>Rozliczenie</th><th>Kontrakt Q4 lub<br>stawka os./mies.<br>(tys. zł)</th><th>Koszt os./mies.<br>(tys. zł)</th><th>Paź<br>osób</th><th>Lis<br>osób</th><th>Gru<br>osób</th><th>Przychody Q4</th><th>Koszt projektu</th><th>Marża</th></tr></thead><tbody id="scenario-projects"></tbody><tfoot><tr><td colspan="7">RAZEM</td><td id="sc-p-revenue"></td><td id="sc-p-cost"></td><td id="sc-p-margin"></td></tr></tfoot></table></div>
+<div class="notice"><strong>Fixed Price:</strong> jeśli dodasz osoby do projektu, jego wartość kontraktowa nie zmieni się, ale koszt wzrośnie. <strong>Time &amp; Material:</strong> przepracowane osobomiesiące zwiększają zarówno przychód, jak i koszt zespołu. Wartości dotyczą wyłącznie przykładowych kontraktów.</div>
+<div class="staff-boxes"><div><small>Dostępnych pracowników</small><strong>80</strong></div><div><small>Na projektach · październik</small><strong id="sc-assigned">74</strong></div><div><small>Na ławce · październik</small><strong id="sc-bench-count">6</strong></div><div><small>Koszt ławki w Q4</small><strong id="sc-bench-cost">252 tys. zł</strong></div></div>
+<div class="month-cards" id="sc-months"></div><p style="font-size:11px;margin:15px 0 0">Dostępnych jest 80 z 85 pracowników (5 nieobecnych). Ławka jest wyliczana z nieprzypisanych osób osobno w każdym miesiącu. Jeżeli zaplanujesz powyżej 80 osób, system sygnalizuje brak zasobów.</p><div class="notice" id="sc-overload" style="display:none"></div></div>
+<div class="real-costs">
+<div class="card"><div class="cardhead"><div><h2>02 · Koszty ogólne</h2><p>Niezależne od rozliczenia poszczególnych projektów</p></div></div><div class="scenario-control"><label for="office">Koszty biura i działalności <output id="office-out">57 tys. zł/mies.</output></label><input type="range" id="office" min="-30" max="30" step="5" value="0"><div class="sliderends"><span>−30%</span><span>+30%</span></div></div><ul class="compactlist"><li><span>Biuro i media</span><b>28 tys./mies.</b></li><li><span>Sprzęt i amortyzacja</span><b>9 tys./mies.</b></li><li><span>Licencje</span><b>12 tys./mies.</b></li><li><span>Administracja i inne</span><b>8 tys./mies.</b></li></ul><div class="notice">Ławka jest kosztem osobnym, a nie składnikiem OPEX. Nie liczymy jej dwukrotnie.</div></div>
+<div class="card"><div class="cardhead"><div><h2>03 · Wynik całej firmy · Q4</h2><p>Przychody projektów minus pracownicy na projektach, ławka i OPEX</p></div><span class="mini">DEMO</span></div><div class="comparegrid"><div class="compare"><span>Przychód projektów</span><strong id="sc-revenue"></strong><small id="sc-revenue-delta"></small></div><div class="compare"><span>Marża operacyjna</span><strong id="sc-margin"></strong><small id="sc-margin-delta"></small></div><div class="compare"><span>Wynik operacyjny</span><strong id="sc-profit"></strong><small id="sc-profit-delta"></small></div></div><div class="moneyflow" id="scenario-cost-detail" style="margin-bottom:17px"></div><div class="cardhead"><h3>Przychód bazowy vs scenariusz</h3><div class="legend"><span class="lbudget">Bazowy</span><span>Scenariusz</span></div></div><div class="scenario-bars" id="scenario-bars"></div><div class="footnote" style="margin-top:34px">Kwoty Fixed Price dzielimy ilustracyjnie na trzy transze miesięczne. To uproszczenie, a nie rzeczywista zasada rozpoznawania przychodów.</div></div></div>
+<div class="card"><div class="cardhead"><div><h2>Gotowe scenariusze</h2><p>Sprawdź wpływ zmiany liczby pracowników, a nie abstrakcyjnych procentów kosztów.</p></div></div><div class="switches"><button class="switch active" data-preset="base">Bazowy</button><button class="switch" data-preset="optimistic">+3 osoby w T&amp;M</button><button class="switch" data-preset="pessimistic">+4 osoby w Fixed Price</button></div><p id="preset-info" class="subhead">Plan bazowy: 74 osoby na projektach i 6 na ławce.</p></div></section>
 <section class="view" id="view-team" aria-label="Zespół, alokacje i ławka">
 <div class="intro"><div><div class="kicker">Capacity & bench management</div><h1>Zespół i ławka</h1><p>W firmie usługowej niezagospodarowani specjaliści generują koszt, nawet jeśli nie pracują na płatnym projekcie.</p></div><div class="actions"><button class="mini primary" data-goto="scenarios">Przelicz koszt ławki →</button></div></div>
 <div class="statgrid">
@@ -289,7 +296,7 @@ const months=["Sty","Lut","Mar","Kwi","Maj","Cze","Lip","Sie","Wrz","Paź","Lis"
 const revenueActual=[780,820,790,850,910,940,890,935,920];
 const revenueForecast=[960,995,1030];
 const budget=[800,810,825,850,880,900,920,940,950,980,1020,1050];
-const costActual=[620,640,635,661,700,735,722,736,748],costForecast=[735,750,770];
+const costActual=[620,640,635,661,700,735,722,736,748],costForecast=[751.6,751.6,751.6];
 const benchPeople=[
 {code:"Specjalista B01",role:"Senior .NET Developer",skills:".NET, Azure, DDD",days:22,cost:16},
 {code:"Specjalista B02",role:"Frontend Developer",skills:"React, TypeScript",days:18,cost:15},
@@ -305,6 +312,13 @@ const operatingExpenses=[{name:"Biuro i media",amount:28,descr:"Czynsz, energia,
 {name:"Inne koszty",amount:8,descr:"Administracja i usługi"}];
 const monthlyOpex=operatingExpenses.reduce((a,x)=>a+x.amount,0);
 
+const projectModels=[
+{id:"atlas",name:"Atlas Platform",type:"Fixed Price",amount:700,rate:0,cost:11,staff:[18,18,18]},
+{id:"mercury",name:"Mercury Cloud",type:"T&M",amount:0,rate:15,cost:10,staff:[14,14,14]},
+{id:"orion",name:"Orion Digital",type:"Fixed Price",amount:600,rate:0,cost:10,staff:[16,16,16]},
+{id:"nova",name:"Nova Commerce",type:"T&M",amount:0,rate:15,cost:9,staff:[12,12,12]},
+{id:"pulse",name:"Pulse Analytics",type:"Fixed Price",amount:515,rate:0,cost:10.4,staff:[14,14,14]}
+];
 const projects=[
 {name:"Atlas Platform",client:"SoftEdge",market:"DE",revenue:2210000,margin:12.4,trend:"−3,2 pp",status:"Do sprawdzenia"},
 {name:"Mercury Cloud",client:"Mariner",market:"PL",revenue:1890000,margin:27.8,trend:"+1,4 pp",status:"W normie"},
@@ -322,7 +336,7 @@ const benchCostQ4=monthlyBenchCost*3,opexCostQ4=monthlyOpex*3,baseOperatingQ4=ba
 
 const metric=(label,value,note,tone,icon)=>'<article class="stat"><div class="statlabel">'+label+' <span class="glyph">'+icon+'</span></div><div class="statvalue">'+value+'</div><span class="change '+(tone||"")+'">'+note+'</span></article>';
 el("overview-stats").innerHTML=metric("Przychody YTD",moneyK(actual),"Rzeczywiste · I–IX 2026","good","↗")+metric("Prognoza 2026",moneyK(year),(year>=budgetYear?"Powyżej":"Poniżej")+" budżetu "+moneyK(Math.abs(year-budgetYear)),"warn","◫")+metric("Marża projektowa YTD",decimal(grossActual/actual*100)+"%","Przychody minus koszty usług","","◎")+metric("Przychody Q4 · local ML",moneyK(baseQ4Revenue),"Symulowany forecast modelu lokalnego","","▦");
-el("financial-stats").innerHTML=metric("Przychody YTD",moneyK(actual),"Na bazie 9 miesięcy","","↗")+metric("Koszty usług YTD",moneyK(sum(costActual)),"Dane przykładowe","","◫")+metric("Zysk brutto na usługach",moneyK(grossActual),"Nie jest to zysk netto","","◇")+metric("Marża projektowa",decimal(grossActual/actual*100)+"%","Przykładowa kalkulacja","","◎");
+el("financial-stats").innerHTML=metric("Przychody YTD",moneyK(actual),"Na bazie 9 miesięcy","","↗")+metric("Koszty osób na projektach YTD",moneyK(sum(costActual)),"Dane przykładowe","","◫")+metric("Zysk brutto na usługach",moneyK(grossActual),"Nie jest to zysk netto","","◇")+metric("Marża projektowa",decimal(grossActual/actual*100)+"%","Przykładowa kalkulacja","","◎");
 el("projects").innerHTML=projects.slice(0,4).map(p=>'<div class="project"><div><strong>'+p.name+'</strong><small>'+p.client+' · '+p.market+'</small></div><div><b class="'+(p.margin<20?"warningflag":"valuepos")+'">'+decimal(p.margin)+'%</b><div class="progress"><b style="width:'+Math.max(5,Math.min(100,p.margin/35*100))+'%;background:'+(p.margin<20?'var(--orange)':'var(--mint)')+'"></b></div></div></div>').join("");
 el("projects-table").innerHTML=projects.map(p=>'<tr><td><strong>'+p.name+'</strong></td><td>'+p.client+' / '+p.market+'</td><td>'+pl.format(p.revenue)+' zł</td><td style="color:'+(p.margin<20?'var(--orange)':'var(--mint)')+'">'+decimal(p.margin)+'%</td><td style="color:'+(p.trend.startsWith("−")?'var(--red)':'var(--mint)')+'">'+p.trend+'</td><td><span class="tag">'+p.status+'</span></td></tr>').join("");
 
@@ -331,7 +345,7 @@ el("overview-operating").textContent=moneyK(baseOperatingQ4);
 el("finance-operating").textContent=moneyK(baseOperatingQ4);
 const operatingItems=[
 {name:"Przychody · symulowany forecast ML",value:baseQ4Revenue,color:"var(--mint)"},
-{name:"Koszty bezpośrednie projektów",value:baseQ4Costs,color:"var(--blue)"},
+{name:"Koszt pracy na projektach",value:baseQ4Costs,color:"var(--blue)"},
 {name:"6 osób na ławce",value:benchCostQ4,color:"var(--orange)"},
 {name:"Biuro, sprzęt, licencje, inne",value:opexCostQ4,color:"var(--purple)"},
 {name:"Wynik operacyjny",value:baseOperatingQ4,color:"var(--mint)"}
@@ -341,7 +355,7 @@ el("bench-table").innerHTML=benchPeople.map(p=>'<tr><td><strong>'+p.code+'</stro
 el("opex-categories").innerHTML=operatingExpenses.map(item=>'<div class="costcategory"><div class="topline"><span>'+item.name+'</span><strong>'+item.amount+' 000 zł</strong></div><div class="midline"><b style="width:'+item.amount/monthlyOpex*100+'%"></b></div><small>'+item.descr+'</small></div>').join("");
 el("expenses-pnl").innerHTML=[
 ["Przychody Q4",baseQ4Revenue,"Symulowana predykcja modelu ML"],
-["Koszty projektów",-baseQ4Costs,"Bezpośrednie koszty dostarczenia"],
+["Koszt osób pracujących na projektach",-baseQ4Costs,"Wynagrodzenia pracowników i konsultantów B2B"],
 ["Ławka (6 osób)",-benchCostQ4,"Koszt niealokowanych specjalistów"],
 ["Biuro i media",-28*3,"OPEX"],
 ["Sprzęt i amortyzacja",-9*3,"OPEX"],
@@ -392,37 +406,86 @@ market:{q:"Dlaczego spada sprzedaż do Niemiec?",a:"FAKT W DEMO: Dwa fikcyjne ko
 actions:{q:"Co możemy zrobić?",a:"PROPOZYCJA A: Sprawdź koszty podwykonawców w projekcie Atlas.\n\nPROPOZYCJA B: Przelicz wykorzystanie zespołu przy zmianie alokacji o +5 pp.\n\nPROPOZYCJA C: Porównaj spadek zamówień z rynku DE z sytuacją klientów i sprawdź inne źródła sprzedaży.\n\nKażda propozycja powinna zostać zatwierdzona przez CFO i oceniona pod kątem kosztów, czasu oraz ryzyka. W tym demo nie wykonujemy żadnych działań."}
 };
 document.querySelectorAll("[data-ask]").forEach(b=>b.addEventListener("click",()=>{const v=questions[b.dataset.ask];if(!v)return;const log=el("chatlog"),u=document.createElement("div"),a=document.createElement("div"),head=document.createElement("span");u.className="msg user";u.textContent=v.q;a.className="msg bot";head.className="chathead";head.textContent="Financial Intelligence · symulowana odpowiedź";a.appendChild(head);a.appendChild(document.createTextNode(v.a));log.append(u,a);log.scrollTop=log.scrollHeight}));
-const sales=el("sales"),people=el("people"),util=el("util"),bench=el("bench"),office=el("office");
-const pct=n=>(n>0?"+":"")+pl.format(n)+"%";
-const pp=n=>(n>0?"+":"")+pl.format(n)+" pp";
-function renderScenario(){
-const s=Number(sales.value),c=Number(people.value),u=Number(util.value),b=Number(bench.value),o=Number(office.value);
-const factor=Math.max(.1,1+s/100+u*.004);
-const rev=baseQ4Revenue*factor,deliveryCost=baseQ4Costs*(1+c/100),benchCost=b*14*3,operatingCost=opexCostQ4*(1+o/100),profit=rev-deliveryCost-benchCost-operatingCost,margin=profit/rev*100;
-const baseMargin=baseOperatingQ4/baseQ4Revenue*100;
-el("sales-out").value=pct(s);el("people-out").value=pct(c);el("util-out").value=pp(u);el("bench-out").value=b+" osób";el("office-out").value=pct(o);
-el("sc-revenue").textContent=moneyK(rev);el("sc-margin").textContent=decimal(margin)+"%";el("sc-profit").textContent=(profit<0?"−":"")+moneyK(Math.abs(profit));
-el("sc-revenue-delta").textContent=pct(Math.round((factor-1)*100))+" vs bazowy";
-el("sc-margin-delta").textContent=pp(Math.round((margin-baseMargin)*10)/10)+" vs bazowy";
-el("sc-profit-delta").textContent=(profit>=baseOperatingQ4?"+":"−")+moneyK(Math.abs(profit-baseOperatingQ4))+" vs bazowy";
-const details=[["Koszty dostarczenia",deliveryCost],["Ławka ("+b+" osób)",benchCost],["Biuro, sprzęt, licencje",operatingCost]];
-el("scenario-cost-detail").innerHTML=details.map(([name,v])=>'<div class="row"><span>'+name+'</span><div class="track"><b style="width:'+Math.max(0,Math.min(100,v/rev*100))+'%;background:'+(name.startsWith("Ławka")?'var(--orange)':'var(--blue)')+'"></b></div><strong>'+moneyK(v)+'</strong></div>').join("");
-const box=el("scenario-bars");box.innerHTML="";
-const peak=Math.max(...revenueForecast.map(x=>Math.max(x,x*factor)))*1.08;
-revenueForecast.forEach((v,i)=>{const g=document.createElement("div");g.className="bargroup";const a=document.createElement("div");a.className="cbar";a.style.height=(v/peak*100)+"%";const n=document.createElement("div");n.className="cbar sc";n.style.height=(v*factor/peak*100)+"%";const l=document.createElement("label");l.textContent=["Paź","Lis","Gru"][i];g.append(a,n,l);box.appendChild(g)});
-document.querySelectorAll("[data-preset]").forEach(button=>{const p=presets[button.dataset.preset];button.classList.toggle("active",p&&[s,c,u,b,o].every((v,i)=>v===p[i]))});
+const office=el("office"), fmt=v=>(v<0?"−":"")+moneyK(Math.abs(v)),signed=v=>(v>=0?"+":"−")+moneyK(Math.abs(v));
+function resetProjects(){return projectModels.map(p=>({...p,staff:p.staff.slice()}))}
+let planned=resetProjects();
+const fixedWeights=[570/605,1,640/605];
+function monthRevenue(p,m){return p.type==="Fixed Price"?p.amount/3*fixedWeights[m]:p.rate*p.staff[m]}
+function calculate(items,adjustment){
+const months=[0,1,2].map(m=>{
+const staff=items.reduce((v,p)=>v+p.staff[m],0);
+const bench=Math.max(0,80-staff),extra=Math.max(0,staff-80);
+const revenue=items.reduce((v,p)=>v+monthRevenue(p,m),0);
+const projectCost=items.reduce((v,p)=>v+p.staff[m]*p.cost,0);
+const benchCost=bench*14,opex=57*(1+adjustment/100);
+return {staff,bench,extra,revenue,projectCost,benchCost,opex};
+});
+const total=field=>months.reduce((s,m)=>s+m[field],0);
+const revenue=total("revenue"),projectCost=total("projectCost"),benchCost=total("benchCost"),opex=total("opex"),profit=revenue-projectCost-benchCost-opex;
+return {months,revenue,projectCost,benchCost,opex,profit,margin:revenue?profit/revenue*100:0};
 }
-[sales,people,util,bench,office].forEach(x=>x.addEventListener("input",()=>{renderScenario();el("preset-info").textContent="Własny wariant. Założenia zmienione przez użytkownika."}));
-const presets={
-base:[0,0,0,6,0,"Plan bazowy: 6 osób na ławce, miesięczny OPEX 57 tys. zł."],
-optimistic:[15,-5,5,3,-10,"Wariant wzrostowy: +15% sprzedaży, 3 osoby na ławce, niższy OPEX."],
-pessimistic:[-15,10,-5,10,15,"Wariant ryzyka: −15% sprzedaży, 10 osób na ławce, wyższy OPEX."]};
-function usePreset(name){const p=presets[name];if(!p)return;sales.value=p[0];people.value=p[1];util.value=p[2];bench.value=p[3];office.value=p[4];el("preset-info").textContent=p[5];renderScenario()}
-document.querySelectorAll("[data-preset]").forEach(button=>button.addEventListener("click",()=>usePreset(button.dataset.preset)));
-el("reset").addEventListener("click",()=>{usePreset("base");toast("Przywrócono scenariusz bazowy.")});
-el("saveScenario").addEventListener("click",()=>{try{localStorage.setItem("fdi-public-demo-scenario",JSON.stringify({sales:+sales.value,costs:+people.value,utilization:+util.value,bench:+bench.value,office:+office.value}));toast("Scenariusz zapisany lokalnie w przeglądarce.")}catch(e){toast("Zapis lokalny jest niedostępny.")}});
-try{const saved=JSON.parse(localStorage.getItem("fdi-public-demo-scenario")||"null");if(saved&&typeof saved==="object"){for(const [field,node] of [["sales",sales],["costs",people],["utilization",util],["bench",bench],["office",office]])if(Number.isFinite(saved[field]))node.value=String(saved[field]);el("preset-info").textContent="Przywrócono scenariusz zapisany lokalnie."}}catch(e){}
-renderScenario();
+const base=calculate(resetProjects(),0);
+function renderRows(){
+el("scenario-projects").innerHTML=planned.map((p,i)=>{
+const rev=[0,1,2].reduce((s,m)=>s+monthRevenue(p,m),0),cost=p.staff.reduce((s,n)=>s+n,0)*p.cost;
+const amount=p.type==="Fixed Price"?p.amount:p.rate;
+const inputs=p.staff.map((n,m)=>'<td><input class="edit" type="number" min="0" max="80" step="1" value="'+n+'" data-row="'+i+'" data-month="'+m+'" aria-label="'+p.name+" "+["październik","listopad","grudzień"][m]+' liczba osób"></td>').join("");
+return '<tr><td><strong>'+p.name+'</strong></td><td><span class="projtype '+(p.type==="Fixed Price"?"fixed":"")+'">'+p.type+'</span></td><td><input class="edit cash" type="number" min="0" max="2000" step="5" value="'+amount+'" data-row="'+i+'" data-field="'+(p.type==="Fixed Price"?"amount":"rate")+'" aria-label="'+p.name+' wartość lub stawka"></td><td>'+new Intl.NumberFormat("pl-PL",{maximumFractionDigits:1}).format(p.cost)+'</td>'+inputs+'<td>'+fmt(rev)+'</td><td>'+fmt(cost)+'</td><td class="'+(rev-cost<0?"valueneg":"valuepos")+'">'+decimal(rev?(rev-cost)/rev*100:0)+'%</td></tr>';
+}).join("");
+}
+function paint(){
+const s=calculate(planned,Number(office.value));
+el("sc-p-revenue").textContent=fmt(s.revenue);el("sc-p-cost").textContent=fmt(s.projectCost);
+el("sc-p-margin").textContent=decimal(s.revenue?(s.revenue-s.projectCost)/s.revenue*100:0)+"%";
+el("sc-assigned").textContent=s.months[0].staff+" osób";
+el("sc-bench-count").textContent=s.months[0].bench+" osób";
+el("sc-bench-cost").textContent=fmt(s.benchCost);
+el("office-out").value=fmt(57*(1+Number(office.value)/100))+"/mies.";
+el("sc-revenue").textContent=fmt(s.revenue);el("sc-margin").textContent=decimal(s.margin)+"%";el("sc-profit").textContent=fmt(s.profit);
+el("sc-revenue-delta").textContent=signed(s.revenue-base.revenue)+" vs plan";
+el("sc-margin-delta").textContent=(s.margin>=base.margin?"+":"")+decimal(s.margin-base.margin)+" pp vs plan";
+el("sc-profit-delta").textContent=signed(s.profit-base.profit)+" vs plan";
+el("sc-months").innerHTML=s.months.map((m,i)=>'<div><span>'+["Październik","Listopad","Grudzień"][i]+'</span><b>'+m.staff+' projekt · '+m.bench+' ławka</b><small>'+(m.extra?"Brakuje "+m.extra+" osób":"80 pracowników do dyspozycji")+'</small></div>').join("");
+let overload=s.months.some(m=>m.extra>0);el("sc-overload").style.display=overload?"block":"none";
+el("sc-overload").textContent=overload?"⚠ Obsada przekracza 80 dostępnych osób. Koszt dodatkowych specjalistów uwzględniono według stawek projektów, ale zatrudnienie ich może wymagać czasu i innych kosztów.":"";
+const scale=Math.max(s.revenue,s.projectCost+s.benchCost+s.opex,1);
+el("scenario-cost-detail").innerHTML=[["Koszt osób pracujących na projektach",s.projectCost,"var(--blue)"],["Koszt osób na ławce",s.benchCost,"var(--orange)"],["Koszty ogólne: biuro, sprzęt, licencje",s.opex,"var(--purple)"]].map(([name,v,color])=>'<div class="row"><span>'+name+'</span><div class="track"><b style="width:'+Math.min(100,v/scale*100)+'%;background:'+color+'"></b></div><strong>'+fmt(v)+'</strong></div>').join("");
+const peak=Math.max(1,...s.months.map((m,i)=>Math.max(m.revenue,base.months[i].revenue)))*1.08;
+el("scenario-bars").innerHTML="";
+s.months.forEach((m,i)=>{const group=document.createElement("div");group.className="bargroup";const a=document.createElement("div");a.className="cbar";a.style.height=base.months[i].revenue/peak*100+"%";const b=document.createElement("div");b.className="cbar sc";b.style.height=m.revenue/peak*100+"%";const label=document.createElement("label");label.textContent=["Paź","Lis","Gru"][i];group.append(a,b,label);el("scenario-bars").appendChild(group)});
+document.querySelectorAll("[data-preset]").forEach(x=>x.classList.remove("active"));
+}
+function render(){renderRows();paint()}
+const info={base:"Plan bazowy: 74 osoby na projektach i 6 na ławce.",optimistic:"3 osoby z ławki pracują teraz w projekcie Mercury T&M: przychód projektu i jego koszt rosną.",pessimistic:"4 dodatkowe osoby na projekcie Atlas Fixed Price: rośnie koszt, ale kontrakt nie jest droższy."};
+function preset(which){
+planned=resetProjects();office.value="0";
+if(which==="optimistic")planned[1].staff=[17,17,17];
+if(which==="pessimistic")planned[0].staff=[22,22,22];
+render();el("preset-info").textContent=info[which]||info.base;
+document.querySelectorAll("[data-preset]").forEach(b=>b.classList.toggle("active",b.dataset.preset===which));
+}
+el("scenario-projects").addEventListener("change",e=>{
+const input=e.target.closest("input[data-row]");if(!input)return;
+const p=planned[Number(input.dataset.row)];if(!p)return;
+const month=input.dataset.month;
+let v=Number(input.value);const isStaff=month!==undefined;v=Number.isFinite(v)?Math.min(isStaff?80:2000,Math.max(0,isStaff?Math.round(v):v)):0;
+if(isStaff)p.staff[Number(month)]=v;else p[input.dataset.field]=v;
+render();el("preset-info").textContent="Twój własny scenariusz, wyniki zostały przeliczone.";
+});
+office.addEventListener("input",()=>{paint();el("preset-info").textContent="Twój własny scenariusz, zmieniono koszty ogólne."});
+document.querySelectorAll("[data-preset]").forEach(b=>b.addEventListener("click",()=>preset(b.dataset.preset)));
+el("reset").addEventListener("click",()=>{preset("base");toast("Przywrócono plan bazowy.")});
+const localKey="fdi-project-based-scenario-v4";
+el("saveScenario").addEventListener("click",()=>{try{localStorage.setItem(localKey,JSON.stringify({projects:planned,office:Number(office.value)}));toast("Scenariusz zapisany w przeglądarce.")}catch(e){toast("Brak możliwości zapisu lokalnego.")}});
+try{
+const saved=JSON.parse(localStorage.getItem(localKey)||"null");
+if(saved&&Array.isArray(saved.projects)&&saved.projects.length===projectModels.length&&saved.projects.every((p,i)=>p.id===projectModels[i].id&&Array.isArray(p.staff)&&p.staff.length===3&&p.staff.every(v=>Number.isInteger(v)&&v>=0&&v<=80)&&["amount","rate"].every(k=>Number.isFinite(p[k])&&p[k]>=0&&p[k]<=2000))){
+planned=resetProjects().map((p,i)=>({...p,amount:saved.projects[i].amount,rate:saved.projects[i].rate,staff:saved.projects[i].staff.slice()}));
+if(Number.isFinite(saved.office)&&saved.office>=-30&&saved.office<=30)office.value=saved.office;
+el("preset-info").textContent="Przywrócono lokalnie zapisany wariant.";
+}
+}catch(e){}
+render();
 })();
 </script>
 </body></html>

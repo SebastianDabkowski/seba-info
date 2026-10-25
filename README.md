@@ -18,7 +18,10 @@ To **celowo publiczna** strona do udostępniania potencjalnym klientom. Nie nale
 
 ## Raporty
 
+**Publiczna analiza spółki XTB:** raport z 25.10.2026 opiera się wyłącznie na upublicznionych danych giełdowych i sprawozdaniach finansowych. Zgodnie z prośbą o publiczny link jest dostępny bez hasła. Nie zawiera danych prywatnych ani poufnych. Pozostałe raporty prywatne pozostają zaszyfrowane.
+
 <!-- SEBA-INFO-REPORTS-START -->
+| 2026-10-25 | XTB / Analiza inwestycyjna (PUBLICZNY) | Notowania StockData, wyniki H1 2026, ocena fundamentalna, wycena scenariuszowa, ryzyka i wnioski. Dane wyłącznie publiczne, bez hasła. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-25-xtb-analiza-inwestycyjna.html) |
 | Data publikacji | Raport | Opis | Strona |
 | --- | --- | --- | --- |
 | 2026-10-25 | Financial Decision Intelligence / Wizualna koncepcja produktu 🔒 | Interaktywny opis produktu: dashboard CFO, diagnoza odchyleń, analiza otoczenia, symulator scenariuszy, architektura, moduły, MVP i roadmapa. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-25-opis-produktu-financial-decision-intelligence.html) |

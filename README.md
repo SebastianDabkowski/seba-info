@@ -21,6 +21,8 @@ To **celowo publiczna** strona do udostępniania potencjalnym klientom. Nie nale
 **Publiczna analiza spółki XTB:** raport z 25.10.2026 opiera się wyłącznie na upublicznionych danych giełdowych i sprawozdaniach finansowych. Zgodnie z prośbą o publiczny link jest dostępny bez hasła. Nie zawiera danych prywatnych ani poufnych. Pozostałe raporty prywatne pozostają zaszyfrowane.
 
 <!-- SEBA-INFO-REPORTS-START -->
+| 2026-10-25 | KRUK S.A. / 8 kwartałów Q3 2024–Q2 2026 (PUBLICZNY) | Liczba akcji, EBITDA, zysk netto, kalendarium Q3 2026, dywidendy, PAP, Stooq, powiadomienia. Bez hasła. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-25-kruk-raport-finansowy.html) |
+
 | 2026-10-25 | CD PROJEKT RED / Wyniki kwartalne Q3 2024–Q2 2026 (PUBLICZNY) | Przychody, EBITDA, zysk netto, liczba akcji, 8 raportów i linki do PAP Biznes. Bez hasła. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-25-cd-projekt-red-wyniki-finansowe.html) |
 
 | 2026-10-25 | Allegro.eu / analiza inwestycyjna (PUBLICZNY) | Notowania StockData, wyniki H1/Q2 2026, FCF, zadłużenie, ryzyka, scenariusze. Bez hasła. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-25-allegro-analiza-inwestycyjna.html) |

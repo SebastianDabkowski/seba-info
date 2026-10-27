@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Raport giełdowy Dino Polska (DNP), 9 kwartałów wyników, kalendarz inwestora i odnośniki do źródeł. Stan na 27.10.2026.">
+<title>Dino Polska (DNP) · Raport giełdowy · 27.10.2026</title>
+<style>
+:root{color-scheme:light;--ink:#172b33;--muted:#62747c;--line:#e0e7e8;--bg:#f5f7f7;--teal:#087c68;--pine:#075d4d;--soft:#e7f5ef;--sand:#fff5de}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:var(--pine)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+header{background:#082b31;color:white;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-130px;top:-150px;width:510px;height:510px;border:90px solid rgba(61,177,144,.095);border-radius:50%;pointer-events:none}
+.topbar{display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid #335158;padding:16px 0;font-size:.84rem}
+.brand{font-weight:800;letter-spacing:.14em;text-transform:uppercase}.asof{color:#b4d4d3}
+.hero{padding:48px 0 54px;position:relative;z-index:1}
+.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.16em;color:#74d0b0;text-transform:uppercase}
+h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.1;letter-spacing:-.05em;margin:12px 0 8px}
+.ticker{display:inline-flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.86rem;color:#c0dadb}
+.ticker span{border:1px solid #426067;border-radius:24px;padding:5px 12px}
+.about{max-width:800px;color:#e0edef;font-size:1.07rem;margin:24px 0 0}
+.nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.nav a{border:1px solid #58747b;color:white;text-decoration:none;border-radius:9px;padding:8px 13px;font-size:.88rem}.nav a:hover{background:#24545c}
+main{padding:34px 0 55px}
+.section{margin-top:37px}h2{font-size:1.45rem;letter-spacing:-.025em;margin:0 0 6px}h2 .chapter{font-size:.8rem;letter-spacing:.11em;color:#137d69;margin-right:8px}
+.subtitle{color:var(--muted);margin:0 0 20px;font-size:.93rem}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-top:-65px;position:relative;z-index:2}
+.card,.panel{background:white;border:1px solid var(--line);border-radius:15px;box-shadow:0 8px 30px rgba(15,50,50,.035)}
+.card{padding:24px}.card dt{font-size:.82rem;color:var(--muted);font-weight:650}.card dd{margin:6px 0;font-size:clamp(1.35rem,2.6vw,2rem);font-weight:850;white-space:nowrap;letter-spacing:-.035em}
+.card small{font-size:.8rem;color:var(--muted)}.card.event{background:#d8f4e7;border-color:#b5e6cf}.card.event dd{color:#085e4c}
+.panel{padding:24px}
+.insights{display:flex;gap:14px;flex-wrap:wrap;margin:16px 0 0}.insights span{font-size:.81rem;background:#eef5f2;color:#285b4f;border-radius:30px;padding:6px 12px;font-weight:650}
+.chart{height:254px;display:flex;align-items:flex-end;gap:12px;padding:12px 8px 4px}
+.bar-item{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;min-width:0}
+.bar-value{height:23px;font-weight:750;font-size:.8rem;color:#49616b;white-space:nowrap}
+.bar-track{width:100%;height:170px;display:flex;align-items:flex-end;border-bottom:1px solid #cbd8d9;background:linear-gradient(to top,rgba(229,240,237,.4),transparent);border-radius:5px 5px 0 0}
+.bar{width:100%;background:#86b7ac;border-radius:5px 5px 0 0;transition:opacity .2s}.bar-latest .bar{background:#0b9372}.bar-label{text-align:center;font-size:.75rem;margin-top:7px;line-height:1.35;color:#5c6c72;font-weight:620}
+.table-container{overflow-x:auto;border-radius:13px;border:1px solid var(--line);background:white}
+table{border-collapse:collapse;width:100%;min-width:900px;font-variant-numeric:tabular-nums}th{text-align:left;background:#eaf1f0;color:#48606a;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.038em;padding:15px 13px;white-space:nowrap}td{padding:15px 13px;border-top:1px solid #e5ecec;font-size:.9rem;vertical-align:middle}tr.latest{background:#f0faf5}tr:hover td{background:rgba(227,241,237,.34)}
+.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:670}.date{white-space:nowrap}.qbadge{display:inline-flex;align-items:center;justify-content:center;background:#e5ebe9;border-radius:6px;font-weight:780;font-size:.8rem;width:37px;height:27px}
+tr.latest .qbadge{background:#a5e3ca;color:#075b48}
+td a{white-space:nowrap;font-size:.82rem;font-weight:690}.derived{display:block;margin-top:4px;font-size:.7rem;color:#8a650e}
+.note{margin-top:13px;color:#52676c;font-size:.82rem;background:#edf4f2;border-left:3px solid #398e7c;border-radius:0 7px 7px 0;padding:11px 14px}
+.type,.status{display:inline-block;padding:5px 10px;border-radius:6px;font-size:.78rem;font-weight:780;white-space:nowrap}
+.type.wyniki{background:#e7eeff;color:#3754a3}.type.dywidenda{background:#fff1db;color:#946100}.type.meeting{background:#f0eaff;color:#7449a6}.type.conference{background:#e6f2ef;color:#30736a}
+.status.confirmed{background:#d7f6e5;color:#0c734f}.status.pending{background:#f1f3f4;color:#758085}
+.sources{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.source-card{border:1px solid var(--line);border-radius:12px;text-decoration:none;padding:16px;background:white;position:relative;min-height:120px;display:flex;flex-direction:column;color:var(--ink)}.source-card:hover{border-color:#55a892;transform:translateY(-1px)}
+.source-name{font-size:.99rem;font-weight:840}.source-desc{color:#66767c;font-size:.77rem;margin-top:8px;padding-right:6px}.source-arrow{position:absolute;top:13px;right:14px;color:var(--teal);font-weight:800}
+.footer{border-top:1px solid #d4dede;margin-top:36px;padding:25px 0 8px;font-size:.8rem;color:#74858a}
+.footer a{font-weight:650}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.sources{grid-template-columns:repeat(3,minmax(0,1fr))}.chart{gap:5px}.bar-value{font-size:.67rem}}
+@media(max-width:570px){.wrap{padding-left:15px;padding-right:15px}.hero{padding:29px 0 79px}.about{font-size:.95rem}.kpis{gap:8px;margin-top:-69px}.card{padding:13px}.card dd{font-size:1.32rem}.card small{font-size:.69rem}.sources{grid-template-columns:1fr 1fr}.panel{padding:14px}.bar-value{font-size:.59rem}.bar-label{font-size:.63rem}.chart{gap:4px}.source-card{min-height:113px}.topbar{font-size:.71rem}}
+@media print{header{background:white;color:black}.hero,.about,.ticker,.eyebrow{color:black}.nav{display:none}.kpis{margin-top:10px}.card,.panel,.table-container{box-shadow:none}body{background:white}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="topbar"><div class="brand">GPW / Equity Research</div><div class="asof">Dane na 27 października 2026 · raport statyczny</div></div>
+<div class="hero"><div class="eyebrow">Raport spółki · Handel detaliczny</div><h1>Dino Polska</h1>
+<div class="ticker"><span>GPW: DNP</span><span>ISIN: PLDINPL00011</span><span>Giełda Papierów Wartościowych w Warszawie</span></div>
+<p class="about">Dino Polska prowadzi sieć supermarketów spożywczych zlokalizowanych przede wszystkim w mniejszych i średnich miejscowościach w Polsce. Oferuje artykuły spożywcze, produkty świeże oraz mięso, współpracując między innymi z zakładami Agro-Rydzyna. Rozwój sieci wspiera własną infrastrukturą logistyczną i centrami dystrybucyjnymi.</p>
+<nav class="nav" aria-label="Nawigacja"><a href="#wyniki">Wyniki finansowe</a><a href="#kalendarz">Kalendarz</a><a href="#linki">Profile spółki</a><a href="#metodologia">Metodologia</a></nav>
+</div></div>
+</header>
+<main class="wrap">
+<section class="kpis" aria-label="Najnowsze wyniki i wydarzenia">
+<div class="card"><dt>Przychody Q2 2026</dt><dd>9 531,4 mln zł</dd><small>+10,5% rok do roku</small></div>
+<div class="card"><dt>EBITDA Q2 2026</dt><dd>665,1 mln zł</dd><small>+2,2% rok do roku</small></div>
+<div class="card"><dt>Zysk netto Q2 2026</dt><dd>400,0 mln zł</dd><small>+0,6% rok do roku</small></div>
+<div class="card event"><dt>Najbliższa publikacja</dt><dd>05.11.2026</dd><small>Wyniki Q3 2026 · po sesji</small></div>
+</section>
+<section id="wyniki" class="section"><h2><span class="chapter">01</span> Wyniki kwartalne</h2><p class="subtitle">Dziewięć ostatnich kwartałów, od Q2 2024 do Q2 2026. Przychody i EBITDA oraz skonsolidowany zysk netto całej grupy.</p>
+<div class="panel"><strong>Przychody ze sprzedaży, mld zł</strong><div class="chart" role="img" aria-label="Wykres przychodów Dino Polska od Q2 2024 do Q2 2026; najwyższe 9,53 mld zł w Q2 2026."><div class="bar-item " title="Q2 2024: 7 243 008 tys. zł przychodów; marża EBITDA 7,2%"><div class="bar-value">7,24 mld</div><div class="bar-track"><div class="bar" style="height:72.4%"></div></div><div class="bar-label">Q2<br>2024</div></div>
+<div class="bar-item " title="Q3 2024: 7 607 380 tys. zł przychodów; marża EBITDA 8,9%"><div class="bar-value">7,61 mld</div><div class="bar-track"><div class="bar" style="height:76.1%"></div></div><div class="bar-label">Q3<br>2024</div></div>
+<div class="bar-item " title="Q4 2024: 7 752 158 tys. zł przychodów; marża EBITDA 8,1%"><div class="bar-value">7,75 mld</div><div class="bar-track"><div class="bar" style="height:77.5%"></div></div><div class="bar-label">Q4<br>2024</div></div>
+<div class="bar-item " title="Q1 2025: 7 354 297 tys. zł przychodów; marża EBITDA 7,2%"><div class="bar-value">7,35 mld</div><div class="bar-track"><div class="bar" style="height:73.5%"></div></div><div class="bar-label">Q1<br>2025</div></div>
+<div class="bar-item " title="Q2 2025: 8 622 573 tys. zł przychodów; marża EBITDA 7,5%"><div class="bar-value">8,62 mld</div><div class="bar-track"><div class="bar" style="height:86.2%"></div></div><div class="bar-label">Q2<br>2025</div></div>
+<div class="bar-item " title="Q3 2025: 8 761 234 tys. zł przychodów; marża EBITDA 8,6%"><div class="bar-value">8,76 mld</div><div class="bar-track"><div class="bar" style="height:87.6%"></div></div><div class="bar-label">Q3<br>2025</div></div>
+<div class="bar-item " title="Q4 2025: 8 896 051 tys. zł przychodów; marża EBITDA 6,9%"><div class="bar-value">8,90 mld</div><div class="bar-track"><div class="bar" style="height:89.0%"></div></div><div class="bar-label">Q4<br>2025</div></div>
+<div class="bar-item " title="Q1 2026: 8 439 401 tys. zł przychodów; marża EBITDA 6,7%"><div class="bar-value">8,44 mld</div><div class="bar-track"><div class="bar" style="height:84.4%"></div></div><div class="bar-label">Q1<br>2026</div></div>
+<div class="bar-item bar-latest" title="Q2 2026: 9 531 400 tys. zł przychodów; marża EBITDA 7,0%"><div class="bar-value">9,53 mld</div><div class="bar-track"><div class="bar" style="height:95.3%"></div></div><div class="bar-label">Q2<br>2026</div></div></div><div class="insights"><span>Q2 2026 · wzrost przychodów 10,5% r/r</span><span>Q2 2026 · wzrost EBITDA 2,2% r/r</span><span>Q2 2026 · zmiana zysku netto 0,6% r/r</span></div></div>
+<div style="height:19px"></div>
+<div class="table-container"><table><thead><tr><th scope="col">Kwartał</th><th scope="col">Rok</th><th scope="col" style="text-align:right">Przychód (tys. zł)</th><th scope="col" style="text-align:right">EBITDA (tys. zł)</th><th scope="col" style="text-align:right">Zysk netto (tys. zł)</th><th scope="col">Data publikacji</th><th scope="col">Raport źródłowy</th></tr></thead><tbody><tr class="latest"><td><span class="qbadge">Q2</span></td><td><strong>2026</strong></td><td class="num">9 531 400</td><td class="num">665 057</td><td class="num">399 972</td><td class="date">20.08.2026</td><td><a href="https://grupadino.pl/wp-content/uploads/2026/08/202606-SSF-MSSF-GK-Dino-Polska.pdf" target="_blank" rel="noopener noreferrer" >Zobacz raport <span aria-hidden="true">↗</span></a></td></tr>
+<tr ><td><span class="qbadge">Q1</span></td><td><strong>2026</strong></td><td class="num">8 439 401</td><td class="num">564 927</td><td class="num">316 298</td><td class="date">14.05.2026</td><td><a href="https://grupadino.pl/wp-content/uploads/2026/05/DINO-POLSKA-S.A.-raport-za-I-kw.-2026.pdf" target="_blank" rel="noopener noreferrer" >Zobacz raport <span aria-hidden="true">↗</span></a></td></tr>
+<tr ><td><span class="qbadge">Q4</span></td><td><strong>2025</strong></td><td class="num">8 896 051</td><td class="num">613 506</td><td class="num">367 750</td><td class="date">26.03.2026</td><td><a href="https://grupadino.pl/wp-content/uploads/2026/03/2025_Grupa_Dino_Polska_Sprawozdanie_Finansowe_MSSF.zip" target="_blank" rel="noopener noreferrer" >Zobacz raport <span aria-hidden="true">↗</span></a><small class="derived">Q4 wyliczony</small></td></tr>
+<tr ><td><span class="qbadge">Q3</span></td><td><strong>2025</strong></td><td class="num">8 761 234</td><td class="num">750 048</td><td class="num">482 085</td><td class="date">06.11.2025</td><td><a href="https://grupadino.pl/wp-content/uploads/2025/11/Dino-Polska-S.A.-raport-za-III-kw.-2025.pdf" target="_blank" rel="noopener noreferrer" >Zobacz raport <span aria-hidden="true">↗</span></a></td></tr>
+<tr ><td><span class="qbadge">Q2</span></td><td><strong>2025</strong></td><td class="num">8 622 573</td><td class="num">650 499</td><td class="num">397 583</td><td class="date">21.08.2025</td><td><a href="https://grupadino.pl/wp-content/uploads/2025/08/202506-SSF-MSSF-GK-Dino-Polska.pdf" target="_blank" rel="noopener noreferrer" >Zobacz raport <span aria-hidden="true">↗</span></a></td></tr>
+<tr ><td><span class="qbadge">Q1</span></td><td><strong>2025</strong></td><td class="num">7 354 297</td><td class="num">532 260</td><td class="num">311 379</td><td class="date">15.05.2025</td><td><a href="https://grupadino.pl/wp-content/uploads/2025/05/DINO-POLSKA-S.A.-raport-za-I-kw.-2025.pdf" target="_blank" rel="noopener noreferrer" >Zobacz raport <span aria-hidden="true">↗</span></a></td></tr>
+<tr ><td><span class="qbadge">Q4</span></td><td><strong>2024</strong></td><td class="num">7 752 158</td><td class="num">631 400</td><td class="num">423 844</td><td class="date">14.04.2025</td><td><a href="https://grupadino.pl/wp-content/uploads/2025/04/2024_Grupa_Dino_Polska_Sprawozdanie_Finansowe_MSSF.zip" target="_blank" rel="noopener noreferrer" >Zobacz raport <span aria-hidden="true">↗</span></a><small class="derived">Q4 wyliczony</small></td></tr>
+<tr ><td><span class="qbadge">Q3</span></td><td><strong>2024</strong></td><td class="num">7 607 380</td><td class="num">673 368</td><td class="num">438 534</td><td class="date">07.11.2024</td><td><a href="https://grupadino.pl/wp-content/uploads/2024/11/Dino-Polska-S.A.-raport-za-III-kw.-2024_.pdf" target="_blank" rel="noopener noreferrer" >Zobacz raport <span aria-hidden="true">↗</span></a></td></tr>
+<tr ><td><span class="qbadge">Q2</span></td><td><strong>2024</strong></td><td class="num">7 243 008</td><td class="num">520 644</td><td class="num">348 103</td><td class="date">22.08.2024</td><td><a href="https://grupadino.pl/wp-content/uploads/2024/08/202406-SSF-MSSF-GK-Dino-Polska.pdf" target="_blank" rel="noopener noreferrer" >Zobacz raport <span aria-hidden="true">↗</span></a></td></tr></tbody></table></div>
+<p class="note">Wszystkie kwoty w tabeli są podane w tysiącach złotych, bez zaokrąglania. Q4 2024 i Q4 2025 obliczono jako wynik całego roku pomniejszony o pierwsze dziewięć miesięcy; Dino nie publikuje odrębnego raportu kwartalnego za Q4. Dla Q2 wykorzystano dane za okres od 1 kwietnia do 30 czerwca z raportów półrocznych. Zysk netto dotyczy całej grupy, w tym udziałów niekontrolujących. Dane nie są prognozami.</p>
+</section>
+<section id="kalendarz" class="section"><h2><span class="chapter">02</span> Najbliższe wydarzenia</h2><p class="subtitle">Wyłącznie terminy potwierdzone przez emitenta. Brak daty nie oznacza, że wydarzenie na pewno się nie odbędzie.</p>
+<div class="table-container"><table style="min-width:810px"><thead><tr><th>Data</th><th>Typ</th><th>Informacja</th><th>Status</th><th>Źródło</th></tr></thead><tbody><tr><td class="date">05.11.2026</td><td><span class="type wyniki">wyniki</span></td><td>Publikacja skonsolidowanego raportu za III kwartał 2026 r. po zamknięciu sesji.</td><td><span class="status confirmed">Potwierdzone</span></td><td><a href="https://grupadino.pl/kalendarz/kalendarz-2026/" target="_blank" rel="noopener noreferrer" >Kalendarz emitenta <span aria-hidden="true">↗</span></a></td></tr>
+<tr><td class="date">Nie ogłoszono</td><td><span class="type dywidenda">dywidenda</span></td><td>Brak opublikowanego przyszłego terminu dnia dywidendy lub wypłaty.</td><td><span class="status pending">Brak terminu</span></td><td><a href="https://grupadino.pl/raporty-gpw/raporty-biezace" target="_blank" rel="noopener noreferrer" >Raporty bieżące <span aria-hidden="true">↗</span></a></td></tr>
+<tr><td class="date">Nie ogłoszono</td><td><span class="type meeting">meeting</span></td><td>Nie ogłoszono daty kolejnego walnego zgromadzenia akcjonariuszy.</td><td><span class="status pending">Brak terminu</span></td><td><a href="https://grupadino.pl/kalendarz/kalendarz-2026/" target="_blank" rel="noopener noreferrer" >Kalendarz emitenta <span aria-hidden="true">↗</span></a></td></tr>
+<tr><td class="date">Nie ogłoszono</td><td><span class="type conference">conference</span></td><td>Brak potwierdzonej daty przyszłej konferencji inwestorskiej.</td><td><span class="status pending">Brak terminu</span></td><td><a href="https://grupadino.pl/kalendarz/kalendarz-2026/" target="_blank" rel="noopener noreferrer" >Kalendarz emitenta <span aria-hidden="true">↗</span></a></td></tr></tbody></table></div></section>
+<section id="linki" class="section"><h2><span class="chapter">03</span> Profile i notowania</h2><p class="subtitle">Szybki dostęp do serwisów giełdowych i informacyjnych. Katalog PAP Biznes może wymagać wyszukania spółki.</p>
+<div class="sources"><a class="source-card" href="https://www.gpw.pl/spolka?isin=PLDINPL00011" rel="noopener noreferrer" target="_blank"><span class="source-name">GPW</span><span class="source-desc">Profil emitenta</span><span class="source-arrow" aria-hidden="true">↗</span></a>
+<a class="source-card" href="https://biznes.pap.pl/profile_spolek" rel="noopener noreferrer" target="_blank"><span class="source-name">PAP Biznes</span><span class="source-desc">Katalog profili spółek · wyszukaj Dino Polska</span><span class="source-arrow" aria-hidden="true">↗</span></a>
+<a class="source-card" href="https://pl.investing.com/equities/dino-polska-sa" rel="noopener noreferrer" target="_blank"><span class="source-name">Investing.com</span><span class="source-desc">Dino Polska SA · DNP</span><span class="source-arrow" aria-hidden="true">↗</span></a>
+<a class="source-card" href="https://stooq.pl/q/?s=dnp" rel="noopener noreferrer" target="_blank"><span class="source-name">Stooq</span><span class="source-desc">Notowania DNP</span><span class="source-arrow" aria-hidden="true">↗</span></a>
+<a class="source-card" href="https://stooq.pl/search/?type=nws&amp;q=Dino%20Polska" rel="noopener noreferrer" target="_blank"><span class="source-name">Stooq News</span><span class="source-desc">Wiadomości o Dino Polska</span><span class="source-arrow" aria-hidden="true">↗</span></a></div>
+</section>
+<section id="metodologia" class="section"><h2><span class="chapter">04</span> Źródła i metodologia</h2>
+<div class="panel" style="font-size:.92rem">
+<p>Podstawą zestawienia są <a href="https://grupadino.pl/raporty-gpw/raporty-okresowe/" target="_blank" rel="noopener noreferrer">oficjalne skonsolidowane sprawozdania finansowe Dino Polska za lata 2024–2026</a>. Każdy wiersz tabeli zawiera odnośnik do konkretnego dokumentu źródłowego, a dla Q4 do raportu rocznego zawierającego dane potrzebne do wyliczenia kwartału.</p>
+<p>Terminy przyszłych publikacji zweryfikowano według <a href="https://grupadino.pl/kalendarz/kalendarz-2026/" target="_blank" rel="noopener noreferrer">kalendarza inwestorskiego 2026</a> oraz <a href="https://grupadino.pl/raport-biezacy-nr-1-2026-terminy-publikacji-raportow-okresowych-dino-polska-s-a-w-2026-r/" target="_blank" rel="noopener noreferrer">raportu bieżącego nr 1/2026</a>. Stan publikacji i harmonogramu: <strong>27 października 2026</strong>.</p>
+<p>Raport jest publiczny, nie zawiera hasła, nie pobiera danych automatycznie i nie jest rekomendacją inwestycyjną. Najbliższy raport za Q3 2026 będzie wymagał aktualizacji zestawienia po 5 listopada 2026.</p>
+</div></section>
+<footer class="footer">DINO POLSKA · GPW: DNP · Publiczny raport informacyjny · Ostatnia aktualizacja: 27.10.2026<br>Dokument oparty na danych emitenta. Materiał nie stanowi rekomendacji kupna ani sprzedaży instrumentów finansowych.</footer>
+</main></body></html>

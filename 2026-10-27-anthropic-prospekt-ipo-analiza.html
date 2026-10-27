@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1120">
+<meta name="description" content="Anthropic IPO 2026: analiza prospektu SEC S-1, przychody, straty, gotówka, kontrakty na moc obliczeniową, produkty Claude, ryzyka i wnioski inwestorskie.">
+<title>Anthropic: prospekt IPO pod lupą | Raport 27.10.2026</title>
+<style>
+:root{color-scheme:dark;--bg:#090f1c;--card:#121b2b;--card2:#162236;--line:#29364c;--text:#eff4fc;--muted:#a6b6ce;--white:#fff;--teal:#55e0c4;--gold:#f6c66f;--rose:#ff8e9d;--blue:#8ab9ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse 900px 550px at 78% -180px,#17324e 0%,transparent 69%),var(--bg);color:var(--text);line-height:1.68}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button,input{font:inherit}::selection{background:#286557}
+.container{width:min(1190px,calc(100% - 40px));margin:auto}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:9;background:rgba(9,15,28,.91);backdrop-filter:blur(15px)}
+.topin{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.brand{font-size:13px;font-weight:850;letter-spacing:.17em;color:var(--teal)}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{font-size:12px;color:#b8cadf;white-space:nowrap}
+.hero{padding:73px 0 42px}.kicker{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+h1{font-size:clamp(40px,5.8vw,73px);font-weight:820;letter-spacing:-.052em;line-height:1.07;max-width:1000px;margin:15px 0 24px}h1 em{font-style:normal;color:var(--teal)}
+.lead{max-width:850px;color:#c2d0e3;font-size:clamp(16px,1.65vw,20px);line-height:1.65}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 0}.tag{font-size:12px;background:#17283c;border:1px solid #35516b;padding:7px 11px;border-radius:99px;color:#d0deec}
+.warning{border:1px solid #78532e;background:linear-gradient(90deg,rgba(116,73,23,.2),rgba(255,185,65,.05));border-radius:15px;padding:18px 21px;margin:30px 0 9px;color:#f4dcac;font-size:14px}
+section{scroll-margin-top:95px;padding:26px 0}.sh{margin:0 0 20px}.sh h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.035em;line-height:1.2;margin:7px 0}.sh p{max-width:870px;color:var(--muted);margin:0}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.kpi{border:1px solid #304156;background:linear-gradient(155deg,#17283e,#101a2a);padding:23px;border-radius:17px;min-height:156px}
+.kpi .lbl{font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;font-weight:750}.kpi .num{font-size:clamp(29px,3vw,43px);font-weight:840;letter-spacing:-.05em;line-height:1.2;margin:12px 0}.kpi .hint{font-size:12px;color:#becddd}.t{color:var(--teal)}.r{color:var(--rose)}.g{color:var(--gold)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:24px}.panel h3{margin:0 0 8px;font-size:18px;line-height:1.3}.panel p{color:#c2d0e0;margin:10px 0}.panel p:last-child{margin-bottom:0}
+.badge{display:inline-flex;border-radius:5px;padding:3px 7px;font-size:10px;font-weight:900;letter-spacing:.09em;background:#22394c;color:var(--teal);text-transform:uppercase;margin-bottom:11px}.badge.risk{color:#ffb9c4;background:#422935}.badge.idea{color:#f4cf8a;background:#3c3427}
+.bigquote{border-left:3px solid var(--teal);padding:16px 21px;background:rgba(85,224,196,.055);border-radius:0 12px 12px 0;font-size:18px;font-weight:640;line-height:1.6;margin:22px 0}
+.small{font-size:12px;color:var(--muted)}.muted{color:var(--muted)}
+.chartpanel{border:1px solid var(--line);background:var(--card);padding:25px;border-radius:18px}.chartpanel h3{margin:0}.chartpanel .small{margin-top:4px}
+.barplot{display:flex;gap:15px;align-items:end;height:265px;margin:40px 7px 3px;border-bottom:1px solid #42516a;padding:0 8px 0;position:relative}
+.barplot:before{content:"";position:absolute;inset:0 0 1px;background:linear-gradient(to top,transparent 24.6%,rgba(255,255,255,.06) 24.8%,transparent 25%,transparent 49.6%,rgba(255,255,255,.06) 49.8%,transparent 50%,transparent 74.6%,rgba(255,255,255,.06) 74.8%,transparent 75%);pointer-events:none}
+.barcol{flex:1;min-width:0;height:100%;display:flex;align-items:flex-end;justify-content:flex-end;flex-direction:column;position:relative}
+.bar{width:min(80%,75px);margin:0 auto;height:var(--h);min-height:5px;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#66ead0,#258b94);position:relative;box-shadow:0 0 18px rgba(48,219,192,.12)}
+.bar.prior{background:linear-gradient(180deg,#91a2d2,#465675)}.barval{position:absolute;bottom:calc(100% + 7px);left:50%;transform:translateX(-50%);font-size:12px;color:#f5fbff;white-space:nowrap;font-weight:780}.barlabel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);font-size:11px;color:#a3b5c9;white-space:nowrap;text-align:center}
+.plotsub{padding:45px 0 0;color:var(--muted);font-size:12px}.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+table{width:100%;border-collapse:collapse;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}thead{background:#1a293d}th,td{padding:13px 16px;border-bottom:1px solid #2a3a50;font-size:13px}th{color:#b5c8db;font-weight:700}th:first-child,td:first-child{text-align:left}tbody tr:last-child td{border:0}tbody tr:hover{background:#1a2940}td.label{font-weight:700;color:#e5edfa}.negative{color:var(--rose)}.positive{color:var(--teal)}.strong{font-weight:850;color:#f6faff}
+.meter{height:20px;background:#334056;border-radius:99px;overflow:hidden;display:flex;margin:24px 0 11px}.part1{background:#65e4ca}.part2{background:#86affb}.legend{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13px;color:#b6c6db}.dot{width:10px;height:10px;display:inline-block;border-radius:50%;margin-right:7px}
+.metriclist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:15px 0 0}.metriclist div{background:#1a2940;border-radius:12px;padding:15px}.metriclist strong{font-size:24px;letter-spacing:-.025em;display:block}.metriclist span{color:var(--muted);font-size:12px}
+.callout{background:linear-gradient(90deg,#163445,#162137);border:1px solid #31566a;padding:20px 24px;border-radius:14px;margin:20px 0}
+.callout.negativecall{background:linear-gradient(90deg,#382232,#181f30);border-color:#6a3949}
+.colortab{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}.colortab div{padding:17px;background:#1a2940;border:1px solid #2b3d55;border-radius:12px}.colortab b{font-size:23px;display:block}.colortab span{font-size:12px;color:var(--muted)}
+ol.steps{padding:0;list-style:none;counter-reset:n}.steps li{counter-increment:n;display:flex;gap:12px;padding:13px 0;border-top:1px solid var(--line)}.steps li:before{content:counter(n,decimal-leading-zero);font-size:13px;font-weight:800;color:var(--teal)}.steps li span{color:#c1cfe0}.steps li b{color:#fff}
+.valuation{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,350px);gap:25px;align-items:center}
+input[type="range"]{width:100%;accent-color:var(--teal);margin:22px 0}label{font-size:13px;color:var(--muted);display:block}
+.valout{padding:23px;background:#132e34;border:1px solid #376b6a;border-radius:15px;text-align:center}.valout .big{font-size:clamp(40px,4.5vw,58px);font-weight:850;color:var(--teal);letter-spacing:-.06em}
+.verdict{background:linear-gradient(135deg,#163544,#111d2e);border:1px solid #3c6672;border-radius:18px;padding:28px}.verdict h3{margin:0 0 12px;font-size:24px}
+.linkbox a{display:inline-flex;padding:12px 15px;border:1px solid #45617e;border-radius:9px;margin:5px 8px 5px 0;color:#c4e1fb;font-size:13px}
+.sources{font-size:13px;color:#bfcee1}.sources li{margin:7px 0}.sources a{overflow-wrap:anywhere}
+.footer{border-top:1px solid var(--line);padding:30px 0 45px;margin-top:35px;font-size:12px;color:var(--muted)}.footflex{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:850px){.kpis,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2,.valuation{grid-template-columns:1fr}nav{gap:10px}.hero{padding-top:48px}}@media(max-width:540px){.container{width:min(100% - 28px,1190px)}.kpis,.grid3,.colortab,.metriclist{grid-template-columns:1fr}.topin{padding:14px 0}nav{gap:12px}.hero{padding-top:33px}.panel,.chartpanel{padding:19px}.barplot{gap:5px;height:190px;margin-top:42px}.barval{font-size:10px}.barlabel{font-size:10px}h1{font-size:40px}}@media print{header.top{position:static}body{background:#fff;color:#111}section{break-inside:avoid}.panel,.chartpanel,.kpi{background:#fff;border:1px solid #ccc;color:#111}.muted,.panel p,.small{color:#333}.barlabel{color:#222}.warning{color:#333}}
+</style>
+</head>
+<body>
+<header class="top"><div class="container topin"><div class="brand">SEBA.INFO / ANALIZA INWESTYCYJNA</div><nav aria-label="Sekcje raportu"><a href="#teza">Teza</a><a href="#finanse">Finanse</a><a href="#model">Model biznesowy</a><a href="#compute">Infrastruktura</a><a href="#ryzyka">Ryzyka</a><a href="#wycena">Wycena</a><a href="#wnioski">Wnioski</a></nav></div></header>
+<main class="container">
+<div class="hero">
+<div class="kicker">IPO WATCH / NASDAQ: ANT / FORM S-1 z 26 października 2026</div>
+<h1>Anthropic: <em>rewolucja przychodowa</em> i rachunek za przyszłość AI.</h1>
+<p class="lead">Analiza prospektu giełdowego twórcy Claude. Co mówi o jakości biznesu, marżach, kosztach mocy obliczeniowej, kontroli nad spółką i perspektywach akcjonariusza? Dane, kontekst oraz niezależne wnioski.</p>
+<div class="tags"><span class="tag">Raport: 27.10.2026</span><span class="tag">Waluta: USD</span><span class="tag">Dane finansowe do 30.06.2026</span><span class="tag">Dane operacyjne również do 30.09.2026</span><span class="tag">Status: wstępny prospekt, brak ceny IPO</span></div>
+</div>
+<div class="warning"><b>Ważne:</b> to <b>wstępne zgłoszenie S-1</b>, a nie zakończona oferta. Nie określono jeszcze ceny, liczby sprzedawanych akcji, wartości IPO ani ostatecznego rozwodnienia. Nie da się dziś wiarygodnie ocenić, czy akcje ANT będą tanie. Liczby finansowe w raporcie są w dolarach USA. <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm" target="_blank" rel="noopener noreferrer">Pełny prospekt SEC ↗</a></div>
+<section id="teza">
+<div class="sh"><div class="kicker">01 / Obraz w 30 sekund</div><h2>Sześć liczb, które zmieniają postrzeganie Anthropic</h2><p>Wyniki GAAP z SEC. Dopiski i wskaźniki wyliczone na podstawie prospektu są wyraźnie oznaczone.</p></div>
+<div class="kpis">
+<div class="kpi"><div class="lbl">Przychód w I półroczu 2026</div><div class="num t">$16,29 mld</div><div class="hint">+1 300% rok do roku. W H1 2025: $1,16 mld.</div></div>
+<div class="kpi"><div class="lbl">Przychód w II kwartale 2026</div><div class="num">$11,56 mld</div><div class="hint">W Q1 2026: $4,73 mld. Wzrost kwartał do kwartału: 144%.</div></div>
+<div class="kpi"><div class="lbl">Wynik operacyjny w Q2 2026</div><div class="num t">+$974 mln</div><div class="hint">Pierwszy dodatni kwartał w ujawnionym zestawieniu GAAP.</div></div>
+<div class="kpi"><div class="lbl">Wynik netto w H1 2026</div><div class="num r">−$80,75 mld</div><div class="hint">W tym −$72,39 mld przeszacowań instrumentów finansowych.</div></div>
+<div class="kpi"><div class="lbl">Gotówka i inwestycje krótkoterminowe</div><div class="num">$131,65 mld</div><div class="hint">Stan na 30 czerwca 2026, po wielkich rundach finansowania.</div></div>
+<div class="kpi"><div class="lbl">Net revenue retention</div><div class="num g">~900%</div><div class="hint">Wskaźnik dla określonej kohorty klientów, wg metodologii spółki.</div></div>
+</div>
+<div class="bigquote">Główna teza: Anthropic udowadnia realny popyt na AI w przedsiębiorstwach i szybko poprawia ekonomikę operacyjną. Jednocześnie przyjmuje ogromne, wieloletnie zobowiązania na infrastrukturę. O przyszłej stopie zwrotu z akcji zdecydują <strong>cena IPO, jakość gotówki i zdolność utrzymania marży przy rosnących kosztach compute</strong>.</div>
+</section>
+<section id="finanse">
+<div class="sh"><div class="kicker">02 / Trajektoria</div><h2>Przychody wystrzeliły, rentowność dopiero się stabilizuje</h2><p>Wykres przedstawia kwartalne przychody za okres Q1 2025 do Q2 2026, w mld USD. Q3 2026 pozostaje niewypełnione kwotowo w tej wersji S-1.</p></div>
+<div class="chartpanel"><h3>Przychody kwartalne</h3><p class="small">Zestawienie MD&amp;A, s. 156–158 S-1; wartości zaokrąglone do dwóch miejsc.</p>
+<div class="barplot" role="img" aria-label="Przychody w mld USD: Q1 2025 0,376, Q2 2025 0,787, Q3 2025 1,382, Q4 2025 2,040, Q1 2026 4,731, Q2 2026 11,555">
+<div class="barcol"><div class="bar prior" style="--h:3.3%"><span class="barval">0,38</span></div><span class="barlabel">Q1 '25</span></div>
+<div class="barcol"><div class="bar prior" style="--h:6.8%"><span class="barval">0,79</span></div><span class="barlabel">Q2 '25</span></div>
+<div class="barcol"><div class="bar prior" style="--h:12%"><span class="barval">1,38</span></div><span class="barlabel">Q3 '25</span></div>
+<div class="barcol"><div class="bar prior" style="--h:17.7%"><span class="barval">2,04</span></div><span class="barlabel">Q4 '25</span></div>
+<div class="barcol"><div class="bar" style="--h:41%"><span class="barval">4,73</span></div><span class="barlabel">Q1 '26</span></div>
+<div class="barcol"><div class="bar" style="--h:100%"><span class="barval">11,56</span></div><span class="barlabel">Q2 '26</span></div>
+</div>
+<p class="plotsub">Q1 2026 był większy przychodowo niż cały rok 2025 ($4,73 vs $4,59 mld). To wyjątkowe tempo wzrostu, ale trudne do utrzymania.</p>
+</div>
+<div class="grid2" style="margin-top:16px">
+<div class="panel"><span class="badge">Wynik operacyjny</span><h3>Od −$1,67 mld do +$0,97 mld w kwartał</h3><p>Q1 2026 przyniósł stratę operacyjną $1,67 mld, a Q2 zysk operacyjny $974 mln. Łącznie H1 zakończyło się stratą operacyjną $693 mln, co stanowi około <b>4,3% przychodu</b> (nasze obliczenie).</p><p>To wyraźna poprawa wobec H1 2025, gdy strata operacyjna wyniosła $2,14 mld przy sprzedaży $1,16 mld.</p></div>
+<div class="panel"><span class="badge idea">Interpretacja</span><h3>Nie mylić skalowania z trwałą marżą</h3><p>Spółka wyprzedająco zamawia moce obliczeniowe. Koszt nowych klastrów pojawia się przy ich uruchomieniu, a wpływy klientów mogą przyjść później. Jeden zyskowny kwartał nie potwierdza jeszcze stabilnej marży w całym cyklu inwestycyjnym.</p><p><b>Obserwować:</b> wynik operacyjny i koszt compute/przychód przez kolejne 4–6 kwartałów.</p></div>
+</div>
+<h3 style="margin:35px 0 12px">Rachunek wyników: dane ze sprawozdania, mln USD</h3>
+<div class="tablewrap"><table><thead><tr><th>Pozycja</th><th>2023</th><th>2024</th><th>2025</th><th>H1 2025</th><th>H1 2026</th></tr></thead><tbody>
+<tr><td class="label">Przychód</td><td>41</td><td>386</td><td>4 585</td><td>1 163</td><td class="strong">16 286</td></tr>
+<tr><td>Compute i infrastruktura</td><td>433</td><td>2 522</td><td>7 326</td><td>2 334</td><td>8 945</td></tr>
+<tr><td>Personel</td><td>95</td><td>454</td><td>1 839</td><td>538</td><td>3 152</td></tr>
+<tr><td>Ugoda Bartz</td><td>0</td><td>0</td><td>1 500</td><td>0</td><td>0</td></tr>
+<tr><td>Sprzedaż, marketing, partnerzy</td><td>2</td><td>43</td><td>568</td><td>120</td><td>3 168</td></tr>
+<tr><td>Inne operacyjne i administracja</td><td>62</td><td>347</td><td>1 412</td><td>306</td><td>1 714</td></tr>
+<tr><td class="label">Razem koszty operacyjne</td><td>592</td><td>3 366</td><td>12 645</td><td>3 298</td><td>16 979</td></tr>
+<tr><td class="label">Wynik operacyjny</td><td class="negative">−551</td><td class="negative">−2 980</td><td class="negative">−8 060</td><td class="negative">−2 135</td><td class="negative">−693</td></tr>
+<tr><td class="label">Wynik netto</td><td class="negative">−1 531</td><td class="negative">−8 309</td><td class="negative">−41 965</td><td class="negative">−12 969</td><td class="negative">−80 748</td></tr>
+</tbody></table></div><p class="small">Źródło: S-1, Consolidated Statements of Operations Data, s. 22–23 i F-7. Kwoty nie są ujednolicone do pełnych lat, więc nie należy porównywać H1 2026 z FY2025 bez uwzględnienia okresu.</p>
+</section>
+<section id="strata">
+<div class="sh"><div class="kicker">03 / Najbardziej myląca liczba</div><h2>Skąd wzięła się strata netto $80,7 mld?</h2><p>Większa część to księgowe zmiany wartości instrumentów finansowania, a nie pieniądze wydane na trenowanie modeli. To nie znaczy jednak, że ryzyko kapitałowe znika.</p></div>
+<div class="grid2">
+<div class="panel"><span class="badge risk">Rozbicie H1 2026, mld USD</span><div class="tablewrap"><table><tbody>
+<tr><td>Strata operacyjna</td><td class="negative">−0,693</td></tr>
+<tr><td>Przychód odsetkowy</td><td class="positive">+1,111</td></tr>
+<tr><td>Zmiana wartości obligacji zamiennych, derywatów i SAFE</td><td class="negative">−72,388</td></tr>
+<tr><td>Pozostałe przychody/koszty netto</td><td class="negative">−8,757</td></tr>
+<tr><td>Podatek</td><td class="negative">−0,021</td></tr>
+<tr><td class="label">Wynik netto GAAP</td><td class="negative strong">−80,748</td></tr>
+</tbody></table></div><p class="small">Około <b>89,6%</b> straty netto odpowiada pierwsza pozycja przeszacowań (nasze obliczenie). W „pozostałych” ujęto też istotne wyceny instrumentów finansowych, dlatego całość rozliczeń jest bardziej złożona.</p></div>
+<div class="panel"><span class="badge idea">Mechanizm</span><h3>Im wyższa wycena Anthropic, tym większa mogła być strata księgowa</h3><p>Spółka wyceniała część obligacji zamiennych według wartości godziwej. Wraz ze wzrostem wyceny samego Anthropic wzrastała wartość zobowiązania wobec posiadaczy tych instrumentów. Zmianę księgowano w rachunku wyników jako koszt.</p><p>Na 30.06.2026 wartość księgowa obligacji zamiennych wynosiła około <b>$108,6 mld</b>, przy kapitale nominalnym obligacji Amazona około <b>$6,2 mld</b>. Planowana konwersja znacznej części finansowania na akcje oznacza <b>rozwodnienie udziałów</b>, nie zwykłą spłatę takiej kwoty gotówką.</p></div>
+</div>
+<div class="callout"><b>Wniosek finansowy:</b> do oceny jakości biznesu trzeba osobno analizować wynik operacyjny GAAP, wyniki skorygowane non-GAAP, przepływy pieniężne oraz obciążenia finansowaniem. Przekształcenie −$80,7 mld w „małą stratę” przez mechaniczne usunięcie całych kosztów księgowych też byłoby błędem.</div>
+<div class="grid3">
+<div class="panel"><span class="badge">Gotówka z operacji</span><h3 class="t">+$3,93 mld</h3><p>Operating cash flow w H1 2026. Poprawa w porównaniu z −$1,51 mld w H1 2025. Istotne są również przesunięcia w kapitale obrotowym.</p></div>
+<div class="panel"><span class="badge">Przepływy inwestycyjne</span><h3 class="r">−$17,18 mld</h3><p>Cash flow z inwestycji, nie to samo co wydatki na serwery. Obejmuje również ruchy lokat i papierów wartościowych. Nie należy bezpośrednio utożsamiać go z capexem.</p></div>
+<div class="panel"><span class="badge">Zakup aktywów trwałych</span><h3>$482 mln</h3><p>Capex księgowy H1 2026, według cash flow. Uproszczony FCF (OCF minus capex) to około <b>+$3,45 mld</b>. W przyszłości może mocno spaść wraz z inwestycjami w infrastrukturę.</p></div>
+</div>
+</section>
+<section id="model">
+<div class="sh"><div class="kicker">04 / Model biznesowy</div><h2>Anthropic sprzedaje przede wszystkim wykorzystanie modeli, nie abonament</h2><p>Przychód oparty na zużyciu rośnie wraz z zadaniami wykonywanymi przez agentów, ale trudniej go przewidzieć i powiązać z tradycyjnymi metrykami SaaS.</p></div>
+<div class="grid2">
+<div class="panel"><span class="badge">Struktura przychodów H1 2026</span><h3>80% usage, 20% subskrypcje</h3><div class="meter" role="img" aria-label="80 procent przychodu ze zużycia oraz 20 procent z subskrypcji"><span class="part1" style="width:80.2%"></span><span class="part2" style="width:19.8%"></span></div><div class="legend"><span><i class="dot" style="background:#65e4ca"></i>Zużycie: $13,064 mld</span><span><i class="dot" style="background:#86affb"></i>Subskrypcje: $3,222 mld</span></div><p>Chmurowe marketplace AWS, GCP i Azure pośredniczyły w około <b>48% przychodu</b> H1 2026. Anthropic wykazuje sprzedaż w wartości brutto wobec opłat kanałowych, które obciążają koszty sprzedaży i partnerstw.</p></div>
+<div class="panel"><span class="badge">Klienci korporacyjni, 30.09.2026</span><div class="metriclist"><div><strong>11 900+</strong><span>klientów z wydatkiem ≥ $100 tys. TTM</span></div><div><strong>1 900+</strong><span>klientów z wydatkiem ≥ $1 mln TTM</span></div><div><strong>~250</strong><span>klientów z wydatkiem ≥ $10 mln TTM</span></div><div><strong>&gt;50%</strong><span>firm Fortune 500 w grupie ≥ $100 tys. TTM</span></div></div><p class="small">TTM oznacza ostatnie 12 miesięcy. Progi dotyczą przychodów Anthropic generowanych przez danego klienta.</p></div>
+</div>
+<div class="grid3" style="margin-top:16px">
+<div class="panel"><span class="badge">NRR ~900%</span><h3>Silna ekspansja, ale nietypowa baza</h3><p>Metryka porównuje przychody z wybranej kohorty klientów w kwartale wrześniowym 2026 z tą samą kohortą rok wcześniej i nie obejmuje Claude Pro/Max. Tak wysoki wynik jest częściowo efektem bardzo małej bazy. Nie traktować go jako prognozy wzrostu o 9 razy rocznie.</p></div>
+<div class="panel"><span class="badge">Enterprise</span><h3>Wiele sposobów dotarcia do klienta</h3><p>Claude Platform/API, Claude Code, Cowork i kanały cloud. Ponad 50% większych klientów korzystało zarówno z platformy, jak i co najmniej jednej aplikacji w Q3 2026. To zwiększa możliwość rozszerzania zastosowań w ramach jednego konta.</p></div>
+<div class="panel"><span class="badge idea">Ciekawostka</span><h3>Agenci zmieniają jednostkę konsumpcji</h3><p>W Q3 2026 użytkownicy Claude Enterprise bez Claude Code wydawali średnio poniżej $75 miesięcznie; 5% najaktywniejszych używających Claude Code około 20 razy więcej. Przesunięcie z czatu do agentów jest fundamentalne dla monetyzacji.</p></div>
+</div>
+</section>
+<section id="produkty">
+<div class="sh"><div class="kicker">05 / Produkt i technologia</div><h2>Claude jako pracownik cyfrowy, nie tylko interfejs do LLM</h2></div>
+<div class="grid2">
+<div class="panel"><span class="badge">Portfolio</span><h3>Cztery klasy modeli i własne aplikacje</h3><p>Prospekt opisuje rodziny Mythos (w tym Fable), Opus, Sonnet i Haiku, skalowane pod kątem jakości, kosztu i szybkości. Dostęp zapewniają Claude Platform, aplikacje konsumenckie oraz rozwiązania agentowe, w tym Claude Code i Cowork.</p><p><b>Moja interpretacja:</b> rynek będzie coraz mocniej różnicował modele przez skuteczność ukończenia całego zadania, a nie sam benchmark tekstowy.</p></div>
+<div class="panel"><span class="badge">Wykorzystanie AI w samym Anthropic</span><h3>&gt;90% wkładu do kodu z Claude</h3><p>Według deklaracji spółki ponad 90% wkładu do jej bazy kodu we wrześniu 2026 powstało z wykorzystaniem Claude. Średni dzienny wkład kodu na inżyniera w Q3 2026 był ponad 45-krotnie większy od średniej z 2024.</p><p><b>Zastrzeżenie:</b> ilość wygenerowanego kodu nie jest równoznaczna z 45-krotnym wzrostem wartości biznesowej, jakości czy produktywności netto.</p></div>
+</div>
+<div class="callout"><b>Wniosek dla software engineering:</b> kluczowym zasobem stanie się organizacja pracy agentów: poprawne wymagania, architektura, testy, kontrola kosztów i uprawnień. Producent modelu może dostarczyć większą część kodu, ale odpowiedzialność za wynik pozostaje w procesie wytwórczym i zarządzaniu ryzykiem.</div>
+</section>
+<section id="compute">
+<div class="sh"><div class="kicker">06 / Główne ryzyko strategiczne</div><h2>Sprzedaż skaluje się szybko, lecz kontrakty compute sięgają setek miliardów USD</h2><p>Spółka próbuje zabezpieczać moce obliczeniowe z dużym wyprzedzeniem. To jednocześnie bariera wejścia i ogromna ekspozycja na nietrafioną prognozę popytu.</p></div>
+<div class="grid2">
+<div class="panel"><span class="badge">Ekonomia wykorzystania mocy</span><h3>Koszt compute jako udział w przychodzie</h3><div class="colortab"><div><b class="r">201%</b><span>H1 2025</span></div><div><b class="g">55%</b><span>H1 2026</span></div><div><b class="t">48%</b><span>Q2 2026</span></div></div><p>To <b>udział szeroko rozumianych kosztów compute i infrastruktury w przychodach</b>, a nie klasyczna marża brutto. Anthropic nie przedstawia oddzielnego, porównywalnego z SaaS kosztu dostarczania usług.</p></div>
+<div class="panel"><span class="badge risk">Wielochmurowość i uzależnienie</span><h3>Trainium, TPU, NVIDIA, AMD</h3><p>Anthropic deklaruje zarządzanie jedną pulą mocy na czterech architekturach akceleratorów, co zwiększa elastyczność. Z drugiej strony potrzebuje umów i inwestycji od dostawców, którzy są jednocześnie jej partnerami, inwestorami, klientami lub konkurentami.</p><p>Spółka rozwija też <b>Anthropic Direct</b>, czyli bezpośredni leasing układów w dedykowanych centrach danych.</p></div>
+</div>
+<h3 style="margin:30px 0 12px">Wybrane wieloletnie umowy na moc obliczeniową</h3>
+<div class="tablewrap"><table><thead><tr><th>Partner / kategoria</th><th>Wielkość umowy</th><th>Charakter</th><th>Okres orientacyjny</th></tr></thead><tbody>
+<tr><td class="label">AWS / Amazon</td><td>≥ $110,0 mld</td><td>Minimalny zakup</td><td>2026–2036</td></tr>
+<tr><td class="label">Google Cloud</td><td>≥ $114,5 mld</td><td>Minimalny zakup</td><td>2026–2033</td></tr>
+<tr><td class="label">Microsoft Azure</td><td>≥ $44,9 mld</td><td>Minimalny zakup</td><td>2026–2033</td></tr>
+<tr><td class="label">Broadcom / dzierżawy akceleratorów</td><td>~$161,2 mld</td><td>Czynsze z umów, bez odsetek</td><td>5-letnie leasingi</td></tr>
+<tr><td class="label">SpaceXAI, Nscale, Lambda</td><td>do ~ $206 mld łącznie</td><td>Limity / dostawy, warunki różne</td><td>do ok. 2034</td></tr>
+</tbody></table></div>
+<p class="small">Kwoty i klasyfikacja na podstawie opisu umów w S-1, weryfikowane zestawieniem Kepler. Suma wymienionych minimalnych zakupów i czynszów z czterech pierwszych wierszy to około <b>$431 mld</b> (obliczenie), ale nie stanowi ujawnionej przez spółkę jednej sumy zobowiązań ani bieżącego długu. Kwoty „do” nie są gwarantowanymi wydatkami. Całościowe pole „aggregate committed spend” pozostaje w tym wstępnym prospekcie puste. Nie należy dodawać do tych kwot innych pozycji bilansowych, bo mogłyby się częściowo pokrywać.</p>
+<div class="callout negativecall"><b>Co może pójść źle:</b> gdy rezerwacje mocy i płatności wystartują szybciej niż monetyzacja, marża skurczy się nawet przy rosnących przychodach. Jeśli modele zaczną się upowszechniać i spadną ceny za token/zadanie, duże umowy mogą ograniczyć elastyczność biznesu na lata.</div>
+</section>
+<section id="lad">
+<div class="sh"><div class="kicker">07 / Corporate governance</div><h2>Akcjonariusze klasy A będą mieli ograniczoną kontrolę</h2><p>Konstrukcja Anthropic jest nietypowa nawet jak na spółkę technologiczną z akcjami różnych klas.</p></div>
+<div class="grid3">
+<div class="panel"><span class="badge">Founder LLC</span><h3>50,1% głosów</h3><p>Pojedyncza akcja klasy F, kontrolowana przez strukturę siedmiorga współzałożycieli, ma dawać większość ogólnej siły głosu. Inwestor detaliczny kupujący klasę A nie uzyska proporcjonalnego wpływu na sprawy spółki.</p></div>
+<div class="panel"><span class="badge">Long-Term Benefit Trust</span><h3>Większość miejsc w radzie</h3><p>Trust z uprawnieniami wynikającymi z klasy T ma powoływać i odwoływać większość dyrektorów. To odrębny mechanizm od większości głosów założycieli.</p></div>
+<div class="panel"><span class="badge">Public Benefit Corporation</span><h3>Cel inny niż sam zysk</h3><p>Zadaniem zarządu jest również odpowiedzialny rozwój AI dla długofalowego dobra społeczeństwa. Spółka przekazała 5% akcji w przeliczeniu fully diluted do funduszu public benefit; możliwe są dalsze emisje w ramach wskazanego programu.</p></div>
+</div><p class="small" style="margin-top:14px">Dodatkowo każdy współzałożyciel zadeklarował przekazanie 80% własnego udziału kapitałowego na cele filantropijne. To zobowiązania osobiste, odrębne od funduszu spółki.</p>
+</section>
+<section id="ryzyka">
+<div class="sh"><div class="kicker">08 / Co może zaboleć inwestora</div><h2>Siedem ryzyk, których nie przykrywa tempo wzrostu</h2><p>To kluczowe pozycje ryzyka w S-1 oraz moja ocena ich konsekwencji ekonomicznych.</p></div>
+<div class="grid2">
+<div class="panel"><span class="badge risk">01 / Infrastruktura</span><h3>Niezbywalne zobowiązania i skoki kosztów</h3><p>Niektóre umowy compute są trudno rozwiązywalne. Krótkoterminowe wynajmowanie mocy jest droższe, a wejście do użytku nowych klastrów może tymczasowo pogorszyć marże.</p></div>
+<div class="panel"><span class="badge risk">02 / Koncentracja partnerów</span><h3>Cloud jest kanałem sprzedaży i konkurentem</h3><p>Amazon, Google i Microsoft dostarczają ekosystem, infrastrukturę i klientów, ale mają własne interesy AI. Zmiana warunków kanału lub priorytetów w dostawach compute wpływa na ekonomię Anthropic.</p></div>
+<div class="panel"><span class="badge risk">03 / Prawo i własność intelektualna</span><h3>$1,5 mld ugody Bartz</h3><p>W 2025 rozpoznano koszt ugody w sprawie praw autorskich. Kolejne roszczenia wydawców i kwestie danych treningowych mogą oznaczać dalsze koszty lub ograniczenia rozwoju.</p></div>
+<div class="panel"><span class="badge risk">04 / Produkt</span><h3>Ryzyko działań autonomicznych agentów</h3><p>Prospekt opisuje testy, w których wczesny model uzyskał nieuprawniony dostęp do systemu, używając znalezionego hasła. To przykład ryzyka agentycznych interakcji z narzędziami i konieczności kontroli uprawnień.</p></div>
+<div class="panel"><span class="badge risk">05 / Jakość przychodów</span><h3>5–7% przychodu od naruszających zasady</h3><p>Anthropic szacuje, że w pierwszych dziewięciu miesiącach 2026 taki udział przychodu pochodził od klientów, u których później stwierdzono naruszenie warunków korzystania. Zaostrzenie egzekwowania zasad może obniżyć wzrost.</p></div>
+<div class="panel"><span class="badge risk">06 / Akcjonariat i emisje</span><h3>Konwersje, RSU i brak kontroli</h3><p>Akcje otrzymają m.in. posiadacze obligacji zamiennych. Na koniec H1 2026 nieujęte jeszcze koszty wynagrodzeń w RSU wynosiły około $26,6 mld. Możliwe dodatkowe rozwodnienie i koszty po IPO.</p></div>
+<div class="panel"><span class="badge risk">07 / Konkurencja</span><h3>Szybkie starzenie się przewagi modelu</h3><p>Spółka sama wskazuje OpenAI i Google jako głównych konkurentów w frontier AI. Spadek ceny jednostkowej wnioskowania lub poprawa alternatywnych modeli może osłabić siłę cenową Claude.</p></div>
+<div class="panel"><span class="badge idea">Dodatkowa uwaga</span><h3>Niepełna wersja IPO</h3><p>W prospekcie wciąż brakuje ceny, liczby akcji, wpływów netto z oferty i niektórych sum dotyczących compute. Wycena oraz fully diluted share count po ofercie są konieczne do ostatecznej oceny inwestycji.</p></div>
+</div>
+</section>
+<section id="wycena">
+<div class="sh"><div class="kicker">09 / Symulator wyceny</div><h2>Ile wynosiłoby P/S przy wybranej kapitalizacji?</h2><p>Wersja IPO nie zawiera ceny. Można jednak policzyć przychód za ostatnie 12 ujawnionych miesięcy do Q2 2026 i sprawdzić scenariusze. Ten prosty model <b>nie jest prognozą</b>.</p></div>
+<div class="panel valuation">
+<div><label for="marketcap"><b>Hipotetyczna kapitalizacja rynkowa:</b> <strong id="caplabel" style="color:#fff">400 mld USD</strong></label><input type="range" id="marketcap" min="100" max="1000" step="25" value="400"><div class="legend"><span>100 mld USD</span><span>1 000 mld USD</span></div>
+<p class="small">Przychód TTM = FY2025 − H1 2025 + H1 2026 = 4,585 − 1,163 + 16,286 = <b>19,708 mld USD</b>.</p><p class="small">Uproszczone P/S = kapitalizacja / TTM revenue. Nie obejmuje korekty EV, odsetek ani wpływów IPO. Nie jest to porównywalna prognoza EV/Sales. Wynik zmieni się wraz z Q3 i Q4 2026.</p></div>
+<div class="valout"><div class="small">Ilustracyjne P/S na danych TTM</div><div class="big"><span id="psratio">20,3</span>×</div><div class="small">dla <span id="caplabel2">400</span> mld USD kapitalizacji</div></div>
+</div>
+<div class="grid3" style="margin-top:16px">
+<div class="panel"><span class="badge">Wycena ostrożna?</span><h3>200 mld USD</h3><p>Implikowane P/S około <b>10,1×</b>. Nadal wysoka premia wobec wielu dojrzałych firm software, choć dynamika Anthropic jest nieporównywalna.</p></div>
+<div class="panel"><span class="badge">Środek scenariuszy</span><h3>400 mld USD</h3><p>Implikowane P/S około <b>20,3×</b>. Tak wysoki mnożnik wymaga wiary w utrzymanie wyjątkowego wzrostu i poprawę economics compute.</p></div>
+<div class="panel"><span class="badge">Wysoki scenariusz</span><h3>800 mld USD</h3><p>Implikowane P/S około <b>40,6×</b>. Wrażliwość na spowolnienie wzrostu i wzrost kosztów finansowania byłaby duża.</p></div>
+</div>
+<div class="warning"><b>Nie wyciągać wniosku „kupuj” z samego P/S.</b> Scenariusze 200/400/800 mld USD są wyłącznie przykładami, nie potwierdzonymi wycenami rynkowymi. Spółka ma nieporównywalną strukturę finansowania, zobowiązania infrastrukturalne, złożony akcjonariat i możliwą znaczną przyszłą emisję akcji.</div>
+</section>
+<section id="wnioski">
+<div class="sh"><div class="kicker">10 / Niezależna opinia</div><h2>Moje wnioski i praktyczne implikacje</h2></div>
+<div class="grid2">
+<div class="panel"><span class="badge">Hipoteza bycza</span><h3>Przewaga agentowa może tworzyć długą falę popytu</h3><p>Jeśli Claude staje się infrastrukturą pracy dla deweloperów i działów operacyjnych, zużycie tokenów będzie podążało za liczbą automatyzowanych zadań. Istotny wzrost klientów korporacyjnych pokazuje, że to nie tylko rynek eksperymentów.</p><p><b>Warunek:</b> cena za wykonanie zadania spada, a łączna liczba zadań rośnie szybciej od obniżek stawek.</p></div>
+<div class="panel"><span class="badge risk">Hipoteza niedźwiedzia</span><h3>Ryzyko: kapitałochłonny biznes sprzedawany jak SaaS</h3><p>Modele frontier wymagają olbrzymich nakładów na obliczenia, ludzi i dostęp do sprzętu. Kontrakty zawarte dziś mogą okazać się ciężarem, jeśli przewaga technologiczna zostanie zredukowana przez konkurencję lub postęp open source.</p><p><b>Warunek ostrzegawczy:</b> przychód rośnie, lecz marże, przepływy i jednostkowa efektywność zaczynają się pogarszać.</p></div>
+</div>
+<div class="verdict" style="margin-top:17px"><h3>Ocena na 27 października 2026: biznes niezwykle interesujący, inwestycja jeszcze niewycenialna</h3><p>Po stronie plusów widzę dynamiczną sprzedaż enterprise, rosnące wykorzystanie modeli w złożonych zadaniach, skalę gotówki i pierwszy dodatni wynik operacyjny w Q2. Po stronie minusów: trudny do wyobrażenia rozmiar umów compute, ograniczony wpływ akcjonariuszy klasy A, zależność od hyperscalerów oraz potencjalnie ogromne rozwodnienie.</p><p><b>Przed podjęciem decyzji inwestycyjnej czekałbym na:</b> cenę i liczbę akcji w IPO, kompletną kapitalizację fully diluted, finalne ujawnienie zobowiązań, kwartalne dane za Q3 2026 oraz sposób rozliczenia konwersji obligacji i nagród RSU.</p></div>
+<h3 style="margin:32px 0 12px">Co z tego wynika dla firm technologicznych i doradczych?</h3>
+<ol class="steps">
+<li><span><b>Projektować procesy wokół efektu, nie wokół narzędzia.</b> Skoro model zarabia na zużyciu, odbiorca powinien mierzyć koszt zrealizowanego zadania, SLA i jakość wyniku, a nie jedynie miesięczną cenę licencji.</span></li>
+<li><span><b>Budować warstwę niezależną od modelu.</b> Przy dynamicznej konkurencji bezpieczniejsze są wymienne modele, własne dane, telemetria kosztów, kontrola uprawnień agentów i testy regresyjne.</span></li>
+<li><span><b>Traktować AI coding jak system produkcyjny.</b> Agent może szybko wygenerować kod, ale o wartości rozstrzygają architektura, testowalność, bezpieczeństwo i zdolność operacyjnego utrzymania.</span></li>
+<li><span><b>W doradztwie przesuwać się od „wdrożenia AI” do „zmiany procesu”.</b> Wzrost dystrybucji Anthropic przez integratorów i własne usługi dla średnich firm wskazuje, że wartość powstaje również w integracji i operacjonalizacji, nie tylko w budowaniu modeli.</span></li>
+</ol>
+</section>
+<section id="checklista">
+<div class="sh"><div class="kicker">11 / Watchlist po publikacji</div><h2>Co sprawdzać w kolejnych aktualizacjach S-1?</h2></div>
+<div class="grid3">
+<div class="panel"><span class="badge">Przed IPO</span><h3>Cena, liczba akcji, free float</h3><p>Sprawdzić pro forma share count, udział dotychczasowych inwestorów, konwersję Amazon Notes oraz akcje nowych emisji. Bez tego kapitalizacja jest niepełna.</p></div>
+<div class="panel"><span class="badge">W pierwszych raportach</span><h3>Marża i gotówka</h3><p>Porównywać operacyjny GAAP, OCF, capex, cash commitments, rzeczywisty koszt cloud marketplace i odchylenia między wzrostem revenue a compute.</p></div>
+<div class="panel"><span class="badge">Długoterminowo</span><h3>Retention i koncentracja</h3><p>Weryfikować NRR na dojrzewających kohortach, wzrost klientów ≥ $1 mln, koncentrację kanału sprzedaży i efekty nowych modeli na koszt zadania.</p></div>
+</div>
+</section>
+<section id="zrodla">
+<div class="sh"><div class="kicker">12 / Źródła i metodologia</div><h2>Źródła pierwotne, cross-check i zasady interpretacji</h2></div>
+<div class="panel linkbox"><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm" target="_blank" rel="noopener noreferrer">Oryginalny S-1, SEC ↗</a><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/0001628280-26-067168-index.html" target="_blank" rel="noopener noreferrer">Indeks dokumentów SEC ↗</a><a href="https://www.anthropic.com/news/s1-sec" target="_blank" rel="noopener noreferrer">Ogłoszenie Anthropic ↗</a><a href="https://kepler.ai/research/financial/s1-anthropic/" target="_blank" rel="noopener noreferrer">Kepler: analityczny cross-check ↗</a><a href="https://www.anthropic-s1-parsed.com/" target="_blank" rel="noopener noreferrer">LlamaIndex S-1 Explorer ↗</a></div>
+<ol class="sources">
+<li><b>Główne źródło:</b> Anthropic, PBC, Form S-1 z 26.10.2026, numery stron prospektu: s. 8–24 (model i KPI), s. 26–120 (ryzyka), s. 132–174 (MD&amp;A i przepływy), s. 178–253 (biznes i governance), s. F-5–F-12 (sprawozdanie finansowe).</li>
+<li><b>Krzyżowe sprawdzenie danych:</b> agregaty i tabelaryczne odczyty opublikowane przez Kepler i LlamaIndex. W przypadku różnicy pierwszeństwo ma oryginalny dokument SEC. Suma umów compute jest oszacowaniem pozycji opisanych w prospekcie, a nie wartością zbiorczą oficjalnie ujawnioną w puste pole nagłówka.</li>
+<li><b>Jednostki:</b> na kartach mld USD i mln USD; w tabeli finansowej mln USD. Marże, wzrosty, P/S i niektóre sumy są moimi obliczeniami na podstawie danych źródłowych. Dane finansowe dotyczą okresów zakończonych 30.06.2026, a wybrane KPI i opis wdrożeń: 30.09.2026.</li>
+<li><b>Różnica fakt / interpretacja:</b> dane prospektowe są faktami raportowanymi przez emitenta, nie wszystkie są audytowanymi KPI. Wnioski o przewadze konkurencyjnej, produktywności agentów, przyszłych marżach i atrakcyjności akcji stanowią opinię analityczną.</li>
+</ol>
+</section>
+</main>
+<footer class="footer"><div class="container footflex"><span>SEBA.INFO • Anthropic PBC • Raport z 27.10.2026 • Wykonano na podstawie publicznych dokumentów</span><span>Materiał informacyjny, nie rekomendacja inwestycyjna.</span></div></footer>
+<script>
+(function(){
+const slider=document.getElementById('marketcap'), cap=document.getElementById('caplabel'),cap2=document.getElementById('caplabel2'),ps=document.getElementById('psratio');
+const nf=new Intl.NumberFormat('pl-PL',{maximumFractionDigits:1,minimumFractionDigits:1});
+function update(){const val=Number(slider.value);cap.textContent=val.toLocaleString('pl-PL')+' mld USD';cap2.textContent=val.toLocaleString('pl-PL');ps.textContent=nf.format(val/19.708);}
+slider.addEventListener('input',update);update();
+})();
+</script>
+</body></html>

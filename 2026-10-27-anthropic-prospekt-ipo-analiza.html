@@ -53,12 +53,30 @@ input[type="range"]{width:100%;accent-color:var(--teal);margin:22px 0}label{font
 
 .future-focus{border:1px solid #305b67;background:linear-gradient(135deg,#173746,#111d30);padding:24px;border-radius:18px;display:grid;grid-template-columns:1.2fr 1fr;gap:25px}.future-focus h3{font-size:24px;line-height:1.25;margin:5px 0}.future-focus p{color:#c3d2e4}.future-steps{display:grid;gap:9px;align-content:center}.future-step{display:flex;align-items:center;gap:13px;background:#12293c;border:1px solid #315068;border-radius:11px;padding:11px 14px;font-size:13px;color:#d9e7f3}.future-step b{font-size:12px;width:27px;height:27px;border-radius:8px;background:#235764;color:#7ae8d1;display:grid;place-items:center;flex:none}
 .cohorts{display:grid;gap:25px;margin:27px 0 24px}.cohort-top{display:flex;justify-content:space-between;gap:11px;align-items:baseline;color:#c8d6e8;font-size:13px}.cohort-top b{white-space:nowrap;color:#fff;font-size:15px}.cohort-track{background:#26354b;height:23px;border-radius:8px;margin-top:9px;overflow:hidden}.cohort-track span{display:block;height:100%;border-radius:8px}.adoption-chart{height:235px;display:flex;gap:25px;align-items:end;justify-content:space-evenly;border-bottom:1px solid #43536b;margin:24px 6px 43px;padding:0 6px}.adoption-column{height:100%;flex:1;max-width:90px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}.adoption-value{font-size:12px;font-weight:760;white-space:nowrap;color:#e7f5ff;margin-bottom:7px}.adoption-bar{width:74%;min-height:5px;border-radius:8px 8px 0 0;background:linear-gradient(#93a9d3,#415b80)}.adoption-bar.forecast{background:linear-gradient(#65e4ca,#298b92)}.adoption-period{position:absolute;top:calc(100% + 9px);color:#bbccdf;font-size:12px;white-space:nowrap}.rev-share{height:24px;background:#26364d;border-radius:100px;display:flex;overflow:hidden;margin:25px 0 15px}.rev-share span{height:100%;display:block}.share-legend{display:flex;flex-wrap:wrap;gap:12px 21px;justify-content:space-between;font-size:13px;color:#c8d7e8;margin:9px 0 18px}.share-legend b{color:#fff}
+
+/* Peer valuation module, updated 2026-10-28 */
+.cmp-chart{display:flex;flex-direction:column;gap:15px;padding:5px 0}
+.cmp-row{display:grid;grid-template-columns:185px 1fr 75px;align-items:center;gap:14px;min-height:23px}
+.cmp-company{font-size:13px;color:#d6e5f2;line-height:1.3}
+.cmp-bar-bg{height:20px;border-radius:5px;background:#202f42;overflow:hidden}
+.cmp-bar{display:block;height:100%;border-radius:5px;transition:width .3s;min-width:2px}
+.cmp-multiple{font-size:14px;text-align:right;white-space:nowrap;color:#fff;font-variant-numeric:tabular-nums}
+.cmp-table td:last-child{white-space:normal;min-width:165px}
+.cmp-emphasis{background:rgba(246,198,111,.085)}
+.cmp-valuation-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.cmp-valuation-grid>div{background:#1a2940;border-radius:10px;padding:13px}
+.cmp-valuation-grid span{display:block;color:#b3c5d8;font-size:12px}
+.cmp-valuation-grid b{display:block;font-size:21px;color:#f6c66f;letter-spacing:-.03em;margin:4px 0}
+.cmp-valuation-grid small{display:block;color:#92aac6;font-size:10px}
+@media(max-width:650px){.cmp-row{grid-template-columns:118px 1fr 51px;gap:7px}.cmp-company{font-size:11px}.cmp-multiple{font-size:12px}.cmp-valuation-grid{grid-template-columns:1fr 1fr}.cmp-valuation-grid b{font-size:18px}}
+@media(max-width:390px){.cmp-valuation-grid{grid-template-columns:1fr}}
+
 @media(max-width:850px){.future-focus{grid-template-columns:1fr}}@media(max-width:540px){.adoption-chart{gap:8px}.cohort-top{flex-wrap:wrap}.share-legend{display:block}.share-legend span{display:block;margin-bottom:7px}}
 @media(max-width:850px){.kpis,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2,.valuation{grid-template-columns:1fr}nav{gap:10px}.hero{padding-top:48px}}@media(max-width:540px){.container{width:min(100% - 28px,1190px)}.kpis,.grid3,.colortab,.metriclist{grid-template-columns:1fr}.topin{padding:14px 0}nav{gap:12px}.hero{padding-top:33px}.panel,.chartpanel{padding:19px}.barplot{gap:5px;height:190px;margin-top:42px}.barval{font-size:10px}.barlabel{font-size:10px}h1{font-size:40px}}@media print{header.top{position:static}body{background:#fff;color:#111}section{break-inside:avoid}.panel,.chartpanel,.kpi{background:#fff;border:1px solid #ccc;color:#111}.muted,.panel p,.small{color:#333}.barlabel{color:#222}.warning{color:#333}}
 </style>
 </head>
 <body>
-<header class="top"><div class="container topin"><div class="brand">SEBA.INFO / ANALIZA INWESTYCYJNA</div><nav aria-label="Sekcje raportu"><a href="#teza">Teza</a><a href="#finanse">Finanse</a><a href="#model">Model biznesowy</a><a href="#przyszlosc-llm">Przyszłość LLM</a><a href="#klienci-korporacyjni">Wydatki firm</a><a href="#najwieksi-klienci">TOP 5 klientów</a><a href="#compute">Infrastruktura</a><a href="#ryzyka">Ryzyka</a><a href="#wycena">Wycena</a><a href="#wnioski">Wnioski</a></nav></div></header>
+<header class="top"><div class="container topin"><div class="brand">SEBA.INFO / ANALIZA INWESTYCYJNA</div><nav aria-label="Sekcje raportu"><a href="#teza">Teza</a><a href="#finanse">Finanse</a><a href="#model">Model biznesowy</a><a href="#przyszlosc-llm">Przyszłość LLM</a><a href="#klienci-korporacyjni">Wydatki firm</a><a href="#najwieksi-klienci">TOP 5 klientów</a><a href="#compute">Infrastruktura</a><a href="#ryzyka">Ryzyka</a><a href="#wycena">Wycena</a><a href="#porownanie-wycen">Porównanie spółek</a><a href="#wnioski">Wnioski</a></nav></div></header>
 <main class="container">
 <div class="hero">
 <div class="kicker">IPO WATCH / NASDAQ: ANT / FORM S-1 z 26 października 2026</div>
@@ -314,6 +332,85 @@ input[type="range"]{width:100%;accent-color:var(--teal);margin:22px 0}label{font
 <div class="panel"><span class="badge">Wysoki scenariusz</span><h3>800 mld USD</h3><p>Implikowane P/S około <b>40,6×</b>. Wrażliwość na spowolnienie wzrostu i wzrost kosztów finansowania byłaby duża.</p></div>
 </div>
 <div class="warning"><b>Nie wyciągać wniosku „kupuj” z samego P/S.</b> Scenariusze 200/400/800 mld USD są wyłącznie przykładami, nie potwierdzonymi wycenami rynkowymi. Spółka ma nieporównywalną strukturę finansowania, zobowiązania infrastrukturalne, złożony akcjonariat i możliwą znaczną przyszłą emisję akcji.</div>
+</section>
+
+<section id="porownanie-wycen">
+  <div class="sh"><div class="kicker">13 / ANALIZA WYCEN • TWOJE PORÓWNANIE • 28.10.2026</div>
+    <h2>Anthropic kontra SpaceX i spółki technologiczne</h2>
+    <p>Porównanie Twojego arkusza z historycznym debiutem SpaceX i wycenami innych firm. Zachowuję Twoje założenie <b>2,2 bln USD kapitalizacji Anthropic</b>, ale nie przedstawiam go jako oficjalnej wyceny IPO: cena, liczba i oferta akcji Anthropic wciąż nie są określone w wstępnym S-1.</p>
+  </div>
+  <div class="grid3">
+    <div class="kpi"><div class="lbl">Anthropic, wycena hipotetyczna</div><div class="num g">2,20 <span class="unit">bln USD</span></div><div class="hint">Scenariusz z Twojego arkusza, nie cena z prospektu.</div></div>
+    <div class="kpi"><div class="lbl">SpaceX: wycena przy IPO</div><div class="num">1,77 <span class="unit">bln USD</span></div><div class="hint">11.06.2026, IPO po 135 USD za akcję. Źródło: Reuters, SpaceX IR.</div></div>
+    <div class="kpi"><div class="lbl">Premia 2,2 bln do IPO SpaceX</div><div class="num g">+24,3%</div><div class="hint">(2,20 / 1,77 − 1) × 100%. Porównanie hipotetyczne.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:17px">
+    <div class="panel">
+      <span class="badge">Punkt odniesienia: rzeczywiste IPO</span>
+      <h3>SpaceX: debiut 12 czerwca 2026</h3>
+      <p>Spółka ustaliła cenę ofertową na <b>135 USD za akcję</b>. Reuters opisywał wycenę przy IPO na około <b>1,77 bln USD</b>, a ofertę jako 555,56 mln akcji za około 75 mld USD. Liczba akcji <b>sprzedawanych w ofercie</b> nie jest liczbą wszystkich akcji spółki.</p>
+      <p class="small"><a href="https://ir.spacex.com/updates/releases-details/2026/Space-Exploration-Technologies-Corp--Announces-Pricing-of-Initial-Public-Offering/default.aspx" target="_blank" rel="noopener noreferrer">SpaceX Investor Relations: cena IPO ↗</a> · <a href="https://www.investing.com/news/stock-market-news/musks-spacex-prices-record-75-billion-ipo-at-135-a-share-4738207" target="_blank" rel="noopener noreferrer">Reuters: 1,77 bln USD przy IPO ↗</a></p>
+    </div>
+    <div class="panel">
+      <span class="badge idea">Twój arkusz: inne założenie</span>
+      <h3>SpaceX: 2,14 bln USD i P/S 63×</h3>
+      <p>Na zrzucie ekranu wyliczyłeś: <b>15 851 851 852 × 135 USD ≈ 2,14 bln USD</b> oraz <b>2,14 bln / 33,968 mld USD przychodów ≈ 63×</b>. Matematycznie kalkulacja jest poprawna przy tych założeniach.</p>
+      <p>To jednak <b>nie jest potwierdzona kapitalizacja z dnia IPO</b>. Łączy cenę ofertową z własną liczbą akcji i innym okresem przychodów. Aktualniejszy raport 10-Q SpaceX podawał łącznie około <b>13,58 mld akcji klas A i B na 15.10.2026</b>; to inna data i potencjalnie inny zakres rozwodnienia niż w arkuszu.</p>
+      <p class="small"><a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm" target="_blank" rel="noopener noreferrer">SpaceX: Form 10-Q Q3 2026 ↗</a></p>
+    </div>
+  </div>
+  <div class="warning"><b>Rozbieżność w przesłanych liczbach SpaceX:</b> na obrazie kapitalizacja wynosi <b>2,14 bln USD</b>, a w tabeli tekstowej <b>2,02 bln USD</b>. P/S 63× przy przychodach 33,968 mld USD odpowiada 2,14 bln, nie 2,02 bln. Dla 2,02 bln i tych samych przychodów P/S wynosi <b>59,47×</b>. W poniższych tabelach zachowuję Twoje tekstowe 2,02 bln i P/S 63× jako osobny snapshot, a w zestawieniu IPO stosuję zweryfikowane 1,77 bln USD. Te liczby nie powinny być ze sobą utożsamiane.</div>
+
+  <div class="sh" style="margin-top:30px"><h2>Anthropic: cztery scenariusze P/S przy wycenie 2,2 bln USD</h2><p>Przychody roczne/TTM zgodne z Twoim arkuszem. Wyższe przyszłe przychody mogą zmniejszyć P/S nawet bez spadku kapitalizacji. <b>TTM jest historyczny, pozostałe wartości są Twoimi scenariuszami</b>, a nie potwierdzonymi prognozami emitenta.</p></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Scenariusz Anthropic</th><th>Przychody, mld USD</th><th>Hipotetyczna kapitalizacja, mld USD</th><th>P/S</th><th>Charakter danych</th></tr></thead>
+    <tbody><tr ><td class="label">TTM (obecny)</td><td>19,708</td><td>2200</td><td><b>111,63×</b></td><td>Historyczny TTM do Q2 2026</td></tr><tr ><td class="label">Pesymistyczny</td><td>27,881</td><td>2200</td><td><b>78,91×</b></td><td>Założenie scenariuszowe użytkownika</td></tr><tr class="cmp-emphasis"><td class="label">Bazowy</td><td>29,881</td><td>2200</td><td><b>73,63×</b></td><td>Założenie scenariuszowe użytkownika</td></tr><tr ><td class="label">Optymistyczny</td><td>35,126</td><td>2200</td><td><b>62,63×</b></td><td>Założenie scenariuszowe użytkownika</td></tr></tbody>
+  </table></div>
+  <div class="grid2" style="margin-top:15px">
+    <div class="panel"><span class="badge">Kalkulator porównawczy</span><h3>Kapitalizacja Anthropic przy mnożnikach innych spółek</h3>
+      <div class="cmp-valuation-grid">
+        <div><span>Przy P/S SpaceX 63×</span><b>1,24 bln USD</b><small>TTM: 1,242 bln USD</small></div>
+        <div><span>Przy P/S SpaceX 63×</span><b>1,88 bln USD</b><small>Scenariusz bazowy: 29,881 mld USD</small></div>
+        <div><span>Przy P/S Palantir 77,6×</span><b>2,32 bln USD</b><small>Scenariusz bazowy: 29,881 mld USD</small></div>
+        <div><span>Przy P/S CrowdStrike 51×</span><b>1,52 bln USD</b><small>Scenariusz bazowy: 29,881 mld USD</small></div>
+      </div>
+      <p class="small">Kapitalizacja = P/S × przychody. To algebraiczna ilustracja, a nie wycena metodą DCF czy rekomendacja.</p>
+    </div>
+    <div class="panel"><span class="badge idea">Interpretacja scenariuszy</span><h3>77,6× Palantira jest ważną granicą porównania</h3>
+      <p>Anthropic przy 2,2 bln USD wycenie i <b>obecnym TTM</b> miałby P/S około <b>111,63×</b>, wyższe niż wszystkie mnożniki w Twojej tabeli. Przy <b>scenariuszu bazowym</b> P/S wynosi <b>73,63×</b>, nieco mniej niż Palantir <b>77,6×</b>, lecz nadal więcej niż SpaceX <b>63×</b>.</p>
+      <p>W scenariuszu optymistycznym <b>62,63×</b>, czyli prawie tyle, co SpaceX w Twoim benchmarku. Uzasadnienie takiej wyceny zależy od realizacji przychodów, rentowności i zapotrzebowania na compute.</p>
+    </div>
+  </div>
+  <div class="sh" style="margin-top:30px"><h2>P/S: Anthropic i spółki wzrostowe</h2><p>Jeden wspólny wykres do porównania mnożników. Żółte słupki to <b>hipotetyczne scenariusze Anthropic</b>. Pozostałe mnożniki: dane z Twojego zestawienia; SpaceX 63× w tym widoku nie oznacza zweryfikowanego P/S z dnia IPO.</p></div>
+  <div class="chartpanel"><div class="cmp-chart"><div class="cmp-row" title="Anthropic • obecny TTM, P/S 111,63">
+<span class="cmp-company">Anthropic • obecny TTM</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:100.000%;background:#f6c66f"></span></div><strong class="cmp-multiple">111,6×</strong></div><div class="cmp-row" title="Palantir, P/S 77,60">
+<span class="cmp-company">Palantir</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:69.515%;background:#55e0c4"></span></div><strong class="cmp-multiple">77,6×</strong></div><div class="cmp-row" title="Anthropic • baza, P/S 73,63">
+<span class="cmp-company">Anthropic • baza</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:65.955%;background:#f6c66f"></span></div><strong class="cmp-multiple">73,6×</strong></div><div class="cmp-row" title="SpaceX, P/S 63,00">
+<span class="cmp-company">SpaceX</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:56.437%;background:#55e0c4"></span></div><strong class="cmp-multiple">63,0×</strong></div><div class="cmp-row" title="CrowdStrike, P/S 51,00">
+<span class="cmp-company">CrowdStrike</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:45.687%;background:#55e0c4"></span></div><strong class="cmp-multiple">51,0×</strong></div><div class="cmp-row" title="Cloudflare, P/S 46,50">
+<span class="cmp-company">Cloudflare</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:41.656%;background:#55e0c4"></span></div><strong class="cmp-multiple">46,5×</strong></div></div></div>
+  <div class="sh" style="margin-top:30px"><h2>P/S: porównanie do największych firm technologicznych</h2><p>Dojrzałe firmy mają inne modele biznesowe, marże i tempo wzrostu. To punkt odniesienia do wysokości mnożnika, nie bezpośrednie porównanie jakości spółek.</p></div>
+  <div class="chartpanel"><div class="cmp-chart"><div class="cmp-row" title="NVIDIA, P/S 17,51">
+<span class="cmp-company">NVIDIA</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:15.686%;background:#8ab9ff"></span></div><strong class="cmp-multiple">17,5×</strong></div><div class="cmp-row" title="Microsoft, P/S 11,89">
+<span class="cmp-company">Microsoft</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:10.651%;background:#8ab9ff"></span></div><strong class="cmp-multiple">11,9×</strong></div><div class="cmp-row" title="Apple, P/S 10,85">
+<span class="cmp-company">Apple</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:9.720%;background:#8ab9ff"></span></div><strong class="cmp-multiple">10,9×</strong></div><div class="cmp-row" title="Alphabet, P/S 8,88">
+<span class="cmp-company">Alphabet</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:7.955%;background:#8ab9ff"></span></div><strong class="cmp-multiple">8,9×</strong></div><div class="cmp-row" title="Amazon, P/S 3,52">
+<span class="cmp-company">Amazon</span><div class="cmp-bar-bg"><span class="cmp-bar" style="width:3.153%;background:#8ab9ff"></span></div><strong class="cmp-multiple">3,5×</strong></div></div></div>
+  <h3 style="margin:30px 0 13px">Kapitalizacja i P/S wszystkich porównywanych spółek</h3>
+  <div class="tablewrap cmp-table"><table>
+    <thead><tr><th>Spółka</th><th>Ticker</th><th>Kapitalizacja</th><th>Przychody TTM</th><th>P/S</th><th>Źródło / status</th></tr></thead>
+    <tbody><tr class="cmp-emphasis"><td class="label">Anthropic</td><td>ANT (planowany)</td><td>2,20 bln USD</td><td>19,708  mld USD</td><td class="g"><b>111,63×</b></td><td class="muted">Hipoteza 2,2 bln; S-1 TTM</td></tr><tr ><td class="label">Palantir</td><td>PLTR</td><td>478 mld USD</td><td>~6,16* mld USD</td><td class=""><b>77,60×</b></td><td class="muted">Dane użytkownika</td></tr><tr ><td class="label">SpaceX</td><td>SPCX</td><td>2,02 bln USD</td><td>~32,06* mld USD</td><td class=""><b>63,00×</b></td><td class="muted">Zestawienie użytkownika (2,02 bln)</td></tr><tr ><td class="label">CrowdStrike</td><td>CRWD</td><td>275 mld USD</td><td>~5,39* mld USD</td><td class=""><b>51,00×</b></td><td class="muted">Dane użytkownika</td></tr><tr ><td class="label">Cloudflare</td><td>NET</td><td>117 mld USD</td><td>~2,52* mld USD</td><td class=""><b>46,50×</b></td><td class="muted">Dane użytkownika</td></tr><tr ><td class="label">NVIDIA</td><td>NVDA</td><td>5,26 bln USD</td><td>303  mld USD</td><td class=""><b>17,51×</b></td><td class="muted">Dane użytkownika</td></tr><tr ><td class="label">Apple</td><td>AAPL</td><td>5,07 bln USD</td><td>467  mld USD</td><td class=""><b>10,85×</b></td><td class="muted">Dane użytkownika</td></tr><tr ><td class="label">Microsoft</td><td>MSFT</td><td>3,95 bln USD</td><td>332  mld USD</td><td class=""><b>11,89×</b></td><td class="muted">Dane użytkownika</td></tr><tr ><td class="label">Alphabet (Google)</td><td>GOOGL</td><td>3,96 bln USD</td><td>446  mld USD</td><td class=""><b>8,88×</b></td><td class="muted">Dane użytkownika</td></tr><tr ><td class="label">Amazon</td><td>AMZN</td><td>2,73 bln USD</td><td>776  mld USD</td><td class=""><b>3,52×</b></td><td class="muted">Dane użytkownika</td></tr></tbody>
+  </table></div>
+  <p class="small">*Przychody Palantir, SpaceX (wariant 2,02 bln), CrowdStrike i Cloudflare wyliczyłem <b>wstecznie</b> z podanych kapitalizacji i P/S, bo nie były wymienione w Twojej tabeli. Nie są to niezależnie sprawdzone wyniki spółek. Dane NVIDIA, Apple, Microsoft, Alphabet i Amazon pochodzą z Twojego zestawienia. Ich P/S i kapitalizacje mogą pochodzić z różnego momentu notowań, dlatego wartości są przybliżone i nie zawsze dokładnie dzielą się przez podane zaokrąglone przychody.</p>
+  <div class="grid2" style="margin-top:18px">
+    <div class="panel"><span class="badge">Główna obserwacja</span><h3>2,2 bln USD to wycena z przyszłości, nie z przeszłości</h3>
+      <p>Jeśli Anthropic wyceniono by na 2,2 bln USD przy aktualnym historycznym TTM <b>19,708 mld USD</b>, inwestor płaciłby około <b>112 USD za każdego dolara przychodów rocznych</b>. Przy bazowym scenariuszu 29,881 mld USD płaciłby około 74 USD. Tak wysoki P/S wymaga wieloletniego wzrostu i marż, których przyszły poziom jest niepewny.</p>
+    </div>
+    <div class="panel"><span class="badge risk">Ryzyka porównywalności</span><h3>P/S pomija rentowność i nakłady na AI</h3>
+      <p>SpaceX łączy działalność kosmiczną, łączność satelitarną i AI; Anthropic koncentruje się na modelach i agentach; hyperscalerzy mają szeroki portfel produktów. Dodatkowo Anthropic przed IPO posiada instrumenty konwertowane na akcje, więc <b>ostateczna kapitalizacja fully diluted może się znacząco różnić</b>. Porównania P/S nie zastępują analizy przepływów, nakładów inwestycyjnych i kosztów infrastruktury.</p>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:17px"><span class="badge">Źródła i daty</span><p><b>Od użytkownika, stan zestawienia 28.10.2026:</b> hipotetyczna kapitalizacja Anthropic 2,2 bln USD; cztery wartości przychodów; kapitalizacje i P/S dziesięciu spółek w tabelach; SpaceX 2,14 bln (zrzut ekranu) i 2,02 bln (zestawienie tekstowe). <b>Zweryfikowane:</b> SpaceX cena IPO 135 USD i data rozpoczęcia handlu 12.06.2026 (<a href="https://ir.spacex.com/updates/releases-details/2026/Space-Exploration-Technologies-Corp--Announces-Pricing-of-Initial-Public-Offering/default.aspx" target="_blank" rel="noopener noreferrer">SpaceX IR</a>), wycena IPO około 1,77 bln USD (<a href="https://www.investing.com/news/stock-market-news/musks-spacex-prices-record-75-billion-ipo-at-135-a-share-4738207" target="_blank" rel="noopener noreferrer">Reuters 11.06.2026</a>); Anthropic brak oficjalnej ceny IPO (<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm" target="_blank" rel="noopener noreferrer">SEC S-1 26.10.2026</a>). <b>Kontekst rynkowy:</b> <a href="https://tradmap.com/screener/largest-companies/valuation" target="_blank" rel="noopener noreferrer">Tradmap, zamknięcie 27.10.2026</a>; <a href="https://www.reuters.com/legal/transactional/anthropic-opens-books-ais-explosive-growth-staggering-costs-2026-10-26/" target="_blank" rel="noopener noreferrer">Reuters: wyceny rozważane przez inwestorów 26.10.2026</a>. Nie zostały zsynchronizowane wszystkie mnożniki do jednej minuty sesji.</p></div>
 </section>
 <section id="wnioski">
 <div class="sh"><div class="kicker">10 / Niezależna opinia</div><h2>Moje wnioski i praktyczne implikacje</h2></div>

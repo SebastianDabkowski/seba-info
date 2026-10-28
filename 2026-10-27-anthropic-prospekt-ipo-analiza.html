@@ -50,18 +50,22 @@ input[type="range"]{width:100%;accent-color:var(--teal);margin:22px 0}label{font
 .sources{font-size:13px;color:#bfcee1}.sources li{margin:7px 0}.sources a{overflow-wrap:anywhere}
 .footer{border-top:1px solid var(--line);padding:30px 0 45px;margin-top:35px;font-size:12px;color:var(--muted)}.footflex{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
 .ops-legend{display:flex;gap:20px;flex-wrap:wrap;margin:19px 0 8px;color:#d5e0ee;font-size:13px}.ops-legend span{display:flex;align-items:center;gap:8px}.ops-key{display:inline-block;width:15px;height:12px;border-radius:3px}.ops-viewport{overflow-x:auto;overflow-y:hidden}.ops-svg{width:100%;min-width:760px;height:auto;display:block;font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ops-svg rect{transition:opacity .12s}.ops-svg rect:hover{opacity:.7}
+
+.future-focus{border:1px solid #305b67;background:linear-gradient(135deg,#173746,#111d30);padding:24px;border-radius:18px;display:grid;grid-template-columns:1.2fr 1fr;gap:25px}.future-focus h3{font-size:24px;line-height:1.25;margin:5px 0}.future-focus p{color:#c3d2e4}.future-steps{display:grid;gap:9px;align-content:center}.future-step{display:flex;align-items:center;gap:13px;background:#12293c;border:1px solid #315068;border-radius:11px;padding:11px 14px;font-size:13px;color:#d9e7f3}.future-step b{font-size:12px;width:27px;height:27px;border-radius:8px;background:#235764;color:#7ae8d1;display:grid;place-items:center;flex:none}
+.cohorts{display:grid;gap:25px;margin:27px 0 24px}.cohort-top{display:flex;justify-content:space-between;gap:11px;align-items:baseline;color:#c8d6e8;font-size:13px}.cohort-top b{white-space:nowrap;color:#fff;font-size:15px}.cohort-track{background:#26354b;height:23px;border-radius:8px;margin-top:9px;overflow:hidden}.cohort-track span{display:block;height:100%;border-radius:8px}.adoption-chart{height:235px;display:flex;gap:25px;align-items:end;justify-content:space-evenly;border-bottom:1px solid #43536b;margin:24px 6px 43px;padding:0 6px}.adoption-column{height:100%;flex:1;max-width:90px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}.adoption-value{font-size:12px;font-weight:760;white-space:nowrap;color:#e7f5ff;margin-bottom:7px}.adoption-bar{width:74%;min-height:5px;border-radius:8px 8px 0 0;background:linear-gradient(#93a9d3,#415b80)}.adoption-bar.forecast{background:linear-gradient(#65e4ca,#298b92)}.adoption-period{position:absolute;top:calc(100% + 9px);color:#bbccdf;font-size:12px;white-space:nowrap}.rev-share{height:24px;background:#26364d;border-radius:100px;display:flex;overflow:hidden;margin:25px 0 15px}.rev-share span{height:100%;display:block}.share-legend{display:flex;flex-wrap:wrap;gap:12px 21px;justify-content:space-between;font-size:13px;color:#c8d7e8;margin:9px 0 18px}.share-legend b{color:#fff}
+@media(max-width:850px){.future-focus{grid-template-columns:1fr}}@media(max-width:540px){.adoption-chart{gap:8px}.cohort-top{flex-wrap:wrap}.share-legend{display:block}.share-legend span{display:block;margin-bottom:7px}}
 @media(max-width:850px){.kpis,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2,.valuation{grid-template-columns:1fr}nav{gap:10px}.hero{padding-top:48px}}@media(max-width:540px){.container{width:min(100% - 28px,1190px)}.kpis,.grid3,.colortab,.metriclist{grid-template-columns:1fr}.topin{padding:14px 0}nav{gap:12px}.hero{padding-top:33px}.panel,.chartpanel{padding:19px}.barplot{gap:5px;height:190px;margin-top:42px}.barval{font-size:10px}.barlabel{font-size:10px}h1{font-size:40px}}@media print{header.top{position:static}body{background:#fff;color:#111}section{break-inside:avoid}.panel,.chartpanel,.kpi{background:#fff;border:1px solid #ccc;color:#111}.muted,.panel p,.small{color:#333}.barlabel{color:#222}.warning{color:#333}}
 </style>
 </head>
 <body>
-<header class="top"><div class="container topin"><div class="brand">SEBA.INFO / ANALIZA INWESTYCYJNA</div><nav aria-label="Sekcje raportu"><a href="#teza">Teza</a><a href="#finanse">Finanse</a><a href="#model">Model biznesowy</a><a href="#compute">Infrastruktura</a><a href="#ryzyka">Ryzyka</a><a href="#wycena">Wycena</a><a href="#wnioski">Wnioski</a></nav></div></header>
+<header class="top"><div class="container topin"><div class="brand">SEBA.INFO / ANALIZA INWESTYCYJNA</div><nav aria-label="Sekcje raportu"><a href="#teza">Teza</a><a href="#finanse">Finanse</a><a href="#model">Model biznesowy</a><a href="#przyszlosc-llm">Przyszłość LLM</a><a href="#klienci-korporacyjni">Wydatki firm</a><a href="#najwieksi-klienci">TOP 5 klientów</a><a href="#compute">Infrastruktura</a><a href="#ryzyka">Ryzyka</a><a href="#wycena">Wycena</a><a href="#wnioski">Wnioski</a></nav></div></header>
 <main class="container">
 <div class="hero">
 <div class="kicker">IPO WATCH / NASDAQ: ANT / FORM S-1 z 26 października 2026</div>
 <h1>Anthropic: <em>rewolucja przychodowa</em> i rachunek za przyszłość AI.</h1>
 <p class="lead">Analiza prospektu giełdowego twórcy Claude. Co mówi o jakości biznesu, marżach, kosztach mocy obliczeniowej, kontroli nad spółką i perspektywach akcjonariusza? Dane, kontekst oraz niezależne wnioski.</p>
 <div class="tags"><span class="tag">Raport: 27.10.2026</span><span class="tag">Aktualizacja wykresu: 28.10.2026</span><span class="tag">Waluta: USD</span><span class="tag">Dane finansowe do 30.06.2026</span><span class="tag">Dane operacyjne również do 30.09.2026</span><span class="tag">Status: wstępny prospekt, brak ceny IPO</span></div>
-</div>
+<span class="tag">Nowe: wizja LLM, klienci i TOP 5 • 28.10.2026</span></div>
 <div class="warning"><b>Ważne:</b> to <b>wstępne zgłoszenie S-1</b>, a nie zakończona oferta. Nie określono jeszcze ceny, liczby sprzedawanych akcji, wartości IPO ani ostatecznego rozwodnienia. Nie da się dziś wiarygodnie ocenić, czy akcje ANT będą tanie. Liczby finansowe w raporcie są w dolarach USA. <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm" target="_blank" rel="noopener noreferrer">Pełny prospekt SEC ↗</a></div>
 <section id="teza">
 <div class="sh"><div class="kicker">01 / Obraz w 30 sekund</div><h2>Sześć liczb, które zmieniają postrzeganie Anthropic</h2><p>Wyniki GAAP z SEC. Dopiski i wskaźniki wyliczone na podstawie prospektu są wyraźnie oznaczone.</p></div>
@@ -161,6 +165,96 @@ input[type="range"]{width:100%;accent-color:var(--teal);margin:22px 0}label{font
 <div class="panel"><span class="badge idea">Ciekawostka</span><h3>Agenci zmieniają jednostkę konsumpcji</h3><p>W Q3 2026 użytkownicy Claude Enterprise bez Claude Code wydawali średnio poniżej $75 miesięcznie; 5% najaktywniejszych używających Claude Code około 20 razy więcej. Przesunięcie z czatu do agentów jest fundamentalne dla monetyzacji.</p></div>
 </div>
 </section>
+
+<section id="przyszlosc-llm">
+<div class="sh"><div class="kicker">NOWE / WIZJA • WEDŁUG PROSPEKTU S-1</div><h2>Przyszłość LLM według Anthropic: od czatu do autonomicznej pracy</h2>
+<p>Anthropic nie opisuje przyszłości jako „większego chatbota”. Jej deklarowaną strategią jest zamiana modeli językowych w platformę <strong>Virtual Collaborators</strong>, czyli współpracujących z ludźmi systemów wykonujących pracę. Poniżej oddzielamy założenia spółki od wniosków analitycznych.</p></div>
+<div class="future-focus">
+<div><span class="badge">Cel Anthropic, nie gwarancja</span><h3>Zadania trwające godziny, dni i tygodnie</h3><p>W prospekcie Anthropic deklaruje ambicję, by Claude samodzielnie realizował coraz bardziej otwarte zadania, planował pracę, używał narzędzi i współpracował z innymi agentami. Od prostych odpowiedzi na pytania ma przejść do procesów wieloetapowych, a w przyszłości do wielu równoległych agentów realizujących odrębne lub wspólne cele.</p><p class="small">Źródło: S-1, „Claude as a Virtual Collaborator”, s. 8–9; zob. <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm" target="_blank" rel="noopener noreferrer">tekst prospektu SEC ↗</a>.</p></div>
+<div class="future-steps" aria-label="Etapy rozwoju AI według tezy Anthropic">
+<div class="future-step"><b>1</b><span>LLM odpowiada na pytania</span></div>
+<div class="future-step"><b>2</b><span>Agent wykonuje zadanie w aplikacji</span></div>
+<div class="future-step"><b>3</b><span>Agent prowadzi proces przez wiele narzędzi</span></div>
+<div class="future-step"><b>4</b><span>Wiele agentów współpracuje autonomicznie</span></div>
+</div>
+</div>
+<div class="grid2" style="margin-top:16px">
+<div class="panel"><span class="badge">01 / Scaling laws</span><h3>Modele mają zwiększać zdolność rozumowania i autonomii</h3><p>Spółka zakłada wieloletni postęp w matematyce, programowaniu, analizie naukowej, pracy poznawczej i używaniu narzędzi. Uważa, że rosnąca wydajność modeli rozszerzy zakres zadań ekonomicznie opłacalnych do automatyzacji. Oczekuje, że popyt na najbardziej zaawansowane modele będzie przez pewien czas ograniczany przede wszystkim dostępnością compute.</p><p class="small">S-1, „Scaling Laws and the Predictability of Progress”, s. 185–186. To <b>ocena zarządu</b>, nie niezależna prognoza rynku.</p></div>
+<div class="panel"><span class="badge">02 / Closing the loop</span><h3>Claude pomaga tworzyć kolejne Claude</h3><p>Anthropic opisuje sprzężenie zwrotne: ulepszone modele wspierają badania, programowanie i budowę kolejnej generacji modeli, co może skracać cykle rozwoju. Firma nazywa ten mechanizm <i>closing the loop</i>. Jednocześnie wskazuje ryzyka związane z przyspieszaniem samodoskonalenia i konieczność oceny bezpieczeństwa.</p><p class="small">S-1, „Our Core Advantages”, s. 181, oraz rozdziały o Responsible Scaling Policy.</p></div>
+<div class="panel"><span class="badge">03 / Trzy warstwy produktów</span><h3>Model + platforma agentów + aplikacje</h3><p>Warstwa modeli dostarcza inteligencję; Claude Platform dostarcza API, narzędzia, MCP, orkiestrację, SDK i Managed Agents; aplikacje Claude Code, Cowork i rozwiązania branżowe dostarczają gotowe procesy. Innowacja w jednej warstwie ma zwiększać wartość pozostałych oraz ograniczać koszt wdrożenia u klienta.</p><p class="small">S-1, „Enterprise Strategy” i „Our Models, Platform, and Applications”, s. 181–199.</p></div>
+<div class="panel"><span class="badge">04 / Od programistów do innych zawodów</span><h3>Claude Code jako wzorzec dla Cowork</h3><p>Spółka chce przenieść autonomię znaną z pracy programisty na analityków, prawników, finanse, compliance, ochronę zdrowia i obsługę organizacji. Wskazuje m.in. łączenie Claude Cowork z Claude.ai oraz rozwój gotowych agentów dla konkretnych branż i regulowanych procesów.</p><p class="small">S-1, „Virtual Collaborators” oraz „Growth Strategies”, s. 8–9 i 197–199.</p></div>
+<div class="panel"><span class="badge">05 / Rynek poza biurkiem</span><h3>Laboratoria, nauka, robotyka i produkcja</h3><p>Strategia obejmuje nie tylko treści i kod. Anthropic wymienia projektowanie leków, eksperymenty naukowe, analizę materiałów oraz sterowanie urządzeniami laboratoryjnymi i robotami przez interfejsy cyfrowe. Wskazuje przejęcie Coefficient Bio i rozwój kompetencji life sciences.</p><p class="small">S-1, „Extend the Frontier into New Markets”, s. 198. To kierunki strategiczne o różnym stopniu dojrzałości.</p></div>
+<div class="panel"><span class="badge">06 / Dystrybucja i wzrost</span><h3>Enterprise, hyperscalerzy, integratorzy i międzynarodowość</h3><p>Anthropic chce rozszerzać bezpośredni dział sprzedaży i zespoły Applied AI, rozwijać partnerstwa z AWS, GCP i Azure oraz z integratorami Accenture, Deloitte, KPMG i PwC. Wskazuje również nowe usługi dla firm średniej wielkości w ramach Ode with Anthropic i rozwój zagranicznych rynków.</p><p class="small">S-1, „Make Claude Available Everywhere”, „Drive Adoption” i „Diffusion”, s. 182 oraz 197–198.</p></div>
+</div>
+<div class="callout"><b>Moja interpretacja:</b> Anthropic chce sprzedawać <strong>pracę wykonaną przez inteligencję</strong>, a nie wyłącznie licencję na model. Jeśli firmy kupują realizację pełnych procesów, ich wydatek na Claude może rosnąć mimo spadku ceny pojedynczego tokenu. Ale sukces wymaga niezawodności agentów, kontroli kosztów oraz integracji z systemami klienta. To kierunek, nie pewna prognoza.</div>
+<div class="panel"><span class="badge risk">Co może zaburzyć tę wizję?</span><h3>Postęp w benchmarkach nie musi oznaczać autonomii w produkcji</h3><p>Prospekt sam wskazuje ryzyka bezpieczeństwa, niestabilnego zachowania modeli, konkurencji, ograniczeń infrastruktury i wzrostu kosztów. Większa autonomia wydłuża łańcuch decyzji, w którym pojedynczy błąd może wywołać istotne konsekwencje. Nie ma w S-1 gwarantowanego harmonogramu osiągnięcia agentów pracujących tygodniami bez nadzoru.</p></div>
+</section>
+<section id="klienci-korporacyjni">
+<div class="sh"><div class="kicker">NOWE / KLIENCI • DANE NA 30.09.2026</div><h2>Ile firmy wydają na Claude? Segmentacja przychodów z klientów</h2>
+<p>Prospekt przedstawia <b>liczbę klientów według rocznej wartości przychodów Anthropic na organizację</b>, a nie według liczby zatrudnionych ani obrotów klientów. To ważne: startup może wydawać na Claude więcej niż wielka korporacja.</p></div>
+<div class="grid3">
+<div class="kpi"><div class="lbl">Wydają co najmniej 100 tys. USD / 12 mies.</div><div class="num t">&gt;11 900</div><div class="hint">Organizacji, próg kumulatywny; 30.09.2026.</div></div>
+<div class="kpi"><div class="lbl">Wydają co najmniej 1 mln USD / 12 mies.</div><div class="num"> &gt;1 900</div><div class="hint">Podzbiór grupy 100 tys.+, nie dodatkowi klienci.</div></div>
+<div class="kpi"><div class="lbl">Wydają co najmniej 10 mln USD / 12 mies.</div><div class="num g">~250</div><div class="hint">Podzbiór grupy 1 mln+, najdroższe relacje.</div></div>
+</div>
+<div class="grid2" style="margin-top:16px">
+<div class="chartpanel">
+<div class="chart-head"><h3>Liczba klientów według progów wydatków (TTM)</h3><span class="tag">Dane SEC</span></div>
+<p class="small">Progi są <b>kumulatywne</b>. Długość paska odnosi się do 11 900; mniejsza grupa zawsze zawiera się w większej. Liczba klientów nie oznacza udziału w przychodach.</p>
+<div class="cohorts">
+<div class="cohort"><div class="cohort-top"><span>≥ 100 tys. USD / rok</span><b>ponad 11 900</b></div><div class="cohort-track"><span style="width:100%;background:linear-gradient(90deg,#55e0c4,#228b9e)"></span></div></div>
+<div class="cohort"><div class="cohort-top"><span>≥ 1 mln USD / rok</span><b>ponad 1 900</b></div><div class="cohort-track"><span style="width:16%;background:linear-gradient(90deg,#8ab9ff,#547cce)"></span></div></div>
+<div class="cohort"><div class="cohort-top"><span>≥ 10 mln USD / rok</span><b>około 250</b></div><div class="cohort-track"><span style="width:2.1%;min-width:9px;background:#f6c66f"></span></div></div>
+</div>
+<p class="small">Dane zaokrąglone z S-1, s. 9 i 135. Paski 1 mln+ oraz 10 mln+ są orientacyjne wobec przyjętej wartości bazowej 11 900; dokładne wartości zastrzeżone słowami „ponad” i „około”.</p>
+</div>
+<div class="chartpanel">
+<div class="chart-head"><h3>Jak wzrosła liczba klientów ≥ 100 tys. USD?</h3><span class="tag">2023–2026</span></div>
+<p class="small">Klienci biznesowi generujący rocznie co najmniej 100 tys. USD dla Anthropic.</p>
+<div class="adoption-chart">
+<div class="adoption-column"><span class="adoption-value">~20</span><div class="adoption-bar" style="height:2%"></div><span class="adoption-period">2023</span></div>
+<div class="adoption-column"><span class="adoption-value">~200</span><div class="adoption-bar" style="height:4%"></div><span class="adoption-period">2024</span></div>
+<div class="adoption-column"><span class="adoption-value">~1 500</span><div class="adoption-bar" style="height:12.6%"></div><span class="adoption-period">2025</span></div>
+<div class="adoption-column"><span class="adoption-value">&gt;11 900</span><div class="adoption-bar forecast" style="height:100%"></div><span class="adoption-period">IX 2026</span></div>
+</div><p class="small">Źródło: S-1, MD&amp;A, s. 143. Wartości 2023–2025 z końców lat; wrzesień 2026 za dziewięć miesięcy. Słupki mają wspólną skalę liniową.</p>
+</div>
+</div>
+<h3 style="margin:31px 0 12px">Ile wydaje przeciętny klient w poszczególnych segmentach?</h3>
+<div class="tablewrap"><table><thead><tr><th>Roczne przychody Anthropic na klienta</th><th>Klienci: liczba orientacyjna*</th><th>Dolny próg dla jednej organizacji</th><th>Ilustracyjne minimum przychodów segmentu*</th></tr></thead><tbody>
+<tr><td class="label">100 tys. do &lt;1 mln USD</td><td>~10 000</td><td>100 tys. USD</td><td>~1,00 mld USD</td></tr>
+<tr><td class="label">1 mln do &lt;10 mln USD</td><td>~1 650</td><td>1 mln USD</td><td>~1,65 mld USD</td></tr>
+<tr><td class="label">≥10 mln USD</td><td>~250</td><td>10 mln USD</td><td>~2,50 mld USD</td></tr>
+<tr><td class="label">&lt;100 tys. USD</td><td>~40 mln kont/klientów**</td><td>Nieokreślony</td><td>Niepoliczalne</td></tr>
+</tbody></table></div>
+<p class="small"><b>*Ważne:</b> SEC podaje tylko <b>kumulatywne, zaokrąglone wartości</b> &gt;11 900, &gt;1 900 i ~250. Liczby 10 000, 1 650 i 250 w rozłącznych segmentach są <b>ilustracją po odjęciu zaokrąglonych progów</b>, nie dokładnymi stanami. Ilustracyjne minima przychodów powstają z liczby klientów × dolny próg; <b>nie są rzeczywistym podziałem przychodów</b>, a faktyczne kwoty mogą być wielokrotnie wyższe. Nie należy interpretować ich procentowo. <b>**</b> Prospekt szacuje około 40 mln klientów poniżej progu 100 tys. USD w 12 mies., w tym również użytkowników indywidualnych; część udziałów przychodowych za TTM 2026 pozostawiono we wstępnym S-1 niewypełnioną. Źródło: <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm" target="_blank" rel="noopener noreferrer">SEC S-1, MD&amp;A, s. 143</a>.</p>
+<div class="callout"><b>Czego dokument nie ujawnia:</b> dokładnego przychodu z poszczególnych segmentów 100 tys.–1 mln, 1–10 mln, 10 mln+, ani rozkładu klientów według zatrudnienia lub ich własnych obrotów. Zatem nie można uczciwie narysować wykresu „wielkość firmy → udział w przychodach” jako faktu. Zestawienia powyżej pokazują <strong>skalę wydatków poszczególnych grup</strong>, a nie taki udział.</div>
+<div class="grid2">
+<div class="panel"><span class="badge">Dane historyczne o biznesie</span><h3>76% przychodów w 2025 pochodziło od klientów ≥100 tys. USD</h3><p>W 2025 klienci z tego progu wygenerowali około <b>3,5 mld USD</b> przy przychodzie całej spółki <b>4,585 mld USD</b>. Odpowiada to około 76% sprzedaży. W poprzednich latach udział wynosił około <b>90% w 2023</b> i <b>57% w 2024</b>.</p><p class="small">Wartość udziału biznesu w przychodach TTM na wrzesień 2026 pozostaje pusta we wstępnym prospekcie i nie jest tu szacowana.</p></div>
+<div class="panel"><span class="badge">Możliwość wzrostu</span><h3>Fortune 10, Fortune 500 i Global 2000</h3><p>Według prospektu każda firma z Fortune 10 była klientem w progu ≥100 tys. USD TTM; ponad połowa Fortune 500 i ponad 30% Global 2000 również. Wśród klientów Fortune 500 wydatki na Anthropic odpowiadały średnio <b>mniej niż 0,1% ich całkowitych kosztów w Q3 2026</b>, natomiast dla 10 największych klientów z tego grona średnio mniej niż 1% kosztów. To miernik wydatku względem wielkości nabywcy, <b>nie udziału w przychodach Anthropic</b>.</p></div>
+</div>
+</section>
+<section id="najwieksi-klienci">
+<div class="sh"><div class="kicker">NOWE / KONCENTRACJA PRZYCHODÓW</div><h2>Kto wydaje najwięcej? Co wiemy o TOP 5?</h2>
+<p>Anthropic <b>nie podaje nazw pięciu największych odbiorców ani kwot przypadających na poszczególne firmy</b>. Ujawnia za to stopień koncentracji. Poniższe kwoty bezwzględne wyliczyłem z udziałów w S-1 i przychodu Q3 z informacji Reuters.</p></div>
+<div class="grid2">
+<div class="panel"><span class="badge">Przychody w Q3 2026</span><h3>Największa piątka: ~21% sprzedaży</h3>
+<div class="rev-share" role="img" aria-label="Q3 2026: top 5 klientów około 21 procent przychodów, pozostali około 79 procent"><span style="width:21%;background:#f6c66f"></span><span style="width:79%;background:#55e0c4"></span></div><div class="share-legend"><span><i class="dot" style="background:#f6c66f"></i>TOP 5: <b>~3,53 mld USD</b></span><span><i class="dot" style="background:#55e0c4"></i>Pozostali: <b>~13,27 mld USD</b></span></div><p class="small">Około 79% przychodów Q3 pochodziło spoza pięciu największych klientów. Z przychodów ~16,8 mld USD Q3, kwoty przeliczone szacunkowo.</p></div>
+<div class="panel"><span class="badge">Przychody od stycznia do września 2026</span><h3>Największa piątka: ~25% sprzedaży</h3>
+<div class="rev-share" role="img" aria-label="Pierwsze dziewięć miesięcy 2026: top pięć około 25 procent, reszta 75 procent"><span style="width:25%;background:#f6c66f"></span><span style="width:75%;background:#55e0c4"></span></div><div class="share-legend"><span><i class="dot" style="background:#f6c66f"></i>TOP 5: <b>~8,27 mld USD</b></span><span><i class="dot" style="background:#55e0c4"></i>Pozostali: <b>~24,81 mld USD</b></span></div><p class="small">Przybliżona sprzedaż 9M: 16,286 mld USD H1 (SEC) + 16,8 mld USD Q3 (Reuters) = <b>33,086 mld USD</b>. 25% to około 8,27 mld USD. Prospekt podaje, że <b>żaden pojedynczy odbiorca nie odpowiadał za ponad 10% przychodów 9M</b>.</p></div>
+</div>
+<h3 style="margin:31px 0 12px">Firmy wymienione w prospekcie jako klienci lub partnerzy</h3>
+<div class="tablewrap"><table><thead><tr><th>Podmiot</th><th>Relacja opisana w S-1</th><th>Wydatki na Claude</th><th>Czy należy do TOP 5?</th></tr></thead><tbody>
+<tr><td class="label">American International Group (AIG)</td><td>Klient Fortune 500, wdrożenia biznesowe</td><td>Nie ujawniono</td><td>Nie ujawniono</td></tr>
+<tr><td class="label">Bristol Myers Squibb</td><td>Klient Fortune 500, zastosowania biznesowe</td><td>Nie ujawniono</td><td>Nie ujawniono</td></tr>
+<tr><td class="label">Salesforce</td><td>Rozwiązania i produkty oparte na Claude</td><td>Nie ujawniono</td><td>Nie ujawniono</td></tr>
+<tr><td class="label">Legora</td><td>Produkty AI oparte na Claude</td><td>Nie ujawniono</td><td>Nie ujawniono</td></tr>
+<tr><td class="label">Amazon / AWS</td><td>Inwestor, dostawca compute, dystrybutor, także klient</td><td>Nie ujawniono</td><td>Nie ujawniono</td></tr>
+<tr><td class="label">Google</td><td>Inwestor, dostawca compute, dystrybutor, także klient</td><td>Nie ujawniono</td><td>Nie ujawniono</td></tr>
+<tr><td class="label">Microsoft</td><td>Inwestor, dostawca compute, dystrybutor, także klient</td><td>Nie ujawniono</td><td>Nie ujawniono</td></tr>
+</tbody></table></div>
+<p class="small">Nazwy z S-1, „A Platform Customers Build Their Businesses On”, s. 193, oraz „Risks Related to Our Compute Infrastructure”, s. 70–78. <b>Obecność na liście nie oznacza rankingu wydatków.</b> Sprzedaż przez AWS, Google Cloud i Azure jest traktowana jako dystrybucja do klientów końcowych; nie należy przypisywać całej wartości takiej sprzedaży samym hyperscalerom jako ich wewnętrznego wydatku.</p>
+<div class="callout"><b>Moja interpretacja:</b> TOP 5 odpowiada za duże kwoty, ale jego udział spadł z około 36% w Q1 do 21% w Q3 2026, co sugeruje dywersyfikację bazy. Jednocześnie pojedynczy bardzo duży klient może mieć budżet na Claude rzędu setek milionów dolarów rocznie lub większy. S-1 nie podaje nazw ani kwot i nie pozwala wyliczyć konkretnej faktury żadnego z nich.</div>
+</section>
 <section id="produkty">
 <div class="sh"><div class="kicker">05 / Produkt i technologia</div><h2>Claude jako pracownik cyfrowy, nie tylko interfejs do LLM</h2></div>
 <div class="grid2">
@@ -252,6 +346,7 @@ input[type="range"]{width:100%;accent-color:var(--teal);margin:22px 0}label{font
 <li><b>Krzyżowe sprawdzenie danych:</b> agregaty i tabelaryczne odczyty opublikowane przez Kepler i LlamaIndex. W przypadku różnicy pierwszeństwo ma oryginalny dokument SEC. Suma umów compute jest oszacowaniem pozycji opisanych w prospekcie, a nie wartością zbiorczą oficjalnie ujawnioną w puste pole nagłówka.</li>
 <li><b>Jednostki:</b> na kartach mld USD i mln USD; w tabeli finansowej mln USD. Marże, wzrosty, P/S i niektóre sumy są moimi obliczeniami na podstawie danych źródłowych. Dane finansowe dotyczą okresów zakończonych 30.06.2026, a wybrane KPI i opis wdrożeń: 30.09.2026.</li>
 <li><b>Aktualizacja Q3 28.10.2026:</b> <a href="https://www.reuters.com/business/finance/anthropics-q3-revenue-surges-45-nearly-17-billion-2026-10-14/">Reuters (14.10.2026)</a>, <a href="https://www.theinformation.com/briefings/anthropic-reports-16-8-billion-third-quarter-revenue/">The Information (14.10.2026, ze sprostowaniem dotyczącym 11% marży YTD)</a>. Przychód Q3 jest wartością ze spotkania inwestorów relacjonowanego przez media, koszty Q3 i wynik Q3 są szacunkiem autorskim.</li>
+<li><b>Rozszerzenie 28.10.2026:</b> strategia i przyszłość AI opierają się na S-1, s. 8–9, 181–199 oraz 197–207; segmentacja klientów i udział TOP 5 na s. 57, 135, 143 i 193. Klienci według progu wydatków nie są segmentacją wg liczby pracowników. Rozłączne przedziały wydatków są przybliżeniem po odjęciu zaokrąglonych progów. Udziały TOP 5 w przychodach podano w S-1, wartości dolarowe są obliczeniem z H1 SEC i z Q3 z mediów. Żaden z przykładów nazwanych firm nie jest zidentyfikowany w prospekcie jako członek TOP 5.</li>
 <li><b>Różnica fakt / interpretacja:</b> dane prospektowe są faktami raportowanymi przez emitenta, nie wszystkie są audytowanymi KPI. Wnioski o przewadze konkurencyjnej, produktywności agentów, przyszłych marżach i atrakcyjności akcji stanowią opinię analityczną.</li>
 </ol>
 </section>

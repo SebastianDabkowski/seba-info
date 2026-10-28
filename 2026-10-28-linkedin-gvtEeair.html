@@ -1,55 +1,147 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Strona źródłowa udostępniona przez LinkedIn. Opis materiału oczekuje na weryfikację treści.">
-  <title>Materiał z LinkedIn | Seba Info</title>
-  <style>
-    :root { color-scheme:dark; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
-    * { box-sizing:border-box }
-    body { margin:0; background:#0a0f1c; color:#e9eef8; line-height:1.65; }
-    .page { width:min(860px,calc(100% - 36px)); margin:0 auto; padding:44px 0 84px; }
-    .top { display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #243047; padding-bottom:20px; }
-    .brand { font-weight:800; letter-spacing:.03em; color:#b7ccff; text-decoration:none; }
-    .date { color:#91a1bd; font-size:.88rem; }
-    .eyebrow { margin-top:66px; color:#91b7ff; text-transform:uppercase; letter-spacing:.15em; font-size:.76rem; font-weight:800; }
-    h1 { font-size:clamp(2.1rem,6vw,4rem); line-height:1.08; letter-spacing:-.045em; margin:13px 0 18px; }
-    .intro { color:#adbad1; font-size:1.13rem; max-width:680px; }
-    .notice { border:1px solid #485571; background:#172034; border-radius:18px; padding:24px; margin:35px 0; }
-    .notice strong { color:#dce9ff; }
-    h2 { font-size:1.32rem; margin-top:40px; letter-spacing:-.025em; }
-    p { max-width:740px; }
-    a { color:#9ec5ff; }
-    .link { display:inline-block; background:#a8c6ff; color:#101a2b; border-radius:11px; padding:12px 18px; font-weight:800; text-decoration:none; margin:12px 0 0; }
-    .meta { background:#111a2a; border:1px solid #263650; padding:20px 24px; border-radius:16px; }
-    .meta dt { color:#9aabc8; font-size:.82rem; }
-    .meta dd { margin:2px 0 18px; overflow-wrap:anywhere; }
-    .meta dd:last-child { margin-bottom:0; }
-    footer { border-top:1px solid #243047; margin-top:68px; padding-top:18px; color:#8595ae; font-size:.84rem; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1020">
+<meta name="description" content="GitHub Universe 2026 po polsku: Copilot App, Fusion, Projects, automatyzacje, AI Code Review, infrastruktura, koszty i wpływ na agentowy SDLC.">
+<meta property="og:title" content="GitHub Universe 2026 | Co zmienia się w software engineering?">
+<meta property="og:description" content="Przegląd najważniejszych ogłoszeń GitHuba i ich znaczenia dla zespołów IT.">
+<meta property="og:type" content="article">
+<title>GitHub Universe 2026 | AI zmienia cały software delivery | Seba Info</title>
+<style>
+:root{--bg:#090e1b;--panel:#111a2c;--panel2:#17223a;--line:#2b3955;--ink:#eff4ff;--muted:#a5b5cf;--blue:#9fbaff;--teal:#65e0c8;--gold:#f7d58a;--radius:18px;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 490px at 90% -160px,#213b68 0,transparent 71%),var(--bg);color:var(--ink);font:16px/1.72 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--blue);text-underline-offset:3px}a:hover{color:#cee0ff}strong{color:#fff}p{margin:0 0 17px}h1,h2,h3{line-height:1.18;letter-spacing:-.035em}h1{font-size:clamp(2.5rem,6vw,4.9rem);margin:17px 0 22px;max-width:890px}h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin:0 0 19px}h3{font-size:1.17rem;margin:0 0 10px}ul,ol{padding-left:24px}li{margin:0 0 11px}code{font-size:.94em;background:#1c2c46;padding:2px 5px;border-radius:5px}
+.wrap{max-width:1160px;padding:0 25px;margin:auto}.header{border-bottom:1px solid var(--line)}.headerin{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:20px 0}.brand{font-weight:850;letter-spacing:.11em;color:#e4ecff;text-decoration:none;font-size:.91rem}.headerlinks{display:flex;gap:20px;font-size:.83rem}.hero{padding:75px 0 54px}.eyebrow{color:var(--teal);font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.lede{font-size:clamp(1.1rem,2vw,1.34rem);max-width:810px;color:#c4d2e7;line-height:1.62}.small{font-size:.86rem;color:var(--muted)}.meta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:28px}.pill{padding:6px 13px;background:#182541;border:1px solid #32456a;border-radius:99px;color:#c1d6ff;font-size:.8rem;font-weight:650}.button{display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:10px 16px;text-decoration:none;color:#071323;background:var(--blue);border-radius:12px;font-weight:750;font-size:.88rem}.button:hover{color:#071323;background:#c7d9ff}
+.heroart{margin-top:38px;border:1px solid #334564;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,#1c3157,#11182a);padding:27px 32px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:16px;align-items:center}.node{text-align:center;padding:13px;border:1px solid #42567c;border-radius:13px;background:#15233a}.node b{display:block;font-size:.94rem}.node span{display:block;color:var(--muted);font-size:.79rem;margin-top:4px}.arrow{font-size:1.55rem;color:var(--teal);font-weight:900}.diagramnote{margin:10px 0 0;color:#b0c3dd;font-size:.77rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:24px}.stat{padding:21px;border:1px solid var(--line);background:var(--panel);border-radius:var(--radius)}.stat b{display:block;font-size:1.76rem;letter-spacing:-.035em;color:#c7d8ff}.stat small{display:block;color:var(--muted)}
+.content{display:grid;grid-template-columns:230px minmax(0,1fr);gap:53px;padding:20px 0 90px}.toc{align-self:start;position:sticky;top:26px}.tocbox{border:1px solid var(--line);background:#0f1828;border-radius:18px;padding:20px}.toctitle{font-size:.74rem;font-weight:800;color:var(--teal);letter-spacing:.13em;text-transform:uppercase;margin-bottom:12px}.toc a{display:block;text-decoration:none;color:#a7bbd8;padding:8px 0;font-size:.85rem}.toc a:hover{color:white}.article{min-width:0}.section{border-bottom:1px solid var(--line);padding:30px 0 48px;margin-bottom:10px;scroll-margin-top:30px}.section:first-child{padding-top:0}.section>p{color:#c4d0e2}
+.callout{border:1px solid #365277;background:linear-gradient(130deg,#152742,#121e34);padding:23px 27px;border-radius:var(--radius);margin:22px 0}.callout p:last-child{margin-bottom:0}.callout strong{color:#cbe0ff}.quote{border-left:4px solid var(--teal);padding-left:20px;color:#e5f1ff;font-size:1.12rem;margin:25px 0}
+.feature{padding:22px 0;border-bottom:1px solid #24314b}.feature:last-child{border:0}.featurehead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}.featurehead h3{margin:0}.tag{display:inline-block;border:1px solid #49647a;border-radius:8px;padding:2px 8px;color:#b1f3e7;font-size:.72rem;font-weight:700;white-space:nowrap}.feature p{color:#c8d2e5;margin:9px 0}.effect{font-size:.89rem;color:#b6c7df!important}.effect strong{color:#a4f1e0}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 23px}.card{padding:22px;border-radius:var(--radius);border:1px solid var(--line);background:var(--panel)}.card p{color:#bdcbe0;font-size:.92rem;margin-bottom:0}.card b{color:#e9efff}.card h3{color:#d7e7ff}.card .n{display:inline-block;color:var(--teal);font-weight:800;font-size:.8rem;letter-spacing:.08em;margin-bottom:7px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:15px;margin:20px 0}table{border-collapse:collapse;width:100%;min-width:570px;font-size:.9rem}th,td{padding:13px 15px;text-align:left;vertical-align:top;border-bottom:1px solid #293650}th{background:#1a2941;color:#d7e6ff;font-size:.8rem;letter-spacing:.025em}td{color:#c5d0e2}tbody tr:last-child td{border-bottom:0}tbody tr:nth-child(even){background:#111c2e}
+.detail{border:1px solid #344863;border-radius:14px;background:#111c2f;padding:20px;margin:19px 0}.detail b{color:#cfe6ff}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.check{color:var(--teal);font-weight:bold}.warning{color:var(--gold)}.source{display:block;padding:14px 0;border-bottom:1px solid #273650;text-decoration:none}.source:last-child{border:0}.source small{display:block;color:var(--muted);font-size:.8rem}footer{border-top:1px solid var(--line);color:#91a2bf;font-size:.83rem;padding:24px 0 40px}
+@media(max-width:850px){.content{grid-template-columns:1fr;gap:5px}.toc{position:static}.tocbox{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center}.toctitle{width:100%;margin-bottom:2px}.toc a{padding:3px 0}.hero{padding-top:50px}.heroart{grid-template-columns:1fr;gap:6px}.arrow{transform:rotate(90deg);text-align:center}.stats{grid-template-columns:1fr 1fr}.headerlinks a:nth-child(1){display:none}}@media(max-width:540px){.cards,.two,.stats{grid-template-columns:1fr}.wrap{padding:0 18px}.heroart{padding:18px}.callout{padding:19px}.headerlinks{gap:10px}}
+@media print{body{background:white;color:#111}a{color:#174da0}.header,.toc,.heroart{display:none}.content{display:block}.section{break-inside:avoid}.card,.stat{background:#fff;color:#111;border-color:#bbb}p,.section>p,.feature p,.card p,td{color:#111!important}}
+</style>
 </head>
 <body>
-<main class="page">
-  <div class="top"><a class="brand" href="https://sebastiandabkowski.github.io/seba-info/">SEBA INFO</a><span class="date">28 października 2026</span></div>
-  <div class="eyebrow">Materiały źródłowe / LinkedIn</div>
-  <h1>Materiał udostępniony przez LinkedIn</h1>
-  <p class="intro">Strona przeznaczona na opis i analizę materiału wskazanego skróconym linkiem LinkedIn. Na ten moment dostępny jest adres źródłowy, lecz treść docelowej publikacji nie została zweryfikowana.</p>
-  <section class="notice" aria-label="Status materiału">
-    <strong>Status: nie udało się odczytać materiału źródłowego.</strong>
-    <p>Podany link wykorzystuje skracacz <code>lnkd.in</code>. Nie udało się ustalić ani odczytać jego docelowej zawartości. Z tego powodu nie publikujemy domniemanego streszczenia, tytułu, autora ani wniosków.</p>
-  </section>
-  <h2>Co udało się ustalić?</h2>
-  <p>Adres przekazany do analizy jest odnośnikiem zabezpieczającym LinkedIn, który wskazuje na skrócony URL <a href="https://lnkd.in/gvtEeair" rel="noopener noreferrer">https://lnkd.in/gvtEeair</a>. Sam skrót nie ujawnia tematu ani treści materiału.</p>
-  <dl class="meta">
-    <dt>Link źródłowy</dt><dd><a href="https://lnkd.in/gvtEeair" rel="noopener noreferrer">https://lnkd.in/gvtEeair</a></dd>
-    <dt>Data przygotowania strony</dt><dd>28.10.2026</dd>
-    <dt>Weryfikacja treści</dt><dd>Niepotwierdzona. Wymagany bezpośredni adres strony lub jej tekst.</dd>
-  </dl>
-  <h2>Jak uzupełnić opis?</h2>
-  <p>Otwórz skrócony adres w przeglądarce. Następnie przekaż bezpośredni adres strony docelowej lub skopiuj jej treść. Pozwoli to przygotować rzeczowy opis, kluczowe tezy i podsumowanie, z zachowaniem źródła.</p>
-  <a class="link" href="https://lnkd.in/gvtEeair" target="_blank" rel="noopener noreferrer">Otwórz materiał źródłowy</a>
-  <footer>Źródło: link przesłany przez użytkownika. Strona informacyjna, nie jest streszczeniem zawartości docelowej.</footer>
-</main>
-</body>
-</html>
+<header class="header"><div class="wrap headerin"><a class="brand" href="https://sebastiandabkowski.github.io/seba-info/">SEBA INFO</a><nav class="headerlinks" aria-label="Nawigacja"><a href="#funkcje">Nowości</a><a href="#koszty">Koszty</a><a href="#wnioski">Wnioski</a></nav></div></header>
+<div class="wrap">
+<section class="hero">
+<div class="eyebrow">Analiza technologiczna · 28 października 2026</div>
+<h1>GitHub Universe 2026:<br>od kodowania do orkiestracji agentów AI</h1>
+<p class="lede">GitHub chce stać się platformą zarządzającą całym procesem dostarczania oprogramowania, a nie tylko miejscem przechowywania kodu. Najnowsze ogłoszenia łączą planowanie, implementację, review, automatyzację oraz infrastrukturę w jeden agentowy system pracy.</p>
+<div class="meta"><span class="pill">GitHub Copilot</span><span class="pill">AI-native SDLC</span><span class="pill">Software architecture</span><a class="button" href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/" target="_blank" rel="noopener noreferrer">Oryginalny artykuł ↗</a></div>
+<div class="heroart" role="img" aria-label="Model procesu: intencja biznesowa, agenci AI, ukończona praca oprogramowania">
+<div class="node"><b>Intencja</b><span>Cel, wymagania, priorytet</span></div><div class="arrow">→</div>
+<div class="node"><b>Agenci + narzędzia</b><span>Kod, testy, review, kontrola</span></div><div class="arrow">→</div>
+<div class="node"><b>Ukończona praca</b><span>Bezpieczna zmiana dostarczona</span></div>
+</div><p class="diagramnote">Schemat interpretacyjny przygotowany na podstawie wizji opisanej przez GitHub, a nie oficjalny diagram architektury produktu.</p>
+</section>
+<div class="stats" aria-label="Inwestycje infrastrukturalne GitHub w 2026 roku">
+<div class="stat"><b>4 mln</b><small>Dodatkowych rdzeni CPU w 2026 r.</small></div>
+<div class="stat"><b>160 PB</b><small>Dodatkowej szybkiej pamięci masowej</small></div>
+<div class="stat"><b>50 Tb/s</b><small>Dodatkowej przepustowości sieci</small></div>
+</div>
+<div class="content">
+<aside class="toc" aria-label="Spis treści"><div class="tocbox"><div class="toctitle">Na tej stronie</div>
+<a href="#esencja">01. Najważniejsza zmiana</a><a href="#funkcje">02. Ogłoszone produkty</a><a href="#fusion">03. Orkiestracja modeli</a><a href="#review">04. AI Code Review</a><a href="#koszty">05. Koszty i dostępność</a><a href="#infrastruktura">06. Infrastruktura</a><a href="#wnioski">07. Wnioski dla IT</a><a href="#zrodla">08. Źródła</a></div></aside>
+<main class="article">
+<section class="section" id="esencja">
+<h2>01. Najważniejsza zmiana: liczy się ukończona praca, nie ilość kodu</h2>
+<p>Jay Parikh w artykule opublikowanym 28 października 2026 r. przedstawia kierunek rozwoju GitHuba: od narzędzi wspierających pojedynczego programistę do systemu, w którym człowiek wyznacza cel, podejmuje decyzje i odpowiada za rezultat, a agenci AI wykonują i weryfikują część pracy.</p>
+<div class="callout"><strong>Główna teza</strong><p>Jednostką wartości w software engineering ma być dostarczona funkcjonalność, naprawiony błąd lub usunięte ryzyko bezpieczeństwa. Sam wygenerowany kod nie jest wystarczającym rezultatem.</p></div>
+<p>GitHub traktuje SDLC jako proces nieliniowy. Pracę może rozpocząć nowe wymaganie, problem produkcyjny, telemetryka lub zmiana w kodzie. Agent może przechodzić między analizą, implementacją, testowaniem i code review, a człowiek zachowuje odpowiedzialność za wdrożenie.</p>
+<div class="cards">
+<div class="card"><div class="n">01 / VELOCITY</div><h3>Szybkość dostarczania</h3><p>Ograniczenie czasu od pomysłu do zakończonej i zweryfikowanej zmiany.</p></div>
+<div class="card"><div class="n">02 / INTELLIGENCE</div><h3>Kontekst i uczenie się</h3><p>Wykorzystanie informacji z platformy i rezultatów wcześniejszych zadań.</p></div>
+<div class="card"><div class="n">03 / QUALITY</div><h3>Jakość i bezpieczeństwo</h3><p>Wykrywanie istotnych problemów przed wdrożeniem, także przy wzroście wolumenu kodu.</p></div>
+<div class="card"><div class="n">04 / CONTROL</div><h3>Kontrola przez zespół</h3><p>Decyzje, odpowiedzialność, narzędzia i koszty pozostają pod kontrolą użytkowników.</p></div>
+</div>
+</section>
+<section class="section" id="funkcje">
+<h2>02. Sześć najważniejszych ogłoszeń produktowych</h2>
+<article class="feature"><div class="featurehead"><h3>GitHub Copilot App</h3><span class="tag">Jedno środowisko pracy</span></div><p>Aplikacja skoncentrowana na pracy z agentami. Pozwala kierować zadaniami od issue do merge, pracować nad specyfikacjami, analizować telemetrię i prowadzić dyskusje projektowe w jednym interfejsie.</p><p class="effect"><strong>Znaczenie:</strong> punkt koordynacji dla człowieka zarządzającego pracą agentów, nie kolejny edytor z autouzupełnianiem.</p></article>
+<article class="feature"><div class="featurehead"><h3>Copilot Fusion</h3><span class="tag">Router i orkiestrator modeli</span></div><p>System automatycznie dobiera modele oraz sposób ich współpracy do zadania. Może wykorzystać jeden model, kaskadową weryfikację albo równoległą krytykę kilku modeli. Szczegóły poniżej.</p><p class="effect"><strong>Znaczenie:</strong> optymalizacja kompromisu koszt, jakość i opóźnienie bez ręcznego przełączania modeli.</p></article>
+<article class="feature"><div class="featurehead"><h3>Copilot Projects</h3><span class="tag">Public preview</span></div><p>Długotrwały cel projektu może być realizowany w wielu repozytoriach i równoległych sesjach. Użytkownik śledzi postęp, zatwierdza decyzje oraz przekazuje kontekst i materiały z biblioteki projektu. Projekty obsługują również zadania cykliczne.</p><p class="effect"><strong>Znaczenie:</strong> zarządzanie strumieniem pracy i rezultatami zamiast ręcznego obsługiwania każdej sesji agenta.</p></article>
+<article class="feature"><div class="featurehead"><h3>Session Continuity</h3><span class="tag">Sesje w chmurze</span></div><p>Jedna sesja może być kontynuowana na GitHub.com, w Copilot App, CLI, VS Code i na urządzeniach mobilnych. Kontekst i stan pracy pozostają w środowisku chmurowym.</p><p class="effect"><strong>Znaczenie:</strong> możliwość uruchamiania, nadzorowania i korygowania pracy bez przywiązania do pojedynczego urządzenia.</p></article>
+<article class="feature"><div class="featurehead"><h3>Copilot Automations</h3><span class="tag">Zdarzenia i harmonogram</span></div><p>Agenci mogą uruchamiać się według harmonogramu, po zdarzeniach repozytorium albo przez API. Przykładowe scenariusze obejmują triaż zgłoszeń, przygotowanie review i analizę incydentów. Automatyzacje mogą proponować ulepszenia swoich konfiguracji, które człowiek ocenia i zatwierdza.</p><p class="effect"><strong>Znaczenie:</strong> krok od asystenta reagującego na prompt do kontrolowanej automatyzacji pracy inżynierskiej.</p></article>
+<article class="feature"><div class="featurehead"><h3>Copilot Code Review Max</h3><span class="tag">Public preview</span></div><p>Nowy poziom dokładniejszego przeglądu zmian. GitHub udostępnia trzy poziomy intensywności review: Lite, Balanced i Max. Max jest przeznaczony do bardziej złożonych, krytycznych zmian i wykorzystuje wiele modeli o silnych zdolnościach rozumowania.</p><p class="effect"><strong>Znaczenie:</strong> skalowanie kontroli jakości wraz ze wzrostem liczby pull requestów generowanych przez AI.</p></article>
+</section>
+<section class="section" id="fusion">
+<h2>03. Copilot Fusion: ważniejsza staje się orkiestracja modeli</h2>
+<p>Fusion nie jest pojedynczym modelem LLM. To warstwa wykonawcza, która na podstawie zadania dobiera model lub kilka modeli oraz poziom wysiłku. Dokumentacja opisuje trzy wzorce działania:</p>
+<div class="table-wrap"><table><thead><tr><th>Wzorzec</th><th>Przebieg</th><th>Zastosowanie</th></tr></thead><tbody>
+<tr><td><strong>Single</strong></td><td>Jeden model wykonuje zadanie.</td><td>Proste, dobrze określone problemy.</td></tr>
+<tr><td><strong>Cascade</strong></td><td>Tańszy model proponuje rozwiązanie, kontroler akceptuje lub eskaluje do mocniejszego.</td><td>Zadania wymagające ekonomicznej walidacji.</td></tr>
+<tr><td><strong>Critique</strong></td><td>Jeden model tworzy odpowiedź, kilka modeli niezależnie ją ocenia, potem następuje poprawa.</td><td>Problemy wymagające głębszej analizy.</td></tr>
+</tbody></table></div>
+<p>Dostępne są poziomy wysiłku Standard, High i Max. Wersja Standard faworyzuje ekonomię, a Max głębsze rozumowanie. Fusion uwzględnia dostępność modeli, polityki organizacji i ograniczenia kontekstu. Dokumentacja wspomina także eksperymentalną obsługę wybranych modeli lokalnych.</p>
+<div class="detail"><b>Wynik wydajności podawany przez GitHub</b><p>Według ogłoszenia Fusion Max uzyskał rezultat w indeksie Artificial Analysis Coding Agent Index oddalony o mniej niż trzy punkty od Opus 5.5 Max, przy około połowie kosztu i czasie na zadanie krótszym o 40%. To przytoczona deklaracja producenta w określonym benchmarku, a nie gwarancja dla dowolnego projektu.</p></div>
+<p><strong>Uwaga kosztowa:</strong> nie ma osobnej opłaty za sam router Fusion, ale naliczane są koszty modeli użytych w danym zadaniu. Poziomy High i Max mogą uruchamiać kilka modeli, a więc nie muszą być tańsze od Standard. W dokumentacji wskazano 30% zniżki na koszty modeli przy używaniu Fusion w płatnych planach do 30 listopada 2026 r.</p>
+<p class="small">Dokumentacja: <a href="https://docs.github.com/en/copilot/concepts/models/copilot-fusion" target="_blank" rel="noopener noreferrer">About GitHub Copilot Fusion</a>.</p>
+</section>
+<section class="section" id="review">
+<h2>04. AI Code Review: więcej automatyzacji oznacza większą potrzebę kontroli</h2>
+<p>Wzrost produkcji kodu zwiększa liczbę zmian wymagających weryfikacji. GitHub podkreśla, że przyspieszenie implementacji nie ma wartości, jeżeli równocześnie rośnie liczba defektów trafiających do produkcji.</p>
+<div class="table-wrap"><table><thead><tr><th>Tryb</th><th>Charakter</th><th>Średni koszt review*</th></tr></thead><tbody>
+<tr><td><strong>Lite</strong></td><td>Szybki przegląd typowych błędów i problemów bezpieczeństwa.</td><td>ok. 0,25 USD</td></tr>
+<tr><td><strong>Balanced</strong></td><td>Dokładniejsza analiza skomplikowanej logiki i zmian między usługami.</td><td>ok. 1,50 USD</td></tr>
+<tr><td><strong>Max</strong></td><td>Najgłębszy przegląd dla zmian wysokiego ryzyka.</td><td>ok. 10 USD</td></tr>
+</tbody></table></div>
+<p class="small">* Szacunki ze strony GitHub Docs, nie cennik stały. Zależą od rozmiaru pull requesta i kontekstu repozytorium, nie uwzględniają kosztów GitHub Actions. Max jest w public preview.</p>
+<p>GitHub podał, że Max osiągnął najwyższy wynik F1 dla problemów wysokiej wagi w benchmarku ReviewBench. Wynik należy interpretować jako informację o teście, nie dowód, że narzędzie wykryje każdy błąd ani substytut testów i review człowieka.</p>
+<div class="callout"><strong>Interpretacja architektoniczna</strong><p>W praktyce warto różnicować poziom review według ryzyka: Lite dla zmian rutynowych, Balanced dla złożonych obszarów biznesowych, Max dla krytycznych fragmentów systemu. Uzupełnieniem nadal powinny być testy automatyczne, kontrola architektury, analiza zależności i odpowiedzialność właściciela kodu.</p></div>
+<p class="small">Dokumentacja: <a href="https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review" target="_blank" rel="noopener noreferrer">GitHub Copilot code review</a>.</p>
+</section>
+<section class="section" id="koszty">
+<h2>05. Dostępność, licencjonowanie i ograniczenia</h2>
+<p>GitHub wprowadza zmianę dla klientów GitHub Enterprise: dostęp do funkcji Copilot bez potrzeby osobnej subskrypcji Copilot, z rozliczaniem zużytych AI credits. Dostęp przez dział sprzedaży został ogłoszony 28 października 2026 r., a samoobsługowe wdrożenie ma pojawić się później. Istniejący klienci Business i Enterprise mogą zachować dotychczasowe plany lub przejść na nowy sposób rozliczania.</p>
+<div class="table-wrap"><table><thead><tr><th>Funkcja</th><th>Co należy wiedzieć</th></tr></thead><tbody>
+<tr><td><strong>Fusion</strong></td><td>Dostępny w planach Copilot; konkretne modele i poziomy wysiłku zależą od planu i polityk.</td></tr>
+<tr><td><strong>Projects</strong></td><td>W aplikacji Copilot, public preview; cele mogą obejmować wiele repozytoriów.</td></tr>
+<tr><td><strong>Automations</strong></td><td>Tylko repozytoria prywatne i wewnętrzne; wymagają odpowiedniego planu i aktywnego cloud agenta.</td></tr>
+<tr><td><strong>Code Review</strong></td><td>Płatne plany Copilot; poziom Max w public preview; koszty w AI credits i potencjalnie Actions.</td></tr>
+<tr><td><strong>Enterprise</strong></td><td>Nowe rozliczanie według wykorzystanych AI credits, początkowo przez sprzedaż.</td></tr>
+</tbody></table></div>
+<h3>Przed wdrożeniem automatyzacji</h3>
+<ul><li>Nadaj agentom tylko niezbędne uprawnienia, w tym uprawnienia do narzędzi MCP.</li><li>Oddziel tworzenie zmian od akceptacji i wdrażania, szczególnie dla kodu wysokiego ryzyka.</li><li>Ustal limity AI credits na uruchomienie i okres rozliczeniowy.</li><li>Pamiętaj, że automatyzacje mogą pobierać opłaty za AI credits oraz minuty GitHub Actions.</li><li>Traktuj samodoskonalenie automatyzacji jako propozycje zmian wymagające zatwierdzenia, a nie niekontrolowane modyfikacje.</li></ul>
+<p class="small">Dokumentacja: <a href="https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations" target="_blank" rel="noopener noreferrer">Copilot automations</a> oraz <a href="https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-projects" target="_blank" rel="noopener noreferrer">Copilot projects</a>.</p>
+</section>
+<section class="section" id="infrastruktura">
+<h2>06. Dlaczego GitHub przebudowuje infrastrukturę?</h2>
+<p>Praca agentów generuje nowe obciążenie: większą liczbę zmian w repozytoriach, operacji Git, sesji i wywołań narzędzi. GitHub ogłosił inwestycje w moc obliczeniową, pamięć masową i sieć, a także migrację w stronę wdrożenia Azure w wielu regionach, z planowanym zakończeniem na początku 2027 r.</p>
+<p>Dodatkowo firma wskazała trzy zasady modernizacji własnej architektury Git:</p>
+<ol><li><strong>Uproszczenie prymitywów</strong>, czyli redukcja złożoności podstawowych mechanizmów.</li><li><strong>Oddzielenie storage od compute</strong>, aby skalować zasoby niezależnie.</li><li><strong>Minimalizacja koordynacji</strong>, aby ograniczać wąskie gardła przy współbieżnej pracy.</li></ol>
+<p>To sygnał, że adopcja agentów jest również problemem architektury platformowej, a nie tylko jakości modeli LLM. Oprogramowanie musi obsłużyć nowe wzorce obciążenia oraz większy wolumen operacji wykonywanych automatycznie.</p>
+<p class="small">Rozwinięcie: <a href="https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/" target="_blank" rel="noopener noreferrer">Building Git infrastructure for agent-scale development</a>.</p>
+</section>
+<section class="section" id="wnioski">
+<h2>07. Co z tego wynika dla architektów i zespołów IT?</h2>
+<p><strong>Poniższe punkty są interpretacją i rekomendacjami, a nie zapowiedziami nowych funkcji GitHuba.</strong> Artykuł wskazuje kierunek rozwoju AI-native SDLC, ale nie dowodzi automatycznie wzrostu produktywności w każdej organizacji.</p>
+<div class="cards">
+<div class="card"><div class="n">ARCHITECTURE</div><h3>Specyfikacje i granice</h3><p>Dostarczaj agentom wymagania jakościowe, decyzje architektoniczne, granice modułów oraz kryteria akceptacji. Sam prompt opisujący funkcję zwykle nie wystarczy do utrzymania spójności dużego systemu.</p></div>
+<div class="card"><div class="n">ENGINEERING</div><h3>Sprawdzalny rezultat</h3><p>Mierz wykonane zadania, defekty po wdrożeniu, czas od issue do merge, koszt na zmianę i wielkość poprawek. Liczba wygenerowanych linii kodu nie jest miernikiem wartości.</p></div>
+<div class="card"><div class="n">QUALITY</div><h3>Automatyczne bramki jakości</h3><p>Połącz testy, statyczną analizę, reguły architektury i AI review. Definiuj warunki, bez spełnienia których agent nie może uznać zadania za zakończone.</p></div>
+<div class="card"><div class="n">OPERATIONS</div><h3>Human-in-the-loop</h3><p>Wyznacz miejsca wymagające zatwierdzenia przez człowieka, uprawnienia do zmian, limity kosztów, śledzenie sesji i sposób audytu działań agentów.</p></div>
+</div>
+<h3>Przykładowy pilotaż w zespole</h3>
+<ol><li>Wybierz jedno repozytorium i kategorię niskiego ryzyka, np. analizę issue albo poprawki testów.</li><li>Dodaj do repozytorium instrukcje dla agentów, zasady architektury i obowiązkowe testy.</li><li>Porównaj pracę ręczną i agentową na podobnych zadaniach, uwzględniając review, poprawki i koszt.</li><li>Dopiero po pomiarach rozszerz automatyzacje na większą liczbę repozytoriów i trudniejsze zmiany.</li></ol>
+<div class="callout"><strong>Podsumowanie</strong><p>Najistotniejszą zmianą nie jest kolejny model do generowania kodu. GitHub buduje system, w którym agenci mogą przejmować fragmenty procesu dostarczania oprogramowania, a rola zespołu przesuwa się w kierunku definiowania celów, ograniczeń, pomiaru jakości i nadzorowania wykonania.</p></div>
+</section>
+<section class="section" id="zrodla">
+<h2>08. Źródła i metodologia</h2>
+<p>To autorskie omówienie w języku polskim, oparte na oficjalnym artykule i dokumentacji producenta. Fragmenty opisujące działanie produktów i dostępność odróżniono od ocen oraz rekomendacji praktycznych. Nie jest to tłumaczenie pełnego tekstu artykułu.</p>
+<a class="source" href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/" target="_blank" rel="noopener noreferrer"><strong>GitHub Universe 2026: Evolving every layer of the stack ↗</strong><small>Jay Parikh, The GitHub Blog, 28.10.2026. Źródło główne.</small></a>
+<a class="source" href="https://docs.github.com/en/copilot/concepts/models/copilot-fusion" target="_blank" rel="noopener noreferrer"><strong>About GitHub Copilot Fusion ↗</strong><small>Wzorce orkiestracji, poziomy wysiłku, modele lokalne i rozliczanie.</small></a>
+<a class="source" href="https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-projects" target="_blank" rel="noopener noreferrer"><strong>Working with projects in the GitHub Copilot app ↗</strong><small>Zakres projektów, status public preview, zadania cykliczne.</small></a>
+<a class="source" href="https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-automations" target="_blank" rel="noopener noreferrer"><strong>Copilot automations ↗</strong><small>Uprawnienia, triggery, dostępność, rozliczenia i bezpieczeństwo.</small></a>
+<a class="source" href="https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/code-review" target="_blank" rel="noopener noreferrer"><strong>GitHub Copilot code review ↗</strong><small>Poziomy Lite/Balanced/Max oraz szacowane koszty.</small></a>
+<a class="source" href="https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/" target="_blank" rel="noopener noreferrer"><strong>Building Git infrastructure for agent-scale development ↗</strong><small>Szczegóły kierunku rozwoju infrastruktury Git.</small></a>
+</section>
+</main></div>
+<footer><div class="wrap">Seba Info · Opracowanie: 28.10.2026 · Materiał informacyjny, niezależny od GitHub, Inc. · <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">Do góry ↑</a></div></footer>
+</div>
+</body></html>

@@ -21,6 +21,7 @@ To **celowo publiczna** strona do udostępniania potencjalnym klientom. Nie nale
 **Publiczna analiza spółki XTB:** raport z 25.10.2026 opiera się wyłącznie na upublicznionych danych giełdowych i sprawozdaniach finansowych. Zgodnie z prośbą o publiczny link jest dostępny bez hasła. Nie zawiera danych prywatnych ani poufnych. Pozostałe raporty prywatne pozostają zaszyfrowane.
 
 <!-- SEBA-INFO-REPORTS-START -->
+| 2026-10-29 | XTB S.A. / III kwartał 2026, ESPI 23/2026 (PUBLICZNY) | Rozbudowana analiza wyników wstępnych, 9 kwartałów, konsensus PAP, KPI klientów, koszty, ryzyko CFD, scenariusze i wnioski. Bez hasła. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-29-xtb-q3-2026-wyniki-espi-analiza.html) |
 | 2026-10-27 | Anthropic IPO, analiza prospektu S-1 (PUBLICZNY) | Wyniki 2023–H1 2026, przychody kwartalne, finansowanie, compute, governance, ryzyka i interaktywny symulator P/S. Bez hasła. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-27-anthropic-prospekt-ipo-analiza.html) |
 
 | 2026-10-26 | Cyfrowy Polsat S.A. (CPS) / 9 kwartałów Q2 2024–Q2 2026 (PUBLICZNY) | Wyniki skonsolidowane, EBITDA, zysk netto, raporty ESPI/PAP, GPW, Investing i Stooq, kalendarz 18.11.2026. Bez hasła. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-26-cyfrowy-polsat-raport-gieldowy.html) |

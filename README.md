@@ -21,6 +21,7 @@ To **celowo publiczna** strona do udostępniania potencjalnym klientom. Nie nale
 **Publiczna analiza spółki XTB:** raport z 25.10.2026 opiera się wyłącznie na upublicznionych danych giełdowych i sprawozdaniach finansowych. Zgodnie z prośbą o publiczny link jest dostępny bez hasła. Nie zawiera danych prywatnych ani poufnych. Pozostałe raporty prywatne pozostają zaszyfrowane.
 
 <!-- SEBA-INFO-REPORTS-START -->
+| 2026-10-31 | Momentum / Feedback-first outreach: tłumaczenie, dane i analiza 🔒 | Tłumaczenie podejścia Meaningful Sales, wyniki FHIR vs HIPAA, interaktywny lejek, krytyczna ocena, zastosowanie w Arpeggia Studio. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-31-momentum-feedback-first-outreach-analiza.html) |
 | Data publikacji | Raport | Opis | Strona |
 | --- | --- | --- | --- |
 | 2026-10-25 | Financial Decision Intelligence / Wizualna koncepcja produktu 🔒 | Interaktywny opis produktu: dashboard CFO, diagnoza odchyleń, analiza otoczenia, symulator scenariuszy, architektura, moduły, MVP i roadmapa. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-25-opis-produktu-financial-decision-intelligence.html) |

@@ -23,7 +23,6 @@ To **celowo publiczna** strona do udostępniania potencjalnym klientom. Nie nale
 <!-- SEBA-INFO-REPORTS-START -->
 | Data publikacji | Raport | Opis | Strona |
 | --- | --- | --- | --- |
-| 2026-11-01 | Dom Development (DOM) / raport giełdowy (publiczny, bez hasła) | 9 kwartałów wyników: przychody, EBITDA, zysk netto, daty publikacji, źródłowe raporty PDF, analiza marż i przyszłe terminy wyników oraz dywidend. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-11-01-dom-development-raport-gieldowy.html) |
 | 2026-10-31 | Momentum / Feedback-first outreach: tłumaczenie, dane i analiza 🔒 | Pełne tłumaczenie podejścia Meaningful Sales, analiza wyników FHIR vs HIPAA, interaktywny lejek, krytyczna ocena metryk, wdrożenie w Arpeggia i plan eksperymentu. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-31-momentum-feedback-first-outreach-analiza.html) |
 | 2026-10-25 | Financial Decision Intelligence / Wizualna koncepcja produktu 🔒 | Interaktywny opis produktu: dashboard CFO, diagnoza odchyleń, analiza otoczenia, symulator scenariuszy, architektura, moduły, MVP i roadmapa. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-25-opis-produktu-financial-decision-intelligence.html) |
 | 2026-10-24 | Test publikacji 🔒 | Strona demonstracyjna sprawdzająca automatyczne szyfrowanie i publikację HTML. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/test-publikacji.html) |

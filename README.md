@@ -23,6 +23,7 @@ To **celowo publiczna** strona do udostępniania potencjalnym klientom. Nie nale
 <!-- SEBA-INFO-REPORTS-START -->
 | Data publikacji | Raport | Opis | Strona |
 | --- | --- | --- | --- |
+| 2026-11-03 | AI przesuwa wąskie gardło: rola architekta, executive summary i fakty 🔒 | Polskie omówienie artykułu Karola Wiszowatego, executive summary, weryfikacja badań LinearB, Harvard, arXiv i Zalando, pięć kroków TOC i plan na 30 dni. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-11-03-ai-przesuniecie-waskiego-gardla-rola-architekta.html) |
 | 2026-10-31 | Momentum / Feedback-first outreach: tłumaczenie, dane i analiza 🔒 | Pełne tłumaczenie podejścia Meaningful Sales, analiza wyników FHIR vs HIPAA, interaktywny lejek, krytyczna ocena metryk, wdrożenie w Arpeggia i plan eksperymentu. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-31-momentum-feedback-first-outreach-analiza.html) |
 | 2026-10-25 | Financial Decision Intelligence / Wizualna koncepcja produktu 🔒 | Interaktywny opis produktu: dashboard CFO, diagnoza odchyleń, analiza otoczenia, symulator scenariuszy, architektura, moduły, MVP i roadmapa. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-10-25-opis-produktu-financial-decision-intelligence.html) |
 | 2026-10-24 | Test publikacji 🔒 | Strona demonstracyjna sprawdzająca automatyczne szyfrowanie i publikację HTML. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/test-publikacji.html) |

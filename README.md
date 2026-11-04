@@ -21,6 +21,8 @@ To **celowo publiczna** strona do udostępniania potencjalnym klientom. Nie nale
 **Publiczna analiza spółki XTB:** raport z 25.10.2026 opiera się wyłącznie na upublicznionych danych giełdowych i sprawozdaniach finansowych. Zgodnie z prośbą o publiczny link jest dostępny bez hasła. Nie zawiera danych prywatnych ani poufnych. Pozostałe raporty prywatne pozostają zaszyfrowane.
 
 <!-- SEBA-INFO-REPORTS-START -->
+| 2026-11-04 | Lubawa S.A. (LBW) · raport giełdowy i 90-dniowy wykres świecowy 🌐 | Publiczna analiza spółki oparta na raportach giełdowych, 9 kwartałów przychodów, EBITDA i zysku, kalendarium oraz kursy dzienne z StockData. Bez hasła. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-11-04-lubawa-raport-gieldowy.html) |
+
 | Data publikacji | Raport | Opis | Strona |
 | --- | --- | --- | --- |
 | 2026-11-03 | AI przesuwa wąskie gardło: rola architekta, executive summary i fakty 🔒 | Polskie omówienie artykułu Karola Wiszowatego, executive summary, weryfikacja badań LinearB, Harvard, arXiv i Zalando, pięć kroków TOC i plan na 30 dni. | [Otwórz](https://sebastiandabkowski.github.io/seba-info/2026-11-03-ai-przesuniecie-waskiego-gardla-rola-architekta.html) |

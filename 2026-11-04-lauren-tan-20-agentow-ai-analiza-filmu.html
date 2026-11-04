@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080f1d">
+<meta name="description" content="Szczegółowa polska analiza 55-minutowego warsztatu Lauren Tan o agentach AI: verification skills, feature maps, pstack, evals, Dune, CI, autonomii i mierzeniu jakości.">
+<meta property="og:title" content="Lauren Tan: 20+ agentów AI. Co naprawdę pokazuje ten film?">
+<meta property="og:description" content="Weryfikacja zamiast ślepego zaufania. Analiza z rozdziałami filmu, diagramami, źródłami i planem wdrożenia.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://i.ytimg.com/vi/yw_QhowlZ2g/hqdefault.jpg">
+<title>Lauren Tan • 20+ agentów AI | Analiza filmu</title>
+<style>
+:root{--bg:#080f1d;--panel:#111e31;--panel2:#152741;--line:#29405d;--ink:#eef5ff;--muted:#afbed3;--blue:#60b3ff;--mint:#65e1c4;--orange:#ffc783;--red:#ff95a6;--max:1150px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:radial-gradient(900px 510px at 72% -100px,#173662 0,transparent 72%),var(--bg);font:16px/1.75 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink)}a{color:#86c9ff;text-decoration:none}a:hover{text-decoration:underline}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.03em}h1{font-size:clamp(2.3rem,6vw,4.5rem);margin:12px 0 22px}h2{font-size:clamp(1.55rem,3vw,2.15rem);margin:0 0 18px}h3{font-size:1.18rem;margin:0 0 12px}p{margin:0 0 16px}strong{color:#fff}ul,ol{padding-left:22px}li{margin:7px 0}code{font-size:.9em;color:#c5eaff;background:#162d49;padding:.08em .3em;border-radius:5px}pre{overflow:auto;padding:16px 20px;background:#081523;border:1px solid var(--line);border-radius:12px;color:#d2ecfa;font-size:.88rem;line-height:1.6}small,.small{font-size:.85rem}header{position:sticky;top:0;z-index:10;backdrop-filter:blur(16px);background:#08101ddc;border-bottom:1px solid #1b2f4b}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:64px}.brand{color:white;font-weight:800;font-size:1.05rem;letter-spacing:-.04em}.brand span{color:var(--blue)}.headlinks{display:flex;gap:18px;align-items:center;font-size:.85rem}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}.hero{padding:80px 0 48px}.eyebrow{display:inline-block;color:var(--mint);font-weight:800;letter-spacing:.15em;text-transform:uppercase;font-size:.73rem}.sub{color:#cfdbeb;font-size:clamp(1.04rem,2.2vw,1.32rem);max-width:800px}.tagline{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.tag{border:1px solid #395170;background:#102541;color:#bdd4ed;border-radius:99px;padding:4px 12px;font-size:.8rem;font-weight:650}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:8px;background:#2a84e8;color:white;padding:11px 19px;border-radius:10px;font-weight:750;border:1px solid #65b4ff}.btn:hover{background:#3d94ef;text-decoration:none}.btn.secondary{background:transparent;color:#d8ecff;border-color:#36516f}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}.vidbox{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#060d17;box-shadow:0 20px 60px #0004}.vidbox iframe{display:block;aspect-ratio:16/9;width:100%;border:0}.vidnote{color:var(--muted);padding:12px 16px;font-size:.82rem}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0 68px}.metric{background:linear-gradient(145deg,#142b47,#0d1a2b);padding:18px 20px;border:1px solid var(--line);border-radius:14px}.metric b{display:block;color:var(--blue);font-size:1.75rem;line-height:1.15}.metric span{display:block;color:#bac9da;margin-top:8px;font-size:.81rem;line-height:1.45}.note{padding:18px 20px;border-left:3px solid var(--blue);background:#10233b;border-radius:0 10px 10px 0;color:#d4e1f2;margin:24px 0}.note.warn{border-color:var(--orange);background:#251f20}.layout{display:grid;grid-template-columns:240px minmax(0,1fr);align-items:start;gap:36px}.toc{position:sticky;top:84px;border:1px solid var(--line);border-radius:14px;padding:19px 15px;background:#0c1729}.toc h3{font-size:.9rem;color:#c6e5ff;margin:0 0 13px}.toc a{display:block;color:#acbed4;font-size:.85rem;padding:7px 9px;border-radius:7px;line-height:1.25}.toc a:hover{background:#182b46;text-decoration:none;color:white}.main section{margin:0 0 36px;padding:30px;border:1px solid #203652;border-radius:16px;background:linear-gradient(145deg,#101e32,#0d1829)}.main section:target{border-color:#4386c0}.main section h2:before{content:"";display:block;width:34px;height:4px;border-radius:5px;background:var(--blue);margin-bottom:16px}.lead{font-size:1.1rem;color:#e1effe}.facts,.cols,.triple{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.triple{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:#152741;border:1px solid #2a486d;border-radius:12px;padding:18px}.card p{color:#d1deec;font-size:.93rem;margin-bottom:0}.card .num{color:var(--mint);font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800}.pill{display:inline-block;font-size:.74rem;font-weight:700;border-radius:10px;padding:3px 8px;background:#203e5f;color:#c1e6ff}.pill.orange{background:#4d3625;color:#ffdfb3}.steps{counter-reset:s;display:grid;gap:12px}.step{display:grid;grid-template-columns:36px 1fr;align-items:start;gap:14px;padding:15px;background:#14263e;border:1px solid var(--line);border-radius:12px}.step:before{counter-increment:s;content:counter(s);height:34px;width:34px;border-radius:10px;display:grid;place-items:center;color:#071526;background:var(--mint);font-weight:900}.step div{min-width:0}.step strong{display:block}.step p{margin:3px 0;color:#bfcee0;font-size:.92rem}.diagram{padding:16px;border-radius:14px;border:1px dashed #406383;background:#0b1c31;margin:18px 0;text-align:center}.node{display:inline-block;max-width:100%;padding:13px 18px;background:#173a5d;border:1px solid #5192c6;border-radius:11px;font-weight:700;color:#f3fbff}.node.green{background:#16463e;border-color:#56cbb6}.node.orange{background:#45301e;border-color:#d5a36e}.arrow{font-size:22px;color:#70c1ff;line-height:1.6}.diagram .cols{margin-top:10px;text-align:center}.diagram .cols .node{font-size:.9rem;min-height:66px;display:flex;align-items:center;justify-content:center}.chapter{padding:15px 0;border-bottom:1px solid #263f5f;display:flex;align-items:start;gap:14px}.chapter:last-child{border:0}.time{white-space:nowrap;color:#a8dcff;font-size:.79rem;font-weight:850;background:#203854;border-radius:8px;padding:5px 8px}.chapter span:last-child{color:#becde0;font-size:.9rem}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:520px;font-size:.91rem}td,th{text-align:left;border-bottom:1px solid #29415f;padding:13px 10px;vertical-align:top}th{color:#a8d9ff}td{color:#d0deed}.ok{color:var(--mint);font-weight:750}.risky{color:var(--orange);font-weight:750}.checklist{list-style:none;padding-left:0}.checklist li{padding:10px 0 10px 31px;position:relative;border-bottom:1px solid #243d5a}.checklist li:before{content:"✓";position:absolute;left:0;top:10px;color:var(--mint);font-weight:900}.sources a{display:block;margin:6px 0;font-size:.9rem;overflow-wrap:anywhere}.cite{font-size:.82rem;color:#a6bed5;margin:10px 0}.foot{color:#899cb7;font-size:.86rem;padding:40px 0 70px;border-top:1px solid #203551;margin-top:35px}.toplink{float:right;font-size:.84rem}.highlight{color:#91d1ff}.eyetag{display:flex;gap:10px;align-items:center;margin-bottom:16px}.eyetag span{font-size:.75rem;color:#b4cde6}.red{color:#ffb1bd}
+@media(max-width:930px){.layout{grid-template-columns:1fr}.toc{position:static;display:none}.hero-grid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.hero{padding-top:50px}}
+@media(max-width:560px){.wrap{width:min(calc(100% - 28px),var(--max))}.main section{padding:20px}.facts,.cols,.triple{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.headlinks{gap:10px;font-size:.76rem}.brand{font-size:.94rem}h1{font-size:2.5rem}.hero{padding-top:32px}}
+@media print{header,.toc,.actions,.vidbox{display:none!important}body{background:white;color:#111}.main section,.metric,.card{background:white;color:#111;border-color:#bbb}p,li,td,.card p,.step p{color:#222!important}h1,h2,h3,strong{color:black!important}.hero-grid,.layout{display:block}.hero{padding:10px 0}.main section{break-inside:avoid}a{color:#13599a}}
+</style>
+</head>
+<body id="top">
+<header><div class="wrap"><a class="brand" href="https://sebastiandabkowski.github.io/seba-info/">seba<span>.info</span></a><nav class="headlinks" aria-label="Nawigacja"><a href="#executive">Wnioski</a><a href="#rozdzialy">Rozdziały</a><a href="#wdrozenie">Wdrożenie</a><a href="#zrodla">Źródła</a></nav></div></header>
+<main>
+<div class="wrap hero">
+<div class="eyebrow">ANALIZA WIDEO • AGENTIC ENGINEERING • 04.11.2026</div>
+<h1>20+ agentów AI?<br><span class="highlight">Najpierw zbuduj system,</span><br>któremu można zaufać.</h1>
+<div class="hero-grid">
+<div>
+<p class="sub">Lauren Tan pokazuje, dlaczego skala w agentic software engineering wynika z weryfikowalnego środowiska, architektury kodu i mechanicznych reguł. A nie z samego uruchomienia kolejnych agentów.</p>
+<div class="tagline"><span class="tag">Lauren Tan (@poteto)</span><span class="tag">GrokBot / Cursor</span><span class="tag">PStack / Dune</span><span class="tag">Język: polski</span></div>
+<div class="actions"><a class="btn" href="https://www.youtube.com/watch?v=yw_QhowlZ2g" target="_blank" rel="noopener">▶ Obejrzyj oryginał</a><a class="btn secondary" href="#executive">Przeczytaj analizę ↓</a></div>
+</div>
+<div class="vidbox"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/yw_QhowlZ2g" title="Lauren Tan: SpaceX AI engineer, warsztat o agentach AI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><div class="vidnote">Źródło: kanał Ai insider • ok. 55 min 39 s • publikacja 11 września 2026</div></div>
+</div>
+</div>
+<div class="wrap">
+<div class="metrics">
+<div class="metric"><b>20+</b><span>Agenci AI w wiralowym opisie pracy Lauren. Liczba nie jest audytem równoległej przepustowości.</span></div>
+<div class="metric"><b>600+</b><span>PR-ów refaktoryzacyjnych przy budowie środowiska i architektury Dune, według prelegentki.</span></div>
+<div class="metric"><b>~1 000</b><span>PR-ów w deklarowanym miesiącu. Licznik zmian, nie wartość dostarczona klientom.</span></div>
+<div class="metric"><b>~20</b><span>PR-ów automatycznie scalonych przez noc, według relacji Lauren.</span></div>
+</div>
+<div class="layout">
+<aside class="toc"><h3>NA TEJ STRONIE</h3><a href="#executive">01 • Executive summary</a><a href="#zaufanie">02 • Krzywa zaufania</a><a href="#weryfikacja">03 • Verification loop</a><a href="#feature-map">04 • Feature maps</a><a href="#pstack">05 • PStack i evals</a><a href="#cloud">06 • Agenci w chmurze</a><a href="#dune">07 • Dune i architektura</a><a href="#ci">08 • Hard constraints w CI</a><a href="#metryki">09 • Jak mierzyć sukces</a><a href="#rozdzialy">10 • Rozdziały filmu</a><a href="#wdrozenie">11 • Plan wdrożenia</a><a href="#seba">12 • Adaptacja do SebaBot</a><a href="#krytyka">13 • Ocena krytyczna</a><a href="#zrodla">14 • Źródła</a></aside>
+<article class="main">
+<section id="executive">
+<div class="eyetag"><span class="pill">01</span><span>Najważniejsze w 3 minuty</span></div>
+<h2>Executive summary</h2>
+<p class="lead"><strong>Wartość filmu nie polega na liczbie agentów.</strong> Najcenniejszy jest proces stopniowego zastępowania ręcznej kontroli człowieka mechanizmami, które dostarczają sprawdzalny wynik i ograniczają zakres błędów.</p>
+<div class="triple">
+<div class="card"><div class="num">Filar 01</div><h3>Weryfikacja</h3><p>Agent sam uruchamia aplikację, odtwarza scenariusz użytkownika, diagnozuje i załącza dowody.</p></div>
+<div class="card"><div class="num">Filar 02</div><h3>Powtarzalne umiejętności</h3><p>Skills opisują sprawdzone procedury; evals sprawdzają, czy procedury nadal działają.</p></div>
+<div class="card"><div class="num">Filar 03</div><h3>Architektura i CI</h3><p>Reguły zależności, typy, lintery i testy uniemożliwiają typowe skróty prowadzące do regresji.</p></div>
+</div>
+<div class="note"><strong>Jedno zdanie do zapamiętania:</strong> zanim zwiększysz liczbę równolegle pracujących agentów, usuń człowieka z powtarzalnych etapów weryfikacji, nie z odpowiedzialności za system.</div>
+<p>Wystąpienie koncentruje się na doświadczeniach Lauren przy GrokBot oraz Cursor. Wideo zawiera deklaracje dużej liczby pull requestów, historie o autonomicznych poprawkach, przykład agenta Benny, narzędzie PStack oraz architekturę Dune. Nie przedstawia niezależnie audytowanych pomiarów produktywności całej organizacji.</p>
+</section>
+<section id="zaufanie">
+<div class="eyetag"><span class="pill">02</span><span>Od mikrozarządzania do autonomii</span></div>
+<h2>Krzywa zaufania do agentów</h2>
+<p>Na początku operator patrzy na każdą odpowiedź, osobiście uruchamia poprawki i sprawdza rezultaty. Uruchomienie kolejnych agentów w tej fazie tylko zwiększa kolejkę do ręcznej kontroli. Lauren opisuje stopniowe budowanie zaufania przez wyniki testów, dowody i odporne środowisko.</p>
+<div class="steps">
+<div class="step"><div><strong>Obserwacja lokalna</strong><p>Jedno zadanie, pełny log narzędzi, analiza błędnych założeń i brakujących kroków.</p></div></div>
+<div class="step"><div><strong>Ograniczony zakres uprawnień</strong><p>Repozytorium testowe, jedno zadanie, izolowana gałąź i zdefiniowane warunki zakończenia.</p></div></div>
+<div class="step"><div><strong>Samodzielna weryfikacja</strong><p>Agent uruchamia produkt, sprawdza efekt oraz zapisuje odtwarzalne dowody.</p></div></div>
+<div class="step"><div><strong>Delegacja i chmura</strong><p>Zadania działają w izolacji, bez czekania na operatora, ale nadal z bramkami.</p></div></div>
+<div class="step"><div><strong>Autonomiczne zmiany o niskim ryzyku</strong><p>Dopiero po udokumentowaniu stabilności można rozważyć automatyczny merge określonych klas zmian.</p></div></div>
+</div>
+<p class="cite">To interpretacja modelu dojrzewania opisanego podczas warsztatu, nie statystyczna krzywa z pomiaru eksperymentalnego.</p>
+</section>
+<section id="weryfikacja">
+<div class="eyetag"><span class="pill">03</span><span>Najważniejsza zdolność agenta</span></div>
+<h2>Verification loop: kod to nie dowód</h2>
+<p>Uruchomienie testów jednostkowych i napisanie „gotowe” nie dowodzi, że użytkownik może zrealizować cel. Agent powinien mieć możliwość uruchomienia rzeczywistej aplikacji i sprawdzenia jej zachowania narzędziami dostępnymi również inżynierowi.</p>
+<div class="diagram" role="img" aria-label="Pętla weryfikacji: uruchom produkt, odtwórz błąd, zbierz dowody, popraw, testuj regresję, zapisz dowody.">
+<div class="node">1. Uruchom działający produkt</div><div class="arrow">↓</div>
+<div class="node">2. Przejdź ścieżkę użytkownika</div><div class="arrow">↓</div>
+<div class="node">3. Odtwórz problem i zbierz ślady</div><div class="arrow">↓</div>
+<div class="node">4. Zmień kod i uruchom scenariusz ponownie</div><div class="arrow">↓</div>
+<div class="node green">5. Zapisz dowody, testy i werdykt</div>
+</div>
+<div class="facts">
+<div class="card"><h3>Przykładowe dowody</h3><p>Screenshoty, logi, wynik Playwright, ślad CPU, heap snapshot, stan sieci, identyfikator komitu i porównanie przed/po.</p></div>
+<div class="card"><h3>Kontrakt zakończenia</h3><p><span class="ok">PASS</span> tylko gdy scenariusz działa; <span class="risky">BLOCKED</span> gdy brakuje danych, dostępu lub narzędzia. Brak dowodów nie oznacza sukcesu.</p></div>
+</div>
+<p>Przykład z wystąpienia: spowolnienie UI trudno rozwiązać na podstawie samego opisu. Agent, który otrzyma ślady i potrafi uruchomić aplikację, może zweryfikować hipotezę zamiast zgadywać przyczynę. Bez tego człowiek pozostaje wąskim gardłem diagnostyki.</p>
+</section>
+<section id="feature-map">
+<div class="eyetag"><span class="pill">04</span><span>Łącznik między interfejsem a kodem</span></div>
+<h2>Feature map: mapa produktu oczami użytkownika</h2>
+<p>Zgłoszenie „lewy panel wolno działa” nie zawiera nazwy pliku ani klasy. Feature map wiąże język użytkownika z nawigacją po aplikacji, zachowaniem funkcji i miejscami implementacji. Agent nie musi szukać losowo.</p>
+<div class="table-wrap"><table><thead><tr><th>Element mapy</th><th>Przykład treści</th><th>Dlaczego ma znaczenie</th></tr></thead><tbody>
+<tr><td>Funkcja</td><td>Lista zadań</td><td>Wspólny język produktu</td></tr>
+<tr><td>Wejście użytkownika</td><td>Projekt → Tablica → Filtr</td><td>Odtwarzalna ścieżka</td></tr>
+<tr><td>Selektory</td><td><code>data-testid</code>, role ARIA</td><td>Stabilne sterowanie UI</td></tr>
+<tr><td>Właściciel kodu</td><td>Moduł tablicy / endpoint</td><td>Mniej zgadywania</td></tr>
+<tr><td>Oczekiwany efekt</td><td>Widoczne tylko zadania „Otwarte”</td><td>Weryfikowalny rezultat</td></tr>
+</tbody></table></div>
+<p>Mapa musi być utrzymywana razem z kodem. Nieaktualny selektor powinien zgłaszać problem, a nie skłaniać agenta do wymyślania nowego wyniku testu.</p>
+</section>
+<section id="pstack">
+<div class="eyetag"><span class="pill">05</span><span>Skills to produkt, nie notatka</span></div>
+<h2>PStack i testowanie umiejętności agentów</h2>
+<p>Lauren budowała PStack przez obserwowanie porażek. Jeżeli agent diagnozował bez przeczytania kodu, powstawała procedura wymagająca dowodów. Jeżeli nie umiał obsłużyć aplikacji, potrzebował narzędzi i instrukcji weryfikacji. To podejście różni się od dopisywania setek ogólnych zaleceń do jednego promptu.</p>
+<div class="diagram"><div class="node">Zaobserwowane niepowodzenie</div><div class="arrow">↓</div><div class="node">Skill / procedura</div><div class="arrow">↓</div><div class="node">Rubryka oceny + przypadki testowe</div><div class="arrow">↓</div><div class="node green">Eval → dowody → poprawka Skill</div></div>
+<p><strong>Evals to testy regresyjne dla agentowych procedur.</strong> Izolowane subagenty wykonują ten sam typ zadania, a ocena sprawdza wynik i jakość dowodów. Lauren opisuje także porównywanie modeli i neutralne nazwy katalogów ewaluacyjnych, by ograniczyć zmiany zachowania agenta, który rozpoznaje test.</p>
+<div class="note"><strong>Praktyczna reguła:</strong> jeśli Skill nie został choć raz wykonany end-to-end w prawdziwym środowisku, jest projektem procedury, nie sprawdzoną automatyzacją. Zewnętrzna dokumentacja PStack potwierdza ten standard.</div>
+</section>
+<section id="cloud">
+<div class="eyetag"><span class="pill">06</span><span>Współbieżność i izolacja</span></div>
+<h2>Agenci w chmurze: przykład Benny</h2>
+<p>Benny to przykład delegowania zgłoszeń błędów do odrębnego środowiska z własnym komputerem. Agent otwiera aplikację, reprodukuje problem i sprawdza, czy poprawka nie trafiła już na główną gałąź. W opisanym przypadku stwierdza, że problem został już naprawiony i potrzebne jest wdrożenie aktualnego buildu.</p>
+<div class="diagram"><div class="node">Bug report</div><div class="arrow">↓</div><div class="node">Benny → izolowane środowisko</div><div class="arrow">↓</div><div class="cols"><div class="node">Reprodukcja i dowody</div><div class="node">Sprawdzenie main</div></div><div class="arrow">↓</div><div class="node green">Werdykt: napraw / wdroż / eskaluj</div></div>
+<p>Kluczowe nie jest to, gdzie działa agent, tylko czy jego działania są izolowane i audytowalne. Zgoda na uruchomienie zadania w chmurze nie jest równoznaczna ze zgodą na merge do produkcji.</p>
+</section>
+<section id="dune">
+<div class="eyetag"><span class="pill">07</span><span>Architektura zaprojektowana pod agentów</span></div>
+<h2>Dune: najłatwiejsza ścieżka ma być poprawna</h2>
+<p>Gdy agenci dostają zbyt dużą swobodę, naturalnie wybierają najkrótszą drogę do lokalnego zamknięcia zadania. W dłuższym okresie może to prowadzić do nieczytelnych zależności, powielonego stanu i kruchego kodu. Dune to próba zmniejszenia liczby błędnych decyzji, które agent w ogóle może podjąć.</p>
+<div class="triple">
+<div class="card"><div class="num">Granice modułów</div><h3>Feature colocation</h3><p>Logika funkcji blisko interfejsu i stanu. Jasny ownership ogranicza eksplorację całego repozytorium.</p></div>
+<div class="card"><div class="num">Granice procesów</div><h3>Electron</h3><p>Rozdział main i renderer, bez niepożądanych importów między procesami.</p></div>
+<div class="card"><div class="num">Reguły nie do negocjacji</div><h3>Build & CI</h3><p>Zabronione wzorce kończą się błędem pipeline’u, zamiast prośbą do modelu o ostrożność.</p></div>
+</div>
+<p>Lauren podaje specyficzne dla Dune decyzje, np. ograniczenie użycia <code>useEffect</code> i zakaz zwykłych komentarzy w kodzie. Sens nie brzmi „wszędzie zakazuj komentarzy”, lecz: <strong>wykryj skróty, które modele nadużywają w Twoim systemie, i zamień je w mierzalne ograniczenia</strong>.</p>
+</section>
+<section id="ci">
+<div class="eyetag"><span class="pill">08</span><span>Przenieś review do systemu</span></div>
+<h2>Soft rules vs hard constraints</h2>
+<p>Reguły w promptach, pliku <code>AGENTS.md</code> i Skills są pomocne, lecz model może je przeoczyć. Granice architektoniczne, statyczna analiza i CI dają bardziej deterministyczny sygnał.</p>
+<div class="table-wrap"><table><thead><tr><th>Sygnał od seniora w review</th><th>Zamiast powtarzać ręcznie</th><th>Mechanizm</th></tr></thead><tbody>
+<tr><td>„Nie importuj modułu UI z warstwy danych”</td><td>Wykryj naruszenie zależności</td><td>Test reguł architektury</td></tr>
+<tr><td>„Każda funkcja w swoim module”</td><td>Stosuj jeden szablon struktury</td><td>Scaffolding + linter</td></tr>
+<tr><td>„Nie kończ bez testu scenariusza”</td><td>Wymagaj dowodów działania</td><td>Verification gate</td></tr>
+<tr><td>„Nie commituj wygenerowanych sekretów”</td><td>Odrzuć zmianę przed mergem</td><td>Secret scanning + policy</td></tr>
+</tbody></table></div>
+<p>Zasada użyteczna także dla ludzkich zespołów: jeżeli ta sama uwaga wraca w code review, zapytaj, czy da się ją wyegzekwować automatycznie. To przesuwa odpowiedzialność architekta z powtarzania komentarzy na projektowanie granic.</p>
+</section>
+<section id="metryki">
+<div class="eyetag"><span class="pill">09</span><span>Co mierzyć, aby nie optymalizować pozorów</span></div>
+<h2>1000 PR-ów ≠ 1000 wartościowych zmian</h2>
+<p>Rozbijając jedno zadanie na dziesięć PR-ów, można zwiększyć licznik bez poprawy produktywności. Z drugiej strony małe, atomowe zmiany pomagają lokalizować regresje i bezpiecznie wycofywać wdrożenia. Dlatego wolumen ma sens jako sygnał operacyjny, nie samodzielny KPI.</p>
+<div class="table-wrap"><table><thead><tr><th>Metryka</th><th>Dlaczego ważna</th><th>Ostrzeżenie</th></tr></thead><tbody>
+<tr><td>Lead time do zweryfikowanego rezultatu</td><td>Pokazuje rzeczywiste tempo dostarczania</td><td>Oddziel czas człowieka od czasu maszyn</td></tr>
+<tr><td>Interwencje człowieka / zadanie</td><td>Mierzy poziom samodzielności</td><td>Nie premiuj ukrywania problemów</td></tr>
+<tr><td>Odsetek zadań z dowodami</td><td>Sprawdzalność pracy</td><td>„PASS” bez artefaktów nie wystarcza</td></tr>
+<tr><td>Defekty, regresje i rollbacki</td><td>Kontrola kosztu jakości</td><td>Wolumen zmian może maskować rework</td></tr>
+<tr><td>Koszt tokenów i infrastruktury</td><td>Ekonomika rozwiązania</td><td>Sam koszt API nie pokazuje TCO</td></tr>
+<tr><td>Wartość biznesowa</td><td>Czy rozwiązano problem klienta?</td><td>Nie zastępuj jej liczbą commitów</td></tr>
+</tbody></table></div>
+</section>
+<section id="rozdzialy">
+<div class="eyetag"><span class="pill">10</span><span>Kliknij, aby przejść do fragmentu filmu</span></div>
+<h2>Rozdziały i najważniejsze momenty</h2>
+<p class="small">Minuty orientacyjne według zewnętrznego indeksu materiału. Linki otwierają oryginalne wideo od wskazanego momentu.</p>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=46s" target="_blank" rel="noopener">00:46 ↗</a><div><strong>Krzywa zaufania</strong><br><span>Dlaczego więcej agentów oznacza więcej kontroli, dopóki nie istnieje automatyczna weryfikacja.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=320s" target="_blank" rel="noopener">05:20 ↗</a><div><strong>Verification skills</strong><br><span>Uruchamianie aplikacji, logi, ślady CPU i sprawdzanie zachowania produktu.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=590s" target="_blank" rel="noopener">09:50 ↗</a><div><strong>Feature maps</strong><br><span>Powiązanie problemów użytkownika z konkretną funkcją i kodem.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=797s" target="_blank" rel="noopener">13:17 ↗</a><div><strong>PStack</strong><br><span>Tworzenie Skills na podstawie obserwowanych błędów agentów.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=1048s" target="_blank" rel="noopener">17:28 ↗</a><div><strong>Evals</strong><br><span>Subagenty, rubryki oceny, regresja zachowania i testy na różnych modelach.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=1467s" target="_blank" rel="noopener">24:27 ↗</a><div><strong>Cloud agents / Benny</strong><br><span>Autonomiczne analizowanie zgłoszeń w izolowanym środowisku.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=1815s" target="_blank" rel="noopener">30:15 ↗</a><div><strong>Agent-friendly codebase</strong><br><span>Dlaczego struktura repozytorium wpływa na jakość zmian generowanych przez AI.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=2145s" target="_blank" rel="noopener">35:45 ↗</a><div><strong>Atomowe PR-y</strong><br><span>Historia Git jako narzędzie diagnostyczne i odwracalność zmian.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=2580s" target="_blank" rel="noopener">43:00 ↗</a><div><strong>Hard CI / lintery</strong><br><span>Utrwalanie decyzji architektonicznych w regułach wymuszanych przez pipeline.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=2900s" target="_blank" rel="noopener">48:20 ↗</a><div><strong>Ekonomika tokenów</strong><br><span>Koszt wdrożenia guardrails a potencjał pracy modeli o różnych możliwościach.</span></div></div>
+<div class="chapter"><a class="time" href="https://www.youtube.com/watch?v=yw_QhowlZ2g&t=3192s" target="_blank" rel="noopener">53:12 ↗</a><div><strong>Nowa rola zespołów</strong><br><span>Jak PM i projektanci mogą wnosić zmiany, gdy system pilnuje ograniczeń.</span></div></div>
+</section>
+<section id="wdrozenie">
+<div class="eyetag"><span class="pill">11</span><span>Plan adaptacji do własnego projektu</span></div>
+<h2>Praktyczny plan na 4 etapy</h2>
+<div class="cols">
+<div class="card"><div class="num">Etap 1</div><h3>Jeden agent, jedno zadanie</h3><p>Wybierz powtarzalny scenariusz. Zapisz akceptację, uprawnienia, budżet i oczekiwane artefakty. Obserwuj lokalne wykonanie.</p></div>
+<div class="card"><div class="num">Etap 2</div><h3>Verification skill</h3><p>Dodaj możliwość uruchomienia aplikacji, feature map i automatyczne dowody. Testuj także przypadek, w którym agent nie ma dostępu.</p></div>
+<div class="card"><div class="num">Etap 3</div><h3>Architektura i evals</h3><p>Powtarzające się uwagi z review zamień w testy. Wprowadź ewaluacje Skills i izolowane środowiska pracy.</p></div>
+<div class="card"><div class="num">Etap 4</div><h3>Kontrolowane skalowanie</h3><p>Uruchom 2–3 role równolegle. Mierz jakość, koszt i liczbę interwencji. Uprawnienia poszerzaj dopiero po spełnieniu ustalonych kryteriów.</p></div>
+</div>
+<h3 style="margin-top:24px">Gotowość do autonomii: lista kontrolna</h3>
+<ul class="checklist"><li>Zadanie ma mierzalne kryterium zakończenia i limit prób.</li><li>Agent potrafi uruchomić rzeczywisty system i odtworzyć krytyczny scenariusz.</li><li>Wynik zawiera dowody oraz identyfikator wersji.</li><li>Repozytorium ma egzekwowane reguły architektoniczne i testy regresji.</li><li>Agent działa na minimalnych uprawnieniach, w izolowanym środowisku.</li><li>Istnieje ścieżka eskalacji, rollback i monitoring.</li><li>Koszt i jakość są raportowane niezależnie od liczby PR-ów.</li></ul>
+</section>
+<section id="seba">
+<div class="eyetag"><span class="pill">12</span><span>Autorska adaptacja, nie cytat z filmu</span></div>
+<h2>Jak zastosować to do SebaBot na Codex CLI</h2>
+<p>Twoja wizja SebaBot to osobisty koordynator korzystający z Discord, Wispr Flow, Microsoft Planner i wiedzy w Obsidian. Wniosek z filmu jest praktyczny: zanim dołożysz 20 workerów, zbuduj silny kontrakt wykonania i walidacji dla jednego workflow.</p>
+<div class="diagram"><div class="node">SebaBot / koordynator</div><div class="arrow">↓</div><div class="cols"><div class="node">Planner • zadania</div><div class="node">Wispr Flow • notatki</div><div class="node">Obsidian • wiedza</div><div class="node">Discord • sygnały</div></div><div class="arrow">↓</div><div class="node green">Wynik + dowody + kolejka zatwierdzeń</div><div class="arrow">↓</div><div class="node orange">Człowiek zatwierdza działania zewnętrzne</div></div>
+<div class="table-wrap"><table><thead><tr><th>Zadanie</th><th>Bezpieczna automatyzacja</th><th>Kontrola</th></tr></thead><tbody>
+<tr><td>Analiza nowych wiadomości</td><td>Odczyt, klasyfikacja, propozycja reakcji</td><td>Brak samodzielnego wysyłania na Discord</td></tr>
+<tr><td>Wnioski ze spotkania</td><td>Propozycja zadania w Plannerze</td><td>Źródło, właściciel, termin i deduplikacja</td></tr>
+<tr><td>Raport dzienny</td><td>Wygenerowanie wersji roboczej i walidacja</td><td>Porównanie z danymi źródłowymi</td></tr>
+<tr><td>Praca z repozytorium</td><td>Izolowana gałąź, testy i PR</td><td>Merge dopiero według klasy ryzyka</td></tr>
+</tbody></table></div>
+<p><strong>Rekomendowany pierwszy eksperyment:</strong> z notatki Wispr Flow wygeneruj propozycję zadania Planner z cytowanym fragmentem, sprawdzeniem duplikatu i statusem wymagającym zatwierdzenia. Testuj przez kilka serii w trybie read-only lub draft-only. Mierz false positives i interwencje. To autorska propozycja zastosowania metody Lauren, a nie opisana w wideo konfiguracja SebaBot.</p>
+</section>
+<section id="krytyka">
+<div class="eyetag"><span class="pill orange">13</span><span>Oddziel deklaracje od zweryfikowanych faktów</span></div>
+<h2>Ocena krytyczna: co wiemy, a czego film nie dowodzi</h2>
+<div class="table-wrap"><table><thead><tr><th>Teza</th><th>Status</th><th>Ocena</th></tr></thead><tbody>
+<tr><td>Lauren opisuje około tysiąca PR-ów w miesiącu oraz ponad 600 PR-ów refaktoryzacyjnych.</td><td class="ok">Deklaracja w wystąpieniu</td><td>Nie ma publicznego audytu, PR nie mierzy wartości.</td></tr>
+<tr><td>Verification skills, feature maps i hard CI zmniejszają obciążenie ręcznej kontroli.</td><td class="ok">Mechanizm techniczny</td><td>Logicznie uzasadniony i wsparty publicznymi artefaktami PStack; rezultat zależy od jakości wdrożenia.</td></tr>
+<tr><td>„Chief of Staff + 3 managerów + 20/40 workerów” to oficjalny schemat z tego warsztatu.</td><td class="risky">Niepotwierdzone w tym filmie</td><td>Wiralowe opisy mieszają różne wypowiedzi i materiały.</td></tr>
+<tr><td>20 agentów może zastąpić 20 inżynierów albo automatyzować 90% każdej firmy.</td><td class="risky">Nie wynika z materiału</td><td>Wymaga badań, baseline, kosztu i jakości.</td></tr>
+<tr><td>Zakaz <code>useEffect</code> lub komentarzy jest uniwersalną praktyką.</td><td class="risky">Nie</td><td>To wybór konkretnej architektury, a nie wzorzec dla każdej aplikacji.</td></tr>
+</tbody></table></div>
+<div class="note warn"><strong>Ważne sprostowanie:</strong> wcześniejszy uproszczony schemat „Chief of Staff → PM agents → coding/testing/review” nie powinien być traktowany jako wierny diagram z tego konkretnego, 55-minutowego warsztatu. Wystąpienie rzeczywiście dotyczy skalowania agentów, ale najwięcej miejsca poświęca kontroli jakości i projektowaniu środowiska.</div>
+<p>Równie istotne są możliwe błędy automatyzacji: agent może nauczyć się maksymalizować wynik evala bez poprawy realnej jakości, wiele agentów może współdzielić jedną słabość, a automatyczny merge może szybko rozpowszechniać regresje. Dlatego oceny potrzebują niezależnych kryteriów, a autonomia: monitoringu i odwracalności.</p>
+</section>
+<section id="zrodla">
+<div class="eyetag"><span class="pill">14</span><span>Materiały do samodzielnego sprawdzenia</span></div>
+<h2>Źródła i metodologia</h2>
+<p>Opracowanie stanowi autorską analizę po polsku na podstawie publicznie dostępnego filmu, indeksu rozdziałów, omówień opartych na warsztacie oraz oficjalnych zasobów PStack. Nie jest stenogramem ani dosłownym tłumaczeniem całego nagrania. Nie uzyskano bezpośredniego pełnego transkryptu tej kopii wideo. Minuty pochodzą z indeksu zewnętrznego i mogą być przybliżone.</p>
+<div class="sources">
+<a href="https://www.youtube.com/watch?v=yw_QhowlZ2g" target="_blank" rel="noopener">01 • Film: Lauren Tan, SpaceX AI engineer, Ai insider ↗</a>
+<a href="https://staging.dubi.ai/videos/youtube/spacex-ai-engineer-lauren-tan-c61a36b5" target="_blank" rel="noopener">02 • Skim: 11 punktów i orientacyjne minuty tego materiału ↗</a>
+<a href="https://xiaohu.ai/en/article/cursor-agent-team-24x7/" target="_blank" rel="noopener">03 • XiaoHu: pogłębiona analiza warsztatu i mechanizmów ↗</a>
+<a href="https://www.superbash.ai/articles/lauren-tan-ai-coding-agents-trust-curve/" target="_blank" rel="noopener">04 • Superbash: weryfikacja popularnych twierdzeń o agentach ↗</a>
+<a href="https://github.com/cursor/plugins/blob/main/pstack/skills/create-verification-skill/SKILL.md" target="_blank" rel="noopener">05 • PStack: oficjalna definicja create-verification-skill ↗</a>
+<a href="https://github.com/cursor/plugins/blob/main/pstack/docs/guide/07-overnight.md" target="_blank" rel="noopener">06 • PStack: sprawdzalne warunki autonomicznej pracy overnight ↗</a>
+<a href="https://kangdaejong.com/work/insights/2026-09-25-grokbot-verification-pstack-lauren-tan/" target="_blank" rel="noopener">07 • Dodatkowe omówienie dokładnie tego URL YouTube ↗</a>
+</div>
+<p class="note">Oznaczenia: „deklaracja prelegentki” nie oznacza niezależnego audytu; „autorska adaptacja” oznacza rekomendację wynikającą z analizy, a nie dosłowny element prezentacji.</p>
+<a class="toplink" href="#top">↑ Wróć na początek</a>
+</section>
+</article>
+</div>
+<footer class="foot">Analiza edukacyjna • 4 listopada 2026 • seba.info • Publiczna, bez hasła • Opracowanie niezależne od Lauren Tan, Cursor i SpaceXAI.</footer>
+</div>
+</main>
+</body>
+</html>
